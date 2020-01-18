@@ -23,9 +23,13 @@
   },
   "homepage": "https://github.com/Androz2091/Discbot.js#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "discord.js": "github:discordjs/discord.js",
     "json-beautify": "^1.1.1",
-    "mongoose": "^5.7.1"
+    "mongoose": "^5.7.1",
+    "discord-backup": "^2.0.3",
+    "ms": "^2.1.2",
+    "tims": "^1.0.4",
+    "fortnite": "^4.3.2"
   }
 }
