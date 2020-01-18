@@ -100,7 +100,11 @@ module.exports = class {
         ":calendar: A rejoint Discord le",
         "🔐 Rôles"
       ],
-      USERINFOS_ERROR : "Ce membre possède trop de rôles!"
+      USERINFOS_ERROR : "Ce membre possède trop de rôles!",
+      /* FN_CHALLENGE */
+      FN_CHALLENGE_DESCRIPTION : "Affiche les défis de fortnite!" ,
+      FN_CHALLENGE_USAGE: "fnchallenge",
+      FN_CHALLENGE_EXEMPLES: "$fnchallenge"
     };
   }
   /**

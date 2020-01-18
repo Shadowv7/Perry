@@ -3,6 +3,7 @@ dependencies:
   chalk: 3.0.0
   discord.js: github.com/discordjs/discord.js/69c79a4136619e4dcacfffb935aa9bd60aa2081c
   enmap: 5.2.4
+  fortnite: 4.3.2
   json-beautify: 1.1.1
   moment: 2.24.0
   mongoose: 5.8.9
@@ -132,6 +133,12 @@ packages:
       node: '>= 0.12'
     resolution:
       integrity: sha512-m21N3WOmEEURgk6B9GLOE4RuWOFf28Lhh9qGYeNlGq4VDXUlJy2th2slBNU8Gp8EzloYZOibZJ7t5ecIrFSjVA==
+  /fortnite/4.3.2:
+    dependencies:
+      node-fetch: 2.6.0
+    dev: false
+    resolution:
+      integrity: sha512-6BReElBAwP/3Gq6zEBn9gdQzrzWpMlumY9IF0suZgDshbzsS8dCDuV8JszDl1l1PVJwtzm2uexfUo9YtUqUV6Q==
   /fs-minipass/1.2.7:
     dependencies:
       minipass: 2.9.0
@@ -416,6 +423,7 @@ specifiers:
   chalk: ^3.0.0
   discord.js: 'github:discordjs/discord.js'
   enmap: ^5.2.4
+  fortnite: ^4.3.2
   json-beautify: ^1.1.1
   moment: ^2.24.0
   mongoose: ^5.7.1
