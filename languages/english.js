@@ -67,7 +67,16 @@ module.exports = class {
         "Permissions:"
       ],
       HELP_NO_ALIASES: "No alias.",
-      HELP_ERR_NOT_FOUND: cmd => `${e.error} | Command \`${cmd}\` not found!`
+      HELP_ERR_NOT_FOUND: cmd => `${e.error} | Command \`${cmd}\` not found!`,
+      HELP_CATEGORIES: [
+        "<:owner:667627445830156298> Owner",
+        "<:badge:667634037988261888> Moderations",
+        "<:coins:667642903254007828> Economy",
+        "<:fun:667627121107271681> Fun",
+        "<:general:667626887014514698> General",
+        "<:musique:667627814027264000> Music",
+        "<:picture:667629000708980785> Images"
+      ]
     };
   }
 

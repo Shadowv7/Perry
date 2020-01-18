@@ -6,6 +6,7 @@ module.exports = class Command {
         name = null,
         // Whether the command is enabled, or not
         enabled = true,
+        category = "",
         // Some command informations to display in the help command
         description = (language) => language.get("NO_DESCRIPTION_PROVIDED"),
         usage = (language) => language.get("NO_USAGE_PROVIDED"),
@@ -26,7 +27,7 @@ module.exports = class Command {
         nsfw = false
     })
     {
-        let category = (commandPath ? commandPath.split(path.sep)[parseInt(commandPath.split(path.sep).length-1, 10)] : "Other");
+        //let category = (commandPath ? commandPath.split(path.sep)[parseInt(commandPath.split(path.sep).length-1, 10)] : "Other");
         this.client = client;
         this.conf = { enabled, aliases, permLevel, clientPermissions, cooldown, guildOnly, nsfw };
         this.help = { name, description, usage, examples, category };

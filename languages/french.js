@@ -39,13 +39,12 @@ module.exports = class {
       PING_EXAMPLES: "$ping",
       PING_WAIT: `${e.loading} | Ping en cours...`,
       PING_RESULT: ms => `${e.success} | Pong ! Latence: \`${ms}\` ms !`,
-      
+
       /* EVAL COMMAND */
       EVAL_DESCRIPTION: "Evalue un code !",
       EVAL_USAGE: "eval <code>",
       EVAL_EXAMPLES: "$eval message.reply('eval')",
-      
-      
+
       /* BUILD EMOJIS COMMAND */
       BUILD_EMOJIS_DESCRIPTION:
         "Ajoute automatiquement les émojis nécessaires au bon fonctionnement du bot et génère une configuration !",
@@ -70,7 +69,15 @@ module.exports = class {
       HELP_NO_ALIASES: "Aucun alias.",
       HELP_ERR_NOT_FOUND: cmd =>
         `${e.error} | Commande \`${cmd}\` introuvable !`,
-      HELP_CATEGORIES : ["""<:general:667626887014514698> Général"]
+      HELP_CATEGORIES: [
+        "<:owner:667627445830156298> Owner",
+        "<:badge:667634037988261888> Modérations",
+        "<:coins:667642903254007828> Économie",
+        "<:fun:667627121107271681> Fun",
+        "<:general:667626887014514698> Général",
+        "<:musique:667627814027264000> Musique",
+        "<:picture:667629000708980785> Images"
+      ]
     };
   }
 
