@@ -31,15 +31,8 @@ module.exports = class {
       );
 
     // Gets the prefix
-    let prefixes = [
-      this.client.user.username,
-      "<@" + this.client.user.id + ">"
-    ];
-    let prefix =
-      message.channel.type !== "dm"
-        ? prefixes.find(p => message.content.startsWith(p))
-        : "";
-    if (!prefix && prefix !== "") return;
+    let prefix = this.client.settings.get(message.guild.id,"prefix")
+    if (!prefix) return;
 
     let args = message.content
       .slice(prefix.length)

@@ -39,12 +39,12 @@ class Help extends Command {
             if(!cmd) return message.channel.send(message.language.get("HELP_CMD_NOT_FOUND", args[0]));
 
             // Replace $ caract with the server prefix
-            let examples = cmd.help.examples(message.language).replace(/[$_]/g, data.guildConf.prefix);
+            let examples = cmd.help.examples(message.language).replace(/[$_]/g, this.client.settings.get(message.guild.id,"prefix"));
 
             // Creates the help embed
             let groupEmbed = new Discord.MessageEmbed()
                 .setAuthor(message.language.get("HELP_HEADINGS")[0]+" "+cmd.help.name)
-                .addField(message.language.get("HELP_HEADINGS")[1], data.guildConf.prefix+cmd.help.usage(message.language), true)
+                .addField(message.language.get("HELP_HEADINGS")[1], this.client.settings.get(message.guild.id,"prefix")+cmd.help.usage(message.language), true)
                 .addField(message.language.get("HELP_HEADINGS")[2], examples, true)
                 .addField(message.language.get("HELP_HEADINGS")[3], cmd.help.category, true)
                 .addField(message.language.get("HELP_HEADINGS")[4], cmd.help.description(message.language), true)
@@ -67,7 +67,7 @@ class Help extends Command {
 
         let embed = new Discord.MessageEmbed()
         .setAuthor(this.client.user.username+" | "+message.language.get("HELP_TITLE"))
-        .setDescription(message.language.get("HELP_SUBTITLE", data.guildConf.prefix))
+        .setDescription(message.language.get("HELP_SUBTITLE", this.client.settings.get(message.guild.id,"prefix")))
         .setColor(data.config.embed.color)
         .setFooter(data.config.embed.footer);
 

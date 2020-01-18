@@ -23,12 +23,9 @@ class BuildEmojis extends Command {
 
     constructor (client) {
         super(client, {
-            // The name of the command
-            name: "build-emojis",
-            // Whether the command is enabled, or not
-            enabled: true,
-            // Some command informations to display in the help command
-            description: (language) => language.get("BUILD_EMOJIS_DESCRIPTION"),
+           name: "build-emojis",
+           enabled: true,
+          description: (language) => language.get("BUILD_EMOJIS_DESCRIPTION"),
             usage: (language) => language.get("BUILD_EMOJIS_USAGE"),
             examples: (language) => language.get("BUILD_EMOJIS_EXAMPLES"),
             // The other names that can trigger the command
