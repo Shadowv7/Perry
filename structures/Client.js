@@ -1,6 +1,7 @@
 const { Client, Collection } = require("discord.js"),
 util = require("util"),
-path = require("path");
+path = require("path"),
+Enmap = require("enmap")
 
 // Creates Atlanta class
 class Atlanta extends Client {
@@ -11,9 +12,9 @@ class Atlanta extends Client {
         this.commands = new Collection(); // Creates new commands collection
         this.aliases = new Collection(); // Creates new command aliases collection
         this.logger = require("../helpers/logger"); // Load the logger file
-        this.wait = util.promisify(setTimeout); // client.wait(1000) - Wait 1 second
-        this.guildsData = require("./Guild"); // Mongoose model
+        this.wait = util.promisify(setTimeout); // client.wait(1000) - Wait 1 second   
         this.permissions = require("../helpers/permissions"); // Permissions levels
+        this.settings = new Enmap({name: "settingd"})
     }
 
     // This function is used to load a command and add it to the collection

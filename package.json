@@ -4,7 +4,7 @@
   "description": "🚀 Powerful discord bot template, for a solid structure!",
   "main": "discbot.js",
   "scripts": {
-    "test": "node discbot.js"
+    "start": "node discbot.js"
   },
   "repository": {
     "type": "git",

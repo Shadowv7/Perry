@@ -33,11 +33,7 @@ const init = async () => {
     });
     
     // connect to mongoose database
-    mongoose.connect(client.config.mongoDB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
-        client.logger.log("Connected to the Mongodb database.", "log");
-    }).catch((err) => {
-        client.logger.log("Unable to connect to the Mongodb database. Error:"+err, "error");
-    });
+    
 
     client.login(client.config.token); // Log in to the discord api
 
