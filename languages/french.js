@@ -71,10 +71,16 @@ module.exports = class {
         `${e.error} | Commande \`${cmd}\` introuvable !`,
 
       /* BOTINFOS */
-      BOTINFOS_DESCRIPTION: "",
-      BOTINFOS_USAGE: "botinfod",
+      BOTINFOS_DESCRIPTION: "Affiche des informations sur Perry",
+      BOTINFOS_USAGE: "botinfos",
       BOTINFOS_EXEMPLES: "$botinfos",
-      BOTINFOS_HEADING: ["•__Voici des informations sur Perry__•",":computer: Développeur :"]
+      BOTINFOS_HEADING: [
+        "•__Voici des informations sur Perry__•",
+        ":computer: Développeur :",
+        "📊 Statistiques : ",
+        "Seveurs",
+        "Utilisateurs"
+      ]
     };
   }
   /**

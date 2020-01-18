@@ -7,7 +7,7 @@ class Bot extends Command {
       name: "botinfos",
       description: language => language.get("BOTINFOS_DESCRIPTION"),
       usage: language => language.get("BOTINFOS_USAGE"),
-      examples: language => language.get("BOTINFOS_EXAMPLES"),
+      examples: language => language.get("BOTINFOS_EXEMPLES"),
       enabled: true,
       aliases: ["bi"],
       clientPermissions: [],
@@ -30,7 +30,7 @@ class Bot extends Command {
       )
       .addField(
         BOT_HEADING[2],
-        `- \`${BOT_HEADING\` : ${this.client.guilds.size}\n- \`Utilisateurs\` : ${this.client.users.size}`
+        `- \`${BOT_HEADING[3]}\` : ${this.client.guilds.size}\n- \`${BOT_HEADING[4]}\` : ${this.client.users.size}`
       )
       .addField(
         "⚙️ Version",
@@ -45,3 +45,4 @@ class Bot extends Command {
     message.channel.send(embed);
   }
 }
+module.exports = Bot;

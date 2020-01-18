@@ -44,7 +44,7 @@ class Help extends Command {
       // Replace $ caract with the server prefix
       let examples = cmd.help
         .examples(message.language)
-        .replace(/[$_]/g, this.client.settings.get(message.guild.id, "prefix"));
+        .replace("$", this.client.settings.get(message.guild.id, "prefix"));
 
       // Creates the help embed
       let groupEmbed = new Discord.MessageEmbed()
