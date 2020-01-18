@@ -80,7 +80,12 @@ module.exports = class {
         "📊 Statistiques : ",
         "Seveurs",
         "Utilisateurs"
-      ]
+      ],
+      /* PERMS */
+      PERMS_DESCRIPTION :"Affiche les permissions que vous possédez!",
+      PERMS_USAGE: "permissions",
+      PERMS_EXEMPLES: "$permissions",
+      PERMS_TITLE: (user) => `•__Voici les permissions de ${user}__•`
     };
   }
   /**

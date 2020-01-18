@@ -79,7 +79,12 @@ module.exports = class {
         "📊 Statistics : ",
         "Servers",
         "Users"
-      ]
+      ],
+      /* PERMS */
+      PERMS_DESCRIPTION: "Show the permissions you have!",
+      PERMS_USAGE: "permissions",
+      PERMS_EXEMPLES: "$permissions",
+      PERMS_TITLE: user => `•__Here are the permissions of ${user}__•`
     };
   }
 
