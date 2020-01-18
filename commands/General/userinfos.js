@@ -60,7 +60,7 @@ class Userinfos extends Command {
         true
       )
 
-      .addField("🔐 Rôles:")
+      .addField("🔐 Rôles")
       .setThumbnail(member.user.displayAvatarURL({ format: "png" }));
     embed.fields[6].value = message.guild
       .member(user)
