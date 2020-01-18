@@ -28,10 +28,11 @@ class Userinfos extends Command {
       member.roles
         .filter(r => r.id !== message.guild.id)
         .map(r => r)
-        .join(", ") || "Aucun";
+        .join(", ") || "None";
 
     const created = formatDate(member.user.createdAt);
     let user = member;
+    const USERINFOS_HEADING = message.language.get("USERINFOS_HEADING")
     const embed = new Discord.MessageEmbed()
       .setFooter(
         member.displayName,
@@ -42,12 +43,12 @@ class Userinfos extends Command {
 
       .setTimestamp()
 
-      .addField(":bust_in_silhouette: Pseudo", `${user.user.username}`, true)
-      .addField(":id: ID", user.id, true)
-      .addField(":hash: Discriminateur", `#${user.user.discriminator}`, true)
-      .addField(":robot: Bot ", member.user.bot ? "- ☑" : "- :x:", true)
+      .addField(USERINFOS_HEADING[0], `${user.user.username}`, true)
+      .addField(USERINFOS_HEADING[1], user.id, true)
+      .addField(USERINFOS_HEADING[2], `#${user.user.discriminator}`, true)
+      .addField(USERINFOS_HEADING[3], member.user.bot ? "- ☑" : "- :x:", true)
       .addField(
-        ":busts_in_silhouette: Surnom",
+        USERINFOS_HEADING[4],
         message.guild.member(user).nickname
           ? message.guild.member(user).nickname
           : "Aucun",
@@ -55,12 +56,12 @@ class Userinfos extends Command {
       )
 
       .addField(
-        ":calendar: A rejoint Discord le",
+        USERINFOS_HEADING[4],
         `${moment(member.user.createdAt).format("DD/MM/YYYY")}`,
         true
       )
 
-      .addField("🔐 Rôles")
+      .addField(USERINFOS_HEADING[6])
       .setThumbnail(member.user.displayAvatarURL({ format: "png" }));
     embed.fields[6].value = message.guild
       .member(user)
@@ -69,7 +70,7 @@ class Userinfos extends Command {
 
     message.channel.send(embed).catch(err => {
       if (err.name == "DiscordAPIError" || err.name == "RangeError") {
-        embed.fields[6].value = "Il a trop de rôles 😦";
+        embed.fields[6].value = message.language.get("USERINFOS_ERROR");
         message.channel.send(embed);
       } else console.error(err);
     });

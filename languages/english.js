@@ -86,22 +86,7 @@ module.exports = class {
       PERMS_EXEMPLES: "$permissions",
       PERMS_TITLE: user => `•__Here are the permissions of ${user}__•`,
       /* USERINFOS */
-      USERINFOS_DESCRIPTION: "      /* USERINFOS */
-      USERINFOS_DESCRIPTION: "Affiche les informations d'un membre!",
-      USERINFOS_USAGE: "userinfos [id | mention | pseudo | discriminateur]",
-      USERINFOS_EXEMPLES:
-        "$userinfos ShadowV\n$userinfos @ShadowV#9338\n$userinfos 9338",
-      USERINFOS_HEADING: [
-        ":bust_in_silhouette: Pseudo",
-        ":id: ID",
-        ":hash: Discriminateur",
-        ":robot: Robot",
-        ":busts_in_silhouette: Surnom",
-        ":calendar: A rejoint Discord le",
-        "🔐 Rôles"
-      ],
-      USERINFOS_ERROR : "Ce membre possède trop de rôles!"
-  ",
+      USERINFOS_DESCRIPTION: "Show member information!",
       USERINFOS_USAGE: "userinfos [id | mention | pseudo | discriminateur]",
       USERINFOS_EXEMPLES:
         "$userinfos ShadowV\n$userinfos @ShadowV#9338\n$userinfos 9338",
@@ -114,7 +99,8 @@ module.exports = class {
         ":calendar: Joined Discord at",
         "🔐 Roles"
       ],
-      USERINFOS_ERROR: "Ce membre possède trop de rôles!"
+      USERINFOS_ERROR : "This member has too many roles!"
+  
     };
   }
 

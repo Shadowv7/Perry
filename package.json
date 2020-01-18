@@ -28,6 +28,7 @@
     "json-beautify": "^1.1.1",
     "mongoose": "^5.7.1",
     "better-sqlite-pool": "^0.2.3",
-    "enmap": "^5.2.4"
+    "enmap": "^5.2.4",
+    "moment": "^2.24.0"
   }
 }
