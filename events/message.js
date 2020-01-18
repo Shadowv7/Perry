@@ -17,20 +17,18 @@ module.exports = class {
         // If the member on a guild is invisible or not cached, fetch him
         if(message.guild && !message.member) await message.guild.members.fetch(message.author.id);
 
-        let guildConf = (message.guild ? await this.client.findOrCreateGuild({ id: message.guild.id }) : { prefix: "", language: this.client.config.guildConf.language });
-        data.guildConf = guildConf;
-        data.config = this.client.config;
+         data.config = this.client.config;
 
         // Gets language
-        let Language = require(`../languages/${guildConf.language}.js`);
+        let Language = require(`../languages/french.js`);
         message.language = new Language();
 
         // Check if the bot was mentionned
         const prefixMention = new RegExp(`^<@!?${this.client.user.id}>( |)$`);
-        if(message.content.match(prefixMention)) return message.reply(message.language.get("PREFIX_INFO", guildConf.prefix));
+        if(message.content.match(prefixMention)) return message.reply(message.language.get("PREFIX_INFO", "p!"));
 
         // Gets the prefix
-        let prefixes = [ guildConf.prefix, this.client.user.username, "<@"+this.client.user.id+">" ];
+        let prefixes = [ "p!", this.client.user.username, "<@"+this.client.user.id+">" ];
         let prefix = (message.channel.type !== "dm" ? prefixes.find((p) => message.content.startsWith(p)) : "");
         if(!prefix && prefix !== "") return;
 

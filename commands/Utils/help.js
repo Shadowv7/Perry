@@ -39,7 +39,7 @@ class Help extends Command {
             if(!cmd) return message.channel.send(message.language.get("HELP_CMD_NOT_FOUND", args[0]));
 
             // Replace $ caract with the server prefix
-            let examples = cmd.help.examples(message.language).replace(/[$_]/g, data.guildConf.prefix);
+            let examples = cmd.help.examples(message.language).replace(/[$_]/g, "p!");
 
             // Creates the help embed
             let groupEmbed = new Discord.MessageEmbed()
@@ -67,7 +67,7 @@ class Help extends Command {
 
         let embed = new Discord.MessageEmbed()
         .setAuthor(this.client.user.username+" | "+message.language.get("HELP_TITLE"))
-        .setDescription(message.language.get("HELP_SUBTITLE", data.guildConf.prefix))
+        .setDescription(message.language.get("HELP_SUBTITLE", "p!"))
         .setColor(data.config.embed.color)
         .setFooter(data.config.embed.footer);
 
