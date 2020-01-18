@@ -1,12 +1,12 @@
 module.exports = {
 
     /* YOUR DISCORD BOT TOKEN */
-    //token: "NjU4NTc5NTAzMTM1NTg4Mzky.XiKy1w.k6HuNDeMbnSwLxQ9enVjuwyUbrY",
+    token: "Your Discord Bot Token here",
 
     /* DEFAULT GUILD CONFIGURATION */
     guildConf: {
         language: "english",
-        prefix: "p!"
+        prefix: "disc!"
     },
     
     /* THE MONGODB URL */
@@ -14,18 +14,18 @@ module.exports = {
 
     /* EMOJIS STRINGS LIKE <:emojiName:emojiID> */
     emojis: {
-        success: "<:success:668013533266575364>",
-        error: "<a:loading:668013532612395008>",
-        loading: "<:error:668013531483996161>"
+        success: "XXXXXXXXX",
+        error: "XXXXXXXXX",
+        loading: "XXXXXXXXX"
     },
 
     /* ARRAY OF BOT'S OWNERS IDs */
-    owners: ["652145085999349791"],
+    owners: [],
 
     /* EMBED CONFIGURATION */
     embed: {
-        color: "#2BFAFA",
-        footer: "Perry | By ShadowV"
+        color: "#FF0000",
+        footer: "Discbot | Open source Discord bot template"
     },
 
     /* STATUS LIST (Playing to... or listen to...) */
@@ -34,11 +34,11 @@ module.exports = {
         list: [
             {
                 type: "PLAYING",
-                content: "sur {guildsCount} serveurs!"
+                content: "On {guildsCount} servers!"
             },
             {
                 type: "LISTENING",
-                content: "{usersCount} utilisateurs"
+                content: "{usersCount} users"
             }
         ]
     }
