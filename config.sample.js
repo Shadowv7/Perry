@@ -6,7 +6,7 @@ module.exports = {
     /* DEFAULT GUILD CONFIGURATION */
     guildConf: {
         language: "english",
-        prefix: "disc!"
+        prefix: "p!"
     },
     
     /* THE MONGODB URL */
@@ -24,8 +24,8 @@ module.exports = {
 
     /* EMBED CONFIGURATION */
     embed: {
-        color: "#FF0000",
-        footer: "Discbot | Open source Discord bot template"
+        color: "#2BFAFA",
+        footer: "Perry | By ShadowV"
     },
 
     /* STATUS LIST (Playing to... or listen to...) */
@@ -34,11 +34,11 @@ module.exports = {
         list: [
             {
                 type: "PLAYING",
-                content: "On {guildsCount} servers!"
+                content: "sur {guildsCount} serveurs!"
             },
             {
                 type: "LISTENING",
-                content: "{usersCount} users"
+                content: "{usersCount} utilisateurs"
             }
         ]
     }
