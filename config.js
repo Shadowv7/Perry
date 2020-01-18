@@ -1,7 +1,7 @@
 module.exports = {
 
     /* YOUR DISCORD BOT TOKEN */
-    token: "Your Discord Bot Token here",
+    token: "NjYzNDYzNzUyNTE1MTkwNzk1.XiM_mg.7WGzF2JvTjc0zCEIcBhKoK2tRUo",
 
     /* DEFAULT GUILD CONFIGURATION */
     guildConf: {
@@ -15,8 +15,8 @@ module.exports = {
     /* EMOJIS STRINGS LIKE <:emojiName:emojiID> */
     emojis: {
         success: "<:success:668110577947770894>",
-        error: "XXXXXXXXX",
-        loading: "XXXXXXXXX"
+        error: "<:error:668110576660250636>",
+        loading: "<a:loading:668110577163304966>"
     },
 
     /* ARRAY OF BOT'S OWNERS IDs */
