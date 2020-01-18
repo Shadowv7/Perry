@@ -8,7 +8,7 @@ class Userinfos extends Command {
       name: "userinfos",
       description: language => language.get("USERINFOS_DESCRIPTION"),
       usage: language => language.get("USERINFOS_USAGE"),
-      examples: language => language.get("USERINFOS_EXAMPLES"),
+      examples: language => language.get("USERINFOS_EXEMPLES"),
       enabled: true,
       aliases: ["ui"],
       clientPermissions: [],

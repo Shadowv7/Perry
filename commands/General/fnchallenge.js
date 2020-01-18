@@ -10,7 +10,7 @@ class Challenge extends Command {
       name: "fnchallenge",
       description: language => language.get("FN_CHALLENGE_DESCRIPTION"),
       usage: language => language.get("FN_CHALLENGE_USAGE"),
-      examples: language => language.get("FN_CHALLENGE_EXAMPLES"),
+      examples: language => language.get("FN_CHALLENGE_EXEMPLES"),
       enabled: true,
       aliases: [],
       clientPermissions: [],

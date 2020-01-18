@@ -8,7 +8,7 @@ class Eval extends Command {
       name: "eval",
       description: language => language.get("EVAL_DESCRIPTION"),
       usage: language => language.get("EVAL_USAGE"),
-      examples: language => language.get("EVAL_EXAMPLES"),
+      examples: language => language.get("EVAL_EXEMPLES"),
       enabled: true,
       aliases: ["e"],
       clientPermissions: [],

@@ -10,7 +10,7 @@ class Shop extends Command {
       name: "fnshop",
       description: language => language.get("FN_STORE_DESCRIPTION"),
       usage: language => language.get("FN_STORE_USAGE"),
-      examples: language => language.get("FN_STORE_EXAMPLES"),
+      examples: language => language.get("FN_STORE_EXEMPLES"),
       enabled: true,
       aliases: [],
       clientPermissions: [],

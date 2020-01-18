@@ -8,7 +8,7 @@ class Perm extends Command {
       name: "permissions",
       description: language => language.get("PERMS_DESCRIPTION"),
       usage: language => language.get("PERMS_USAGE"),
-      examples: language => language.get("PERMS_EXAMPLES"),
+      examples: language => language.get("PERMS_EXEMPLES"),
       enabled: true,
       aliases: ["perms"],
       clientPermissions: [],

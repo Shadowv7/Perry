@@ -36,14 +36,14 @@ module.exports = class {
       /* PING COMMAND */
       PING_DESCRIPTION: "Displays the bot latency!",
       PING_USAGE: "ping",
-      PING_EXAMPLES: "$ping",
+      PING_EXEMPLES: "$ping",
       PING_WAIT: `${e.loading} | Pinging...`,
       PING_RESULT: ms => `${e.success} | Pong! Latency: \`${ms}\` ms!`,
 
       /* EVAL COMMAND */
       EVAL_DESCRIPTION: "Evaluate a code !",
       EVAL_USAGE: "eval <code>",
-      EVAL_EXAMPLES: "$eval message.reply('eval')",
+      EVAL_EXEMPLES: "$eval message.reply('eval')",
 
       /* BUILD EMOJIS COMMAND */
       BUILD_EMOJIS_DESCRIPTION:

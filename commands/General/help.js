@@ -12,7 +12,7 @@ class Help extends Command {
       // Some command informations to display in the help command
       description: language => language.get("HELP_DESCRIPTION"),
       usage: language => language.get("HELP_USAGE"),
-      examples: language => language.get("HELP_EXAMPLES"),
+      examples: language => language.get("HELP_EXEMPLES"),
       // The other names that can trigger the command
       aliases: ["h"],
       // The permissions needed by the bot to run the command

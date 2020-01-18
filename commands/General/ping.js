@@ -12,7 +12,7 @@ class Ping extends Command {
             // Some command informations to display in the help command
             description: (language) => language.get("PING_DESCRIPTION"),
             usage: (language) => language.get("PING_USAGE"),
-            examples: (language) => language.get("PING_EXAMPLES"),
+            examples: (language) => language.get("PING_EXEMPLES"),
             // The other names that can trigger the command
             aliases: [ "pong", "latency" ],
             // The permissions needed by the bot to run the command

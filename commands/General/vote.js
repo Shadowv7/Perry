@@ -7,7 +7,7 @@ class Vote extends Command {
       name: "vote",
       description: language => language.get("BOTINFOS_DESCRIPTION"),
       usage: language => language.get("BOTINFOS_USAGE"),
-      examples: language => language.get("BOTINFOS_EXAMPLES"),
+      examples: language => language.get("BOTINFOS_EXEMPLES"),
       enabled: true,
       aliases: [],
       clientPermissions: [],
