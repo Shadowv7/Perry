@@ -20,7 +20,7 @@ module.exports = {
     },
 
     /* ARRAY OF BOT'S OWNERS IDs */
-    owners: [],
+    owners: ["652145085999349791"],
 
     /* EMBED CONFIGURATION */
     embed: {

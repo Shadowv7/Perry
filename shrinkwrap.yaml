@@ -1,6 +1,7 @@
 dependencies:
   better-sqlite-pool: 0.2.3
   chalk: 3.0.0
+  common-tags: 1.8.0
   discord.js: github.com/discordjs/discord.js/69c79a4136619e4dcacfffb935aa9bd60aa2081c
   enmap: 5.2.4
   fortnite: 4.3.2
@@ -97,6 +98,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
+  /common-tags/1.8.0:
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
   /debug/3.1.0:
     dependencies:
       ms: 2.0.0
@@ -421,6 +428,7 @@ shrinkwrapVersion: 3
 specifiers:
   better-sqlite-pool: ^0.2.3
   chalk: ^3.0.0
+  common-tags: ^1.8.0
   discord.js: 'github:discordjs/discord.js'
   enmap: ^5.2.4
   fortnite: ^4.3.2

@@ -4,13 +4,13 @@ const { stripIndents } = require("common-tags");
 const Client = require("fortnite");
 const ft = new Client("8e3e5c23-3560-4ad0-8986-8c21821e6245");
 const Command = require("../../structures/Command.js");
-class Challenge extends Command {
+class Shop extends Command {
   constructor(client) {
     super(client, {
-      name: "fnchallenge",
-      description: language => language.get("FN_CHALLENGE_DESCRIPTION"),
-      usage: language => language.get("FN_CHALLENGE_USAGE"),
-      examples: language => language.get("FN_CHALLENGE_EXAMPLES"),
+      name: "fnshop",
+      description: language => language.get("FN_STORE_DESCRIPTION"),
+      usage: language => language.get("FN_STORE_USAGE"),
+      examples: language => language.get("FN_STORE_EXAMPLES"),
       enabled: true,
       aliases: [],
       clientPermissions: [],
@@ -27,7 +27,7 @@ class Challenge extends Command {
     
     const embed = new MessageEmbed()
       .setColor("#2BFAFA")
-      .setTitle("•__Boutique de Fortnite__•")
+      .setTitle("•__Fortnite Store__•")
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp();
 
@@ -38,9 +38,9 @@ class Challenge extends Command {
     store.forEach(el => {
       embed.addField(
         el.name,
-        stripIndents`- \`Rareté\` : ${el.rarity}
-                - \`Prix\` :  ${el.vbucks} v-bucks
-                - \`Image:\` [Cliquez ici](${el.image})`,
+        stripIndents`- \`${message.language.get("FN_STORE_HEADING")[0]}\` : ${el.rarity}
+                - \`${message.language.get("FN_STORE_HEADING")[1]}\` :  ${el.vbucks} v-bucks
+                - \`${message.language.get("FN_STORE_HEADING")[2]}:\` [${message.language.get("FN_STORE_HEADING")[3]}](${el.image})`,
         true 
       );
     });
@@ -48,3 +48,4 @@ class Challenge extends Command {
     message.channel.send(embed);
   }
 }
+module.exports = Shop;

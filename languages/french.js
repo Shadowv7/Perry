@@ -104,7 +104,12 @@ module.exports = class {
       /* FN_CHALLENGE */
       FN_CHALLENGE_DESCRIPTION : "Affiche les défis de fortnite!" ,
       FN_CHALLENGE_USAGE: "fnchallenge",
-      FN_CHALLENGE_EXEMPLES: "$fnchallenge"
+      FN_CHALLENGE_EXEMPLES: "$fnchallenge",
+      /* FN_STORE*/
+      FN_STORE_DESCRIPTION : "Affiche la boutique de Fortnite!",
+      FN_STORE_USAGE: "fnshop",
+      FN_STORE_EXEMPLES: "$fnshop",
+      FN_STORE_HEADING: ["Rareté","Prix","Image","Cliquez ici"]
     };
   }
   /**
