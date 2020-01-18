@@ -1,27 +1,31 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
-  "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "server.js",
+  "name": "discbot",
+  "version": "1.0.0",
+  "description": "🚀 Powerful discord bot template, for a solid structure!",
+  "main": "discbot.js",
   "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "engines": {
-    "node": "10.x"
+    "test": "node discbot.js"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "type": "git",
+    "url": "git+https://github.com/Androz2091/Discbot.js.git"
   },
-  "license": "MIT",
   "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+    "template",
+    "discord.js",
+    "bot",
+    "structure"
+  ],
+  "author": "Androz2091",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Androz2091/Discbot.js/issues"
+  },
+  "homepage": "https://github.com/Androz2091/Discbot.js#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "discord.js": "github:discordjs/discord.js",
+    "json-beautify": "^1.1.1",
+    "mongoose": "^5.7.1"
+  }
 }
