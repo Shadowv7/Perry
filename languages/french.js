@@ -40,7 +40,10 @@ module.exports = class {
       PING_WAIT: `${e.loading} | Ping en cours...`,
       PING_RESULT: ms => `${e.success} | Pong ! Latence: \`${ms}\` ms !`,
       
-      /* EVAL COMMAND/*
+      /* EVAL COMMAND */
+      EVAL_DESCRIPTION: "Evalue un code !",
+      EVAL_USAGE: "eval <code>",
+      EVAL_EXAMPLES: "$eval message.reply('eval')",
       
       
       /* BUILD EMOJIS COMMAND */
@@ -66,7 +69,8 @@ module.exports = class {
       ],
       HELP_NO_ALIASES: "Aucun alias.",
       HELP_ERR_NOT_FOUND: cmd =>
-        `${e.error} | Commande \`${cmd}\` introuvable !`
+        `${e.error} | Commande \`${cmd}\` introuvable !`,
+      HELP_CATEGORIES : ["""<:general:667626887014514698> Général"]
     };
   }
 

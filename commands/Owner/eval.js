@@ -10,7 +10,7 @@ class Eval extends Command {
       usage: language => language.get("EVAL_USAGE"),
       examples: language => language.get("EVAL_EXAMPLES"),
       enabled: true,
-      aliases: [],
+      aliases: ["e"],
       clientPermissions: [],
       permLevel: 4,
       cooldown: 5000,
