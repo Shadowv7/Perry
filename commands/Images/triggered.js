@@ -1,6 +1,6 @@
 const Command = require("../../structures/Command.js");
 const { get } = require("axios");
-const endpoint = "blur";
+const endpoint = "triggered";
 const { getMember } = require("../../functions.js");
 
 class Endpoint extends Command {
@@ -39,7 +39,7 @@ class Endpoint extends Command {
         files: [
           {
             attachment: data.data,
-            name: endpoint + ".png"
+            name: endpoint + ".gif"
           }
         ]
       });

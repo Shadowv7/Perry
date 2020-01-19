@@ -1,6 +1,6 @@
 const Command = require("../../structures/Command.js");
 const { get } = require("axios");
-const endpoint = "blur";
+const endpoint = "sepia";
 const { getMember } = require("../../functions.js");
 
 class Endpoint extends Command {

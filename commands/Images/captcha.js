@@ -1,6 +1,6 @@
 const Command = require("../../structures/Command.js");
 const { get } = require("axios");
-const endpoint = "blur";
+const endpoint = "captcha";
 const { getMember } = require("../../functions.js");
 
 class Endpoint extends Command {
@@ -30,11 +30,12 @@ class Endpoint extends Command {
           "prefix"
         )}${message.language.get("IMAGE_USAGE", endpoint)}`
       );
-    let url = member.user.displayAvatarURL({ format: "png", size: 2048 });
-
-    get(`https://eclyssia-api.tk/api/v1/${endpoint}?url=${url}`, {
-      responseType: "arraybuffer"
-    }).then(data => {
+    let url = member.user.displayAvatarURL({ format: "jpg", size: 2048 });
+    let username = member.user.username;
+    get(
+      `https://eclyssia-api.tk/api/v1/${endpoint}?url=${url}&username=${username}`,
+      { responseType: "arraybuffer" }
+    ).then(data => {
       message.channel.send({
         files: [
           {
