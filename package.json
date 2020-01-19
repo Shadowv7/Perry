@@ -33,6 +33,7 @@
     "fortnite": "^4.3.2",
     "common-tags": "^1.8.0",
     "axios": "^0.19.1",
-    "ascii-art": "^2.5.0"
+    "ascii-art": "^2.5.0",
+    "math-expression-evaluator": "^1.2.17"
   }
 }

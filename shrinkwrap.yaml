@@ -8,6 +8,7 @@ dependencies:
   enmap: 5.2.4
   fortnite: 4.3.2
   json-beautify: 1.1.1
+  math-expression-evaluator: 1.2.17
   moment: 2.24.0
   mongoose: 5.8.9
 packages:
@@ -980,6 +981,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-QoL30g3Il3rBULncqwRHUVQtzyKU9o5i3qqfZCiE5prRurnKAXTZp0r4zYCECqo7gQDmGg8MKVuYJmVLtAIuVQ==
+  /math-expression-evaluator/1.2.17:
+    dev: false
+    resolution:
+      integrity: sha1-3oGf282E3M2PrlnGrreWFbnSZqw=
   /memory-pager/1.5.0:
     dev: false
     optional: true
@@ -1761,5 +1766,6 @@ specifiers:
   enmap: ^5.2.4
   fortnite: ^4.3.2
   json-beautify: ^1.1.1
+  math-expression-evaluator: ^1.2.17
   moment: ^2.24.0
   mongoose: ^5.7.1

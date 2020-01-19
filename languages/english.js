@@ -141,7 +141,16 @@ module.exports = class {
       ASCII_EXEMPLES: "$ascii Shadow is the best!",
       ASCII_NO_TEXT: `${e.error} | Please enter a message !`,
       ASCII_TEXT_LENGTH: `${e.error} | Your message is too long !`,
-      ASCII_ERROR: `${e.error} | Check that your message contains only UTF-8 characters! `
+      ASCII_ERROR: `${e.error} | Check that your message contains only UTF-8 characters! `,
+           /* CALCUL */
+      CALCUL_DESCRIPTION: "Solve your expression!",
+      CALCUL_USAGE: "calcul <calculation>",
+      CALCUL_EXEMPLES: "$calcul 1+1",
+      CALCUL_NO_CALCUL : `${e.error} | Please enter the calculation to solve!`,
+      CALCUL_0 : `${e.error} | It is impossible to divide a number by 0!`,
+      CALCUL_ERROR: `${e.error} | I can't solve your calculation !`,
+      CALCUL_RESULT: "•__Result__•",
+      CALCUL_CALCUL: "•__Calculation__•"
     };
   }
 

@@ -144,8 +144,14 @@ module.exports = class {
       ASCII_TEXT_LENGTH: `${e.error} | Votre message est trop long !`,
       ASCII_ERROR: `${e.error} | Vérifiez que votre message contient que des caractères UTF-8 !`,
       /* CALCUL */
-      CALCUL_DESCRIPTION: "Résouds votre expréssion !",
-      CALCUL_USAGE: ""
+      CALCUL_DESCRIPTION: "Résout votre expréssion !",
+      CALCUL_USAGE: "calcul <calcul>",
+      CALCUL_EXEMPLES: "$calcul 1+1",
+      CALCUL_NO_CALCUL : `${e.error} | Veuillez saisir le calcul à résoudre !`,
+      CALCUL_0 : `${e.error} | Il est impossible de diviser un nombre par 0 !`,
+      CALCUL_ERROR: `${e.error} | Je n'arrive pas à résoudre votre calcul !`,
+      CALCUL_RESULT: "•__Résultat__•",
+      CALCUL_CALCUL: "•__Calcul__•"
     };
   }
   /**

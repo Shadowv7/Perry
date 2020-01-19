@@ -27,8 +27,8 @@ class Calcul extends Command {
       let result = math.eval(args.join(" "));
       result = Math.round(result * 1000);
       result = result / 1000;
-      if (Number.isNaN(result))
-        return message.reply(message.langage.get("CALCUL_/0"));
+      if (["/0"])
+        return message.reply(message.langage.get("CALCUL_0"));
       let embed = new Discord.MessageEmbed()
         .setColor(0x2BFAFA)
         .setAuthor(
@@ -36,7 +36,7 @@ class Calcul extends Command {
           this.client.user.displayAvatarURL({ format: "png" })
         )
         .addField(
-          "•__Calcul__•",
+          message.language.get("CALCUL_CALCUL"),
           `\`\`\`Js\n${args
             .join("")
             .replace(/[x]/gi, "*")
