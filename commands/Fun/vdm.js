@@ -35,10 +35,11 @@ class Joke extends Command {
         }
       }).then(joke => {
         if (joke.data.status === 200) {
+          console.log(joke)
           embed
             .setTitle("•__Vie de merde__•")
             .setDescription(
-              joke.data.joke.question + "\n||" + joke.data.joke.answer + "||"
+              joke.data.vdm.content// + "\n||" + joke.data.joke.answer + "||"
             )
             .setTimestamp()
             .setFooter(
@@ -63,7 +64,7 @@ class Joke extends Command {
           embed
             .setTitle("•__Shit of life__•")
             .setDescription(
-              joke.data.joke.question + "\n||" + joke.data.joke.answer + "||"
+              joke.data.vdm.content// + "\n||" + joke.data.joke.answer + "||"
             )
             .setTimestamp()
             .setFooter(

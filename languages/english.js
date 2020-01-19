@@ -168,13 +168,13 @@ module.exports = class {
       JOKE_USAGE: "joke",
       JOKE_EXEMPLES: "$joke",
       /* JOKE OF DAY */
-      JOD_DESCRIPTION: "Fait la blague du jour!",
-      JOD_USAGE: "bdj",
-      JOD_EXEMPLES: "bdj",
+      JOD_DESCRIPTION: "Make the joke at the day !",
+      JOD_USAGE: "jod",
+      JOD_EXEMPLES: "jod",
       /* VDM */
-      VDM_DESCRIPTION: "Raconte une vie de merde!",
-      VDM_USAGE: "vdm",
-      VDM_EXEMPLES: "vdm"
+      VDM_DESCRIPTION: "Tell a shit of life!",
+      VDM_USAGE: "shitoflife",
+      VDM_EXEMPLES: "shitoflife"
     };
   }
 
