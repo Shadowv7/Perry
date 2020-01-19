@@ -117,9 +117,18 @@ module.exports = class {
       FN_STATS_NO_USER: `${e.error} | Please enter the nickname of a Fortnite player!`,
       FN_STATS_NO_PLATFORM: `${e.error} | Please enter the platform!`,
       FN_STATS_USER_NOT_FOUND: `${e.error} | I can't find this player!`,
-      FN_STATS_PLATFORM_NOT_FOUND: platform => `${e.error} | The platform \`${platform}\` is not correct!`,
+      FN_STATS_PLATFORM_NOT_FOUND: platform =>
+        `${e.error} | The platform \`${platform}\` is not correct!`,
       FN_STATS_TITLE: user => `Statistics Fortnite of ${user}`,
-      FN_STATS_HEADING: ["Win(s)", "Kill(s)", "Game(s) played", "K/D"]
+      FN_STATS_HEADING: ["Win(s)", "Kill(s)", "Game(s) played", "K/D"],
+      /* MINECRAFT */
+      MINECRAFT_DESCRIPTION:
+        "Displays informations for a Minecraft server !",
+      MINECRAFT_USAGE: "minecraft <ip>",
+      MINECRAFT_EXEMPLES: "$minecraft funcraft.fr",
+      MINECRAFT_NO_IP: `${e.error} | Please enter the adress ip of a Minecraft server!`,
+      MINECRAFT_ERROR: `${e.error} | I can't find thid server !`,
+      MINECRAFT_HEADING: [":star: Adress IP", "👨‍👩‍👧‍👦 Players"]
     };
   }
 

@@ -114,14 +114,21 @@ module.exports = class {
 
       FN_STATS_DESCRIPTION: "Affiche les statistiques d'un joueur Fortnite !",
       FN_STATS_USAGE: "fnstats <platform> <pseudo>",
-      FN_STATS_EXEMPLES: "fnstats psn Shadow",
+      FN_STATS_EXEMPLES: "$fnstats psn Shadow",
       FN_STATS_NO_USER: `${e.error} | Veuillez saisir le pseudo d'un joueur Fortnite !`,
       FN_STATS_NO_PLATFORM: `${e.error} | Veuillez saisir la platform !`,
       FN_STATS_USER_NOT_FOUND: `${e.error} | Je ne trouve pas ce joueur !`,
       FN_STATS_PLATFORM_NOT_FOUND: platform =>
         `${e.error} | La platforme \`${platform}\` n'est pas correcte !`,
       FN_STATS_TITLE: user => `Statistiques Fortnite de ${user}`,
-      FN_STATS_HEADING: ["Victoire(s)", "Tué(s)", "Partie(s)", "T/M"]
+      FN_STATS_HEADING: ["Victoire(s)", "Tué(s)", "Partie(s)", "T/M"],
+      /* MINECRAFT */
+      MINECRAFT_DESCRIPTION: "Affiche les informations d'un serveur Minecraft !",
+      MINECRAFT_USAGE: "minecraft <ip>",
+      MINECRAFT_EXEMPLES: "$minecraft funcraft.fr",
+      MINECRAFT_NO_IP: `${e.error} | Veuillez saisir l'ip d'un serveur Minecraft !`,
+      MINECRAFT_ERROR: `${e.error} | Je n'arrive pas à trouver ce serveur !`,
+      MINECRAFT_HEADING: [":star: Adresse IP","👨‍👩‍👧‍👦 Joueurs"]
     };
   }
   /**

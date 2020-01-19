@@ -31,6 +31,7 @@
     "enmap": "^5.2.4",
     "moment": "^2.24.0",
     "fortnite": "^4.3.2",
-    "common-tags": "^1.8.0"
+    "common-tags": "^1.8.0",
+    "axios": "^0.19.1"
   }
 }

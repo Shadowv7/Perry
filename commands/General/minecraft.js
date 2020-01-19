@@ -25,7 +25,7 @@ class Minecraft extends Command {
     const ip = args.join(" ");
     if (!ip)
       return message.reply(
-        "Veuillez préciser l'adresse IP d'un serveur Minecraft."
+        message.language.get("MINECRAFT_NO_IP")
       );
     axios({
       method: "get",
@@ -37,9 +37,9 @@ class Minecraft extends Command {
       embed
         //.setThumbnail(data.data.icon)
         .setColor("2bfafa")
-        .addField(message.language.get("MINECRAFT_HEADING", "```\n" + ip + "```")
+        .addField(message.language.get("MINECRAFT_HEADING")[0], "```\n" + ip + "```")
         .addField(
-          "👨‍👩‍👧‍👦 Joueurs",
+          message.language.get("MINECRAFT_HEADING")[1],
           "```\n" +
             data.data.players.online +
             "/" +
