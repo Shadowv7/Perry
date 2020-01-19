@@ -147,7 +147,7 @@ module.exports = class {
       CALCUL_USAGE: "calcul <calculation>",
       CALCUL_EXEMPLES: "$calcul 1+1",
       CALCUL_NO_CALCUL : `${e.error} | Please enter the calculation to solve!`,
-      CALCUL_0 : `${e.error} | It is impossible to divide a number by 0!`,
+      CALCUL_ZERO : `${e.error} | It is impossible to divide a number by 0!`,
       CALCUL_ERROR: `${e.error} | I can't solve your calculation !`,
       CALCUL_RESULT: "•__Result__•",
       CALCUL_CALCUL: "•__Calculation__•"

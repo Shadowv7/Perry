@@ -27,8 +27,8 @@ class Calcul extends Command {
       let result = math.eval(args.join(" "));
       result = Math.round(result * 1000);
       result = result / 1000;
-      if (["/0"])
-        return message.reply(message.langage.get("CALCUL_0"));
+      if (message.content.includes("/0"))
+        return message.reply(message.langage.get("CALCUL_ZERO"));
       let embed = new Discord.MessageEmbed()
         .setColor(0x2BFAFA)
         .setAuthor(
