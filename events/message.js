@@ -18,7 +18,7 @@ module.exports = class {
 
     data.config = this.client.config;
     //database
-    this.client.settings.ensure(message.guild.id,{prefix: "p!",language: "english"})
+    this.client.settings.ensure(`${message.guild.id}`,{prefix: "p!",language: "english"})
     // Gets language
     let Language = require(`../languages/${this.client.settings.get(message.guild.id,"language")}.js`);
     message.language = new Language();
