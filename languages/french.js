@@ -128,7 +128,13 @@ module.exports = class {
       MINECRAFT_EXEMPLES: "$minecraft funcraft.fr",
       MINECRAFT_NO_IP: `${e.error} | Veuillez saisir l'ip d'un serveur Minecraft !`,
       MINECRAFT_ERROR: `${e.error} | Je n'arrive pas à trouver ce serveur !`,
-      MINECRAFT_HEADING: [":star: Adresse IP","👨‍👩‍👧‍👦 Joueurs"]
+      MINECRAFT_HEADING: [":star: Adresse IP","👨‍👩‍👧‍👦 Joueurs"],
+      /* SKIN */
+      SKIN_DESCRIPTION: "Affiche le skin d'un joueur Minecraft !",
+      SKIN_USAGE: "skin <pseudo>",
+      SKIN_EXEMPLES: "$skin Shadow",
+      SKIN_NICKNAME_LENGTH: `${e.error} | Le pseudo est trop long !`,
+      SKIN_NO_NICKNAME: `${e.error} | Veuillez saisir le pseudo d'un joueur Minecraft !`
     };
   }
   /**
