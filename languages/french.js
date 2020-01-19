@@ -151,7 +151,21 @@ module.exports = class {
       CALCUL_ZERO : `${e.error} | Il est impossible de diviser un nombre par 0 !`,
       CALCUL_ERROR: `${e.error} | Je n'arrive pas à résoudre votre calcul !`,
       CALCUL_RESULT: "•__Résultat__•",
-      CALCUL_CALCUL: "•__Calcul__•"
+      CALCUL_CALCUL: "•__Calcul__•",
+      /* 8BALL */
+      BALL_DESCRIPTION : "Répond aléatoirement à votre question !",
+      BALL_USAGE: "8ball <question>",
+      BALL_EXEMPLES: "$8ball Salut , ça va ?",
+      BALL_RESPONSE:  [
+      "Bien sûr.",
+      "Je ne sais pas.",
+      "Oui.",
+      "Non.",
+      "Impossible !"
+    ],
+      BALL_NO_TEXT : `${e.error} | Veuillez poser une question contenant au moins deux mots !`,
+      BALL_NO_QUESTION: `${e.error} | Veuillez poser une **question** !`
+       
     };
   }
   /**

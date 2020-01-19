@@ -142,15 +142,28 @@ module.exports = class {
       ASCII_NO_TEXT: `${e.error} | Please enter a message !`,
       ASCII_TEXT_LENGTH: `${e.error} | Your message is too long !`,
       ASCII_ERROR: `${e.error} | Check that your message contains only UTF-8 characters! `,
-           /* CALCUL */
+      /* CALCUL */
       CALCUL_DESCRIPTION: "Solve your expression!",
       CALCUL_USAGE: "calcul <calculation>",
       CALCUL_EXEMPLES: "$calcul 1+1",
-      CALCUL_NO_CALCUL : `${e.error} | Please enter the calculation to solve!`,
-      CALCUL_ZERO : `${e.error} | It is impossible to divide a number by 0!`,
+      CALCUL_NO_CALCUL: `${e.error} | Please enter the calculation to solve!`,
+      CALCUL_ZERO: `${e.error} | It is impossible to divide a number by 0!`,
       CALCUL_ERROR: `${e.error} | I can't solve your calculation !`,
       CALCUL_RESULT: "•__Result__•",
-      CALCUL_CALCUL: "•__Calculation__•"
+      CALCUL_CALCUL: "•__Calculation__•" 
+      /* 8BALL */,
+      BALL_DESCRIPTION: "Répond aléatoirement à votre question !",
+      BALL_USAGE: "8ball <question>",
+      BALL_EXEMPLES: "$8ball Hello , how are you ?",
+      BALL_RESPONSE: [
+        "Bien sûr.",
+        "Je ne sais pas.",
+        "Oui.",
+        "Non.",
+        "Impossible !"
+      ],
+      BALL_NO_TEXT: `${e.error} | Veuillez poser une question contenant au moins deux mots !`,
+      BALL_NO_QUESTION: `${e.error} | Veuillez poser une **question** !`
     };
   }
 
