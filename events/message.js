@@ -5,7 +5,7 @@ module.exports = class {
   constructor(client) {
     this.client = client;
   }
-
+//settingd
   async run(message) {
     const data = {};
 

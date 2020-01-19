@@ -27,7 +27,7 @@ class Eval extends Command {
           .replace(/`/g, "`" + String.fromCharCode(8203))
           .replace(/@/g, "@" + String.fromCharCode(8203));
       else return text;
-    };
+    }
     try {
       const code = args.join(" ");
       let evaled = eval(code);

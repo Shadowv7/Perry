@@ -24,13 +24,13 @@ class Skin extends Command {
       .join(" ")
       .split("")
       .filter(r =>
-        "abcdefghijklmnopqrstuvwxyz1234567890_-".includes(
+        "abcdefghijklmnopqrstuvwxyz1234567890_- ".includes(
           r.toLowerCase()
         )
       )
       .join("")
     if(!text) return message.reply(message.language.get("SKIN_NO_NICKNAME"))
-    if(text.length > 20) return message.reply(message.language.get("SKIN_NIKCNAME_LENGTH"))
+    if(text.length > 20) return message.reply(message.language.get("SKIN_NICKNAME_LENGTH"))
     const embed = new Discord.MessageEmbed()
     .setColor(0x2BFAFA)
     .setImage(`https://minotar.net/armor/body/${text}/100.png`)
