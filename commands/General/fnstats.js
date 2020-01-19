@@ -32,17 +32,17 @@ class Fortnite extends Command {
 
     if (!args[0])
       return message.channel.send(
-        `Avez-vous saisit la plateform ? Utilisation: \`${this.client.settings.get(message.guild.id,"prefix")}fortnite <platform> <pseudo>\``
+        message.language.get("FN_STATS_NO_PLATFORM")
       );
 
     if (
       platform &&
       !["psn", "PSN", "pc", "PC", "xbl", "XBL"].includes(platform)
     )
-      return message.reply(":x: | Veuillez saisir une plateform correcte!");
+      return message.reply(message.language.get("FN_STATS_PLATFORM_NOT_FOUND",args[0]));
     if (!args.slice(1).join(" "))
       return message.channel.send(
-        ":x: | Veuillez préciser le nom d'un joueur de Fortnite"
+       message.language.get("FN_STATS_NO_USER")
       );
     fortnite
       .user(username, platform)
@@ -71,21 +71,21 @@ class Fortnite extends Command {
           )
           .addField(
             "👥 Duo ❯",
-            `\n **${solo.wins || 0}** ${categories[0]}\n**${swinrate ||
-              0} %** ${categories[0]}\n**${solo.kills ||
-              0}** ${categories[1]}\n**${solo.matches || 0}** ${categories[2]}\n**${solo.kd ||
+            `\n **${duo.wins || 0}** ${categories[0]}\n**${dwinrate ||
+              0} %** ${categories[0]}\n**${duo.kills ||
+              0}** ${categories[1]}\n**${duo.matches || 0}** ${categories[2]}\n**${duo.kd ||
               0}** ${categories[3]}`,
             true
           )
           .addField(
             "👨‍👨‍👧‍👦 Squad ❯",
-            `\n **${squad.wins || 0}** Victoire(s)\n**${sqwinrate ||
-              0} %** Victoire(s)\n**${squad.kills ||
-              0}** Kill(s)\n**${squad.matches || 0}** Partie(s)\n**${squad.kd ||
-              0}** K/D`,
+            `\n **${squad.wins || 0}** ${categories[0]}\n**${sqwinrate ||
+              0} %** ${categories[0]}\n**${squad.kills ||
+              0}** ${categories[1]}\n**${squad.matches || 0}** ${categories[2]}\n**${squad.kd ||
+              0}** ${categories[3]}`,
             true
           )
-          .setTitle("Statistique Fortnite de " + data.username)
+          .setTitle(message.language.get("FN_STATS_TITLE",data.username))
           .setColor(0x2bfafa)
           .setThumbnail(
             "https://cdn.glitch.com/dbf12b4c-377e-44c3-97b7-8c3c83dcd80e%2F8e1abc97-2117-4406-946c-517b52daf2b0.image.jpeg?v=1575899784269"
@@ -99,7 +99,7 @@ class Fortnite extends Command {
         message.channel.send(embed);
       })
       .catch(err => {
-        message.reply(":x: | Ce joueur est introuvable.");
+        message.reply(message.language.get("FN_STATS_USER_NOT_FOUND"));
         console.error(err);
       });
   }
