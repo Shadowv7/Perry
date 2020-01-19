@@ -6,7 +6,7 @@ class Help extends Command {
     super(client, {
       // The name of the command
       name: "help",
-//      category: language => language.get("HELP_CATEGORIES")[4],
+      //      category: language => language.get("HELP_CATEGORIES")[4],
       // Whether the command is enabled, or not
       enabled: true,
       // Some command informations to display in the help command
