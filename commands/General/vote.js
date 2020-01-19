@@ -10,7 +10,7 @@ class Vote extends Command {
       examples: language => language.get("BOTINFOS_EXEMPLES"),
       enabled: true,
       aliases: [],
-      clientPermissions: [],
+      clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,

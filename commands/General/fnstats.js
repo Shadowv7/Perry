@@ -10,7 +10,7 @@ class Fortnite extends Command {
       examples: language => language.get("FNSTATS_EXEMPLES"),
       enabled: true,
       aliases: ["ft","fortnite"],
-      clientPermissions: [],
+      clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,

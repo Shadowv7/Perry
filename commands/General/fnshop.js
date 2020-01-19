@@ -13,7 +13,7 @@ class Shop extends Command {
       examples: language => language.get("FN_STORE_EXEMPLES"),
       enabled: true,
       aliases: [],
-      clientPermissions: [],
+      clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,
