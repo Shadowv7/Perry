@@ -123,12 +123,13 @@ module.exports = class {
       FN_STATS_TITLE: user => `Statistiques Fortnite de ${user}`,
       FN_STATS_HEADING: ["Victoire(s)", "Tué(s)", "Partie(s)", "T/M"],
       /* MINECRAFT */
-      MINECRAFT_DESCRIPTION: "Affiche les informations d'un serveur Minecraft !",
+      MINECRAFT_DESCRIPTION:
+        "Affiche les informations d'un serveur Minecraft !",
       MINECRAFT_USAGE: "minecraft <ip>",
       MINECRAFT_EXEMPLES: "$minecraft funcraft.fr",
       MINECRAFT_NO_IP: `${e.error} | Veuillez saisir l'ip d'un serveur Minecraft !`,
       MINECRAFT_ERROR: `${e.error} | Je n'arrive pas à trouver ce serveur !`,
-      MINECRAFT_HEADING: [":star: Adresse IP","👨‍👩‍👧‍👦 Joueurs"],
+      MINECRAFT_HEADING: [":star: Adresse IP", "👨‍👩‍👧‍👦 Joueurs"],
       /* SKIN */
       SKIN_DESCRIPTION: "Affiche le skin d'un joueur Minecraft !",
       SKIN_USAGE: "skin <pseudo>",
@@ -137,8 +138,8 @@ module.exports = class {
       SKIN_NO_NICKNAME: `${e.error} | Veuillez saisir le pseudo d'un joueur Minecraft !`,
       SKIN_ERROR: `${e.error} | Je ne trouve pas ce skin !`,
       /* ASCII */
-      ASCII_DESCRIPTION : "Met votre message en ascii !",
-      ASCII_USAGE : "ascii <texte>",
+      ASCII_DESCRIPTION: "Met votre message en ascii !",
+      ASCII_USAGE: "ascii <texte>",
       ASCII_EXEMPLES: "$ascii Shadow est le best!",
       ASCII_NO_TEXT: `${e.error} | Veuillez saisir un message !`,
       ASCII_TEXT_LENGTH: `${e.error} | Votre message est trop long !`,
@@ -147,25 +148,36 @@ module.exports = class {
       CALCUL_DESCRIPTION: "Résout votre expréssion !",
       CALCUL_USAGE: "calcul <calcul>",
       CALCUL_EXEMPLES: "$calcul 1+1",
-      CALCUL_NO_CALCUL : `${e.error} | Veuillez saisir le calcul à résoudre !`,
-      CALCUL_ZERO : `${e.error} | Il est impossible de diviser un nombre par 0 !`,
+      CALCUL_NO_CALCUL: `${e.error} | Veuillez saisir le calcul à résoudre !`,
+      CALCUL_ZERO: `${e.error} | Il est impossible de diviser un nombre par 0 !`,
       CALCUL_ERROR: `${e.error} | Je n'arrive pas à résoudre votre calcul !`,
       CALCUL_RESULT: "•__Résultat__•",
       CALCUL_CALCUL: "•__Calcul__•",
       /* 8BALL */
-      BALL_DESCRIPTION : "Répond aléatoirement à votre question !",
+      BALL_DESCRIPTION: "Répond aléatoirement à votre question !",
       BALL_USAGE: "8ball <question>",
       BALL_EXEMPLES: "$8ball Salut , ça va ?",
-      BALL_RESPONSE:  [
-      "Bien sûr.",
-      "Je ne sais pas.",
-      "Oui.",
-      "Non.",
-      "Impossible !"
-    ],
-      BALL_NO_TEXT : `${e.error} | Veuillez poser une question contenant au moins deux mots !`,
-      BALL_NO_QUESTION: `${e.error} | Veuillez poser une **question** !`
-       
+      BALL_RESPONSE: [
+        "Bien sûr.",
+        "Je ne sais pas.",
+        "Oui.",
+        "Non.",
+        "Impossible !"
+      ],
+      BALL_NO_TEXT: `${e.error} | Veuillez poser une question contenant au moins deux mots !`,
+      BALL_NO_QUESTION: `${e.error} | Veuillez poser une **question** !`,
+      /* JOKE */
+      JOKE_DESCRIPTION: "Fait une blague aléatoire !",
+      JOKE_USAGE: "blague",
+      JOKE_EXEMPLES: "$blague",
+      /* JOKE OF DAY */
+      JOD_DESCRIPTION: "Fait la blague du jour!",
+      JOD_USAGE: "bdj",
+      JOD_EXEMPLES: "bdj",
+      /* VDM */
+      VDM_DESCRIPTION: "Raconte une vie de merde!",
+      VDM_USAGE: "vdm",
+      VDM_EXEMPLES: "vdm"
     };
   }
   /**

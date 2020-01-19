@@ -4,13 +4,13 @@ const Command = require("../../structures/Command.js"),
 class Joke extends Command {
   constructor(client) {
     super(client, {
-      name: "joke",
-      description: language => language.get("JOKE_DESCRIPTION"),
-      usage: language => language.get("JOKE_USAGE"),
-      examples: language => language.get("JOKE_EXEMPLES"),
+      name: "shitoflife",
+      description: language => language.get("VDM_DESCRIPTION"),
+      usage: language => language.get("VDM_USAGE"),
+      examples: language => language.get("VDM_EXEMPLES"),
       enabled: true,
-      aliases: ["blague"],
-      clientPermissions: ["EMBED_LINKS"],
+      aliases: ["vdm"],
+      clientPermissions: [],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,
@@ -28,7 +28,7 @@ class Joke extends Command {
     if (this.client.settings.get(message.guild.id, "language") === "french") {
       axios({
         method: "get",
-        url: "https://blague.xyz/api/joke/random",
+        url: "https://blague.xyz/api/vdm/random",
         responseType: "application/JSON",
         headers: {
           Authorization: token
@@ -36,7 +36,7 @@ class Joke extends Command {
       }).then(joke => {
         if (joke.data.status === 200) {
           embed
-            .setTitle("•__Blague__•")
+            .setTitle("•__Vie de merde__•")
             .setDescription(
               joke.data.joke.question + "\n||" + joke.data.joke.answer + "||"
             )
@@ -53,7 +53,7 @@ class Joke extends Command {
     } else {
       axios({
         method: "get",
-        url: "https://blague.xyz/api/joke/random?lang=en",
+        url: "https://blague.xyz/api/vdm/random?lang=en",
         responseType: "application/JSON",
         headers: {
           Authorization: token
@@ -61,7 +61,7 @@ class Joke extends Command {
       }).then(joke => {
         if (joke.data.status === 200) {
           embed
-            .setTitle("•__Joke__•")
+            .setTitle("•__Shit of life__•")
             .setDescription(
               joke.data.joke.question + "\n||" + joke.data.joke.answer + "||"
             )
@@ -72,7 +72,7 @@ class Joke extends Command {
             );
           message.channel.send(embed);
         } else {
-          message.reply(`${this.client.config.emojis.error} | An error has occurred`);
+          message.reply(`${this.client.config.emojis.error} | An error has occurred !`);
         }
       });
     }

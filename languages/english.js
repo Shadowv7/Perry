@@ -150,9 +150,8 @@ module.exports = class {
       CALCUL_ZERO: `${e.error} | It is impossible to divide a number by 0!`,
       CALCUL_ERROR: `${e.error} | I can't solve your calculation !`,
       CALCUL_RESULT: "•__Result__•",
-      CALCUL_CALCUL: "•__Calculation__•" 
-      /* 8BALL */,
-      BALL_DESCRIPTION: "Randomly answers your question !",
+      CALCUL_CALCUL: "•__Calculation__•",
+      /* 8BALL */ BALL_DESCRIPTION: "Randomly answers your question !",
       BALL_USAGE: "8ball <question>",
       BALL_EXEMPLES: "$8ball Hello , how are you ?",
       BALL_RESPONSE: [
@@ -163,7 +162,19 @@ module.exports = class {
         "Impossible !"
       ],
       BALL_NO_TEXT: `${e.error} | Please ask a question containing at least two words !`,
-      BALL_NO_QUESTION: `${e.error} | Please ask a question **question** !`
+      BALL_NO_QUESTION: `${e.error} | Please ask a question **question** !`,
+      /* JOKE */
+      JOKE_DESCRIPTION: "Make a joke at random !",
+      JOKE_USAGE: "joke",
+      JOKE_EXEMPLES: "$joke",
+      /* JOKE OF DAY */
+      JOD_DESCRIPTION: "Fait la blague du jour!",
+      JOD_USAGE: "bdj",
+      JOD_EXEMPLES: "bdj",
+      /* VDM */
+      VDM_DESCRIPTION: "Raconte une vie de merde!",
+      VDM_USAGE: "vdm",
+      VDM_EXEMPLES: "vdm"
     };
   }
 

@@ -5,9 +5,9 @@ class JokeDay extends Command {
   constructor(client) {
     super(client, {
       name: "jod",
-      description: language => language.get("BOTINFOS_DESCRIPTION"),
-      usage: language => language.get("BOTINFOS_USAGE"),
-      examples: language => language.get("BOTINFOS_EXEMPLES"),
+      description: language => language.get("JOD_DESCRIPTION"),
+      usage: language => language.get("JOD_USAGE"),
+      examples: language => language.get("JOD_EXEMPLES"),
       enabled: true,
       aliases: ["bdj"],
       clientPermissions: ["EMBED_LINKS"],
@@ -72,7 +72,7 @@ class JokeDay extends Command {
             );
           message.channel.send(embed);
         } else {
-          message.reply(`${this.client.config.emojis.error} | `);
+          message.reply(`${this.client.config.emojis.error} | An error has occurred !`);
         }
       });
     }
