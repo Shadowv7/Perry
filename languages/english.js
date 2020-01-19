@@ -105,10 +105,20 @@ module.exports = class {
       FN_CHALLENGE_USAGE: "fnchallenge",
       FN_CHALLENGE_EXEMPLES: "$fnchallenge",
       /* FN_STORE*/
-      FN_STORE_DESCRIPTION : "Show the Fortnite Store!",
+      FN_STORE_DESCRIPTION: "Show the Fortnite Store!",
       FN_STORE_USAGE: "fnshop",
       FN_STORE_EXEMPLES: "$fnshop",
-      FN_STORE_HEADING: ["Rarity","Price","Image","Tap here"]
+      FN_STORE_HEADING: ["Rarity", "Price", "Image", "Tap here"],
+      /* FN_STATS*/
+
+      FN_STATS_DESCRIPTION: "Displays statistics for a Fortnite player!",
+      FN_STATS_USAGE: "fnstats <platform> <pseudo>",
+      FN_STATS_EXEMPLES: "fnstats psn Shadow",
+      FN_STATS_NO_USER: `${e.error} | Please enter the nickname of a Fortnite player!`,
+      FN_STATS_NO_PLATFORM: `${e.error} | Please enter the platform!`,
+      FN_STATS_USER_NOT_FOUND: `${e.error} | I can't find this player!`,
+      FN_STATS_PLATFORM_NOT_FOUND: platform => `${e.error} | The platform \`${platform}\` is not correct!`,
+      FN_STATS_HEADING: ["Win(s)", "Kill(s)", "Game(s) Played", "K/D"]
     };
   }
 

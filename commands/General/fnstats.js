@@ -47,6 +47,7 @@ class Fortnite extends Command {
     fortnite
       .user(username, platform)
       .then(data => {
+         const categories = message.language.get("FN_STATS_HEADING")
         let stats = data.stats;
         let lifetime = stats.lifetime;
         let solo = stats.solo;
@@ -62,18 +63,18 @@ class Fortnite extends Command {
         let embed = new Discord.MessageEmbed()
           .addField(
             "👤 Solo ❯",
-            `\n **${solo.wins || 0}** Victoire(s)\n**${swinrate ||
-              0} %** Victoire(s)\n**${solo.kills ||
-              0}** Kill(s)\n**${solo.matches || 0}** Partie(s)\n**${solo.kd ||
-              0}** K/D`,
+            `\n **${solo.wins || 0}** ${categories[0]}\n**${swinrate ||
+              0} %** ${categories[0]}\n**${solo.kills ||
+              0}** ${categories[1]}\n**${solo.matches || 0}** ${categories[2]}\n**${solo.kd ||
+              0}** ${categories[3]}`,
             true
           )
           .addField(
             "👥 Duo ❯",
-            `\n **${duo.wins || 0}** Victoire(s)\n**${dwinrate ||
-              0} %** Victoire(s)\n**${duo.kills ||
-              0}** Kill(s)\n**${duo.matches || 0}** Partie(s)\n**${duo.kd ||
-              0}** K/D`,
+            `\n **${solo.wins || 0}** ${categories[0]}\n**${swinrate ||
+              0} %** ${categories[0]}\n**${solo.kills ||
+              0}** ${categories[1]}\n**${solo.matches || 0}** ${categories[2]}\n**${solo.kd ||
+              0}** ${categories[3]}`,
             true
           )
           .addField(

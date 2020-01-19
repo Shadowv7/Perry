@@ -100,24 +100,27 @@ module.exports = class {
         ":calendar: A rejoint Discord le",
         "🔐 Rôles"
       ],
-      USERINFOS_ERROR : `${e.error} | Ce membre possède trop de rôles!`,
+      USERINFOS_ERROR: `${e.error} | Ce membre possède trop de rôles!`,
       /* FN_CHALLENGE */
-      FN_CHALLENGE_DESCRIPTION : "Affiche les défis de fortnite!" ,
+      FN_CHALLENGE_DESCRIPTION: "Affiche les défis de fortnite!",
       FN_CHALLENGE_USAGE: "fnchallenge",
       FN_CHALLENGE_EXEMPLES: "$fnchallenge",
       /* FN_STORE*/
-      FN_STORE_DESCRIPTION : "Affiche la boutique de Fortnite!",
+      FN_STORE_DESCRIPTION: "Affiche la boutique de Fortnite!",
       FN_STORE_USAGE: "fnshop",
       FN_STORE_EXEMPLES: "$fnshop",
-      FN_STORE_HEADING: ["Rareté","Prix","Image","Cliquez ici"],
-      /* FN_STATS*/ 
+      FN_STORE_HEADING: ["Rareté", "Prix", "Image", "Cliquez ici"],
+      /* FN_STATS*/
+
       FN_STATS_DESCRIPTION: "Affiche les statistiques d'un joueur Fortnite !",
       FN_STATS_USAGE: "fnstats <platform> <pseudo>",
       FN_STATS_EXEMPLES: "fnstats psn Shadow",
       FN_STATS_NO_USER: `${e.error} | Veuillez saisir le pseudo d'un joueur Fortnite !`,
       FN_STATS_NO_PLATFORM: `${e.error} | Veuillez saisir la platform !`,
       FN_STATS_USER_NOT_FOUND: `${e.error} | Je ne trouve pas ce joueur !`,
-      FN_STATS_PLATFORM_NOT_FOUND: `${e.error} | `
+      FN_STATS_PLATFORM_NOT_FOUND: platform =>
+        `${e.error} | La platforme \`${platform}\` n'est pas correcte !`,
+      FN_STATS_HEADING: ["Victoire(s)", "Tué(s)", "Partie(s)", "T/M"]
     };
   }
   /**
