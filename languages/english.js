@@ -118,7 +118,7 @@ module.exports = class {
       FN_STATS_NO_PLATFORM: `${e.error} | Please enter the platform!`,
       FN_STATS_USER_NOT_FOUND: `${e.error} | I can't find this player!`,
       FN_STATS_PLATFORM_NOT_FOUND: platform => `${e.error} | The platform \`${platform}\` is not correct!`,
-      FN_STATS_TITLE: `Statistics Fortnite of ${user}`
+      FN_STATS_TITLE: user => `Statistics Fortnite of ${user}`,
       FN_STATS_HEADING: ["Win(s)", "Kill(s)", "Game(s) played", "K/D"]
     };
   }

@@ -120,6 +120,7 @@ module.exports = class {
       FN_STATS_USER_NOT_FOUND: `${e.error} | Je ne trouve pas ce joueur !`,
       FN_STATS_PLATFORM_NOT_FOUND: platform =>
         `${e.error} | La platforme \`${platform}\` n'est pas correcte !`,
+      FN_STATS_TITLE: user => `Statistiques Fortnite de ${user}`,
       FN_STATS_HEADING: ["Victoire(s)", "Tué(s)", "Partie(s)", "T/M"]
     };
   }
