@@ -25,14 +25,16 @@ class Endpoint extends Command {
     const member = getMember(message, args.join(" "));
     if (!member)
       return message.reply(
-        `**Utilisation**: p!${endpoint} < username | mention | id >`
+        `${this.client.settings.get(
+          message.guild.id,
+          "prefix"
+        )}${message.language.get("IMAGE_USAGE", endpoint)}`
       );
     let url = member.user.displayAvatarURL({ format: "png", size: 2048 });
 
     get(`https://eclyssia-api.tk/api/v1/${endpoint}?url=${url}`, {
       responseType: "arraybuffer"
     }).then(data => {
-      // console.log(data)
       message.channel.send({
         files: [
           {

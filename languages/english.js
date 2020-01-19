@@ -174,7 +174,11 @@ module.exports = class {
       /* VDM */
       VDM_DESCRIPTION: "Tell a shit of life!",
       VDM_USAGE: "shitoflife",
-      VDM_EXEMPLES: "shitoflife"
+      VDM_EXEMPLES: "shitoflife",
+       /* IMAGE */
+      IMAGE_DESCRIPTION: (endpoint) => `Generate an image ${endpoint} !`,
+      IMAGE_USAGE: (endpoint) => `${endpoint} [ username | id | mention | discriminator]`,
+      IMAGE_EXEMPLES: (endpoint) => `$${endpoint} ShadowV`
     };
   }
 
