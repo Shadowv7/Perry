@@ -141,7 +141,11 @@ module.exports = class {
       ASCII_USAGE : "ascii <texte>",
       ASCII_EXEMPLES: "$ascii Shadow est le best!",
       ASCII_NO_TEXT: `${e.error} | Veuillez saisir un message !`,
-      ASCII_TEXT_LENGTH: `${e.error} | Votre message est trop long !`
+      ASCII_TEXT_LENGTH: `${e.error} | Votre message est trop long !`,
+      ASCII_ERROR: `${e.error} | Vérifiez que votre message contient que des caractères UTF-8 !`,
+      /* CALCUL */
+      CALCUL_DESCRIPTION: "Résouds votre expréssion !",
+      CALCUL_USAGE: ""
     };
   }
   /**

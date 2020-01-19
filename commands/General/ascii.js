@@ -43,7 +43,7 @@ class Ascii extends Command {
         return message.reply(message.language.get("ASCII_ERROR")); //lettres ou/et des chiffres."));
       }
       message.channel.send("```" + ascii + "```");
-    });
+    }).catch(err => message.reply(message.language.get("ASCII_ERROR")));
   }
 }
 module.exports = Ascii;

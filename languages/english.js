@@ -140,7 +140,8 @@ module.exports = class {
       ASCII_USAGE: "ascii <texte>",
       ASCII_EXEMPLES: "$ascii Shadow is the best!",
       ASCII_NO_TEXT: `${e.error} | Please enter a message !`,
-      ASCII_TEXT_LENGTH: `${e.error} | Your message is too long !`
+      ASCII_TEXT_LENGTH: `${e.error} | Your message is too long !`,
+      ASCII_ERROR: `${e.error} | Check that your message contains only UTF-8 characters! `
     };
   }
 
