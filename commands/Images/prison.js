@@ -3,7 +3,7 @@ const { get } = require("axios");
 const endpoint = "prison";
 const { getMember } = require("../../functions.js");
 
-class Endpoint extends Command {
+class prison extends Command {
   constructor(client) {
     super(client, {
       name: endpoint,
@@ -46,4 +46,4 @@ class Endpoint extends Command {
     });
   }
 }
-module.exports = Endpoint;
+module.exports = prison;
