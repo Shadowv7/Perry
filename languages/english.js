@@ -99,7 +99,7 @@ module.exports = class {
         ":calendar: Joined Discord at",
         "🔐 Roles"
       ],
-      USERINFOS_ERROR: "This member has too many roles!",
+      USERINFOS_ERROR: `${e.error} | This member has too many roles!`,
       /* FN_CHALLENGE */
       FN_CHALLENGE_DESCRIPTION: "Show fortnite challenges!",
       FN_CHALLENGE_USAGE: "fnchallenge",

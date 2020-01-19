@@ -100,7 +100,7 @@ module.exports = class {
         ":calendar: A rejoint Discord le",
         "🔐 Rôles"
       ],
-      USERINFOS_ERROR : "Ce membre possède trop de rôles!",
+      USERINFOS_ERROR : `${e.error} | Ce membre possède trop de rôles!`,
       /* FN_CHALLENGE */
       FN_CHALLENGE_DESCRIPTION : "Affiche les défis de fortnite!" ,
       FN_CHALLENGE_USAGE: "fnchallenge",
@@ -109,7 +109,15 @@ module.exports = class {
       FN_STORE_DESCRIPTION : "Affiche la boutique de Fortnite!",
       FN_STORE_USAGE: "fnshop",
       FN_STORE_EXEMPLES: "$fnshop",
-      FN_STORE_HEADING: ["Rareté","Prix","Image","Cliquez ici"]
+      FN_STORE_HEADING: ["Rareté","Prix","Image","Cliquez ici"],
+      /* FN_STATS*/ 
+      FN_STATS_DESCRIPTION: "",
+      FN_STATS_USAGE: "",
+      FN_STATS_EXEMPLES: "",
+      FN_STATS_NO_USER: ``,
+      FN_STATS_NO_PLATFORM: ``,
+      FN_STATS_USER_NOT_FOUND: ``,
+      FN_STATS_PLATFORM_NOT_FOUND: ``
     };
   }
   /**
