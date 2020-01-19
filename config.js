@@ -1,45 +1,44 @@
 module.exports = {
+  /* YOUR DISCORD BOT TOKEN */
+  token: "NjYzNDYzNzUyNTE1MTkwNzk1.XiM_mg.7WGzF2JvTjc0zCEIcBhKoK2tRUo",
 
-    /* YOUR DISCORD BOT TOKEN */
-    
-    /* DEFAULT GUILD CONFIGURATION */
-    guildConf: {
-        language: "english",
-        prefix: "p!"
-    },
-    
-    /* THE MONGODB URL */
-    mongoDB: "mongodb://localhost:27017/Discbot",
+  /* DEFAULT GUILD CONFIGURATION */
+  guildConf: {
+    language: "english",
+    prefix: "p!"
+  },
 
-    /* EMOJIS STRINGS LIKE <:emojiName:emojiID> */
-    emojis: {
-        success: "<:success:668110577947770894>",
-        error: "<:error:668110576660250636>",
-        loading: "<a:loading:668110577163304966>"
-    },
+  /* THE MONGODB URL */
+  mongoDB: "mongodb://localhost:27017/Discbot",
 
-    /* ARRAY OF BOT'S OWNERS IDs */
-    owners: ["652145085999349791"],
+  /* EMOJIS STRINGS LIKE <:emojiName:emojiID> */
+  emojis: {
+    success: "<:success:668110577947770894>",
+    error: "<:error:668110576660250636>",
+    loading: "<a:loading:668110577163304966>"
+  },
 
-    /* EMBED CONFIGURATION */
-    embed: {
-        color: "#2BFAFA",
-        footer: "Perry | Discord Bot"
-    },
+  /* ARRAY OF BOT'S OWNERS IDs */
+  owners: ["652145085999349791"],
 
-    /* STATUS LIST (Playing to... or listen to...) */
-    status: {
-        updateEvery: 20000,
-        list: [
-            {
-                type: "PLAYING",
-                content: "On {guildsCount} servers!"
-            },
-            {
-                type: "LISTENING",
-                content: "{usersCount} users"
-            }
-        ]
-    }
+  /* EMBED CONFIGURATION */
+  embed: {
+    color: "#2BFAFA",
+    footer: "Perry | Discord Bot"
+  },
 
+  /* STATUS LIST (Playing to... or listen to...) */
+  status: {
+    updateEvery: 20000,
+    list: [
+      {
+        type: "PLAYING",
+        content: "On {guildsCount} servers!"
+      },
+      {
+        type: "LISTENING",
+        content: "{usersCount} users"
+      }
+    ]
+  }
 };

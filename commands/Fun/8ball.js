@@ -10,7 +10,7 @@ class Ball extends Command {
       examples: language => language.get("BALL_EXEMPLES"),
       enabled: true,
       aliases: ["bi"],
-      clientPermissions: [],
+      clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,

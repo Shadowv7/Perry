@@ -1,15 +1,15 @@
 const Command = require("../../structures/Command.js"),
   Discord = require("discord.js");
 
-class Joke extends Command {
+class JokeDay extends Command {
   constructor(client) {
     super(client, {
-      name: "joke",
+      name: "jod",
       description: language => language.get("BOTINFOS_DESCRIPTION"),
       usage: language => language.get("BOTINFOS_USAGE"),
       examples: language => language.get("BOTINFOS_EXEMPLES"),
       enabled: true,
-      aliases: ["blague"],
+      aliases: ["bdj"],
       clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
       cooldown: 5000,
@@ -28,7 +28,7 @@ class Joke extends Command {
     if (this.client.settings.get(message.guild.id, "language") === "french") {
       axios({
         method: "get",
-        url: "https://blague.xyz/api/joke/random",
+        url: "https://blague.xyz/api/joke/day",
         responseType: "application/JSON",
         headers: {
           Authorization: token
@@ -36,7 +36,32 @@ class Joke extends Command {
       }).then(joke => {
         if (joke.data.status === 200) {
           embed
-            .setTitle("•__Blague__•")
+            .setTitle("•__Blague du jour__•")
+            .setDescription(
+              joke.data.joke.question + "\n||" + joke.data.joke.answer + "||"
+            )
+            .setTimestamp()
+            .setFooter(
+              this.client.user.username,
+              this.client.user.avatarURL({ format: "png" })
+            );
+          message.channel.send(embed);
+        } else {
+          message.reply(`${this.client.config.emojis.error} | Une erreur est survenue !`);
+        }
+      });
+    } else {
+      axios({
+        method: "get",
+        url: "https://blague.xyz/api/joke/day?lang=en",
+        responseType: "application/JSON",
+        headers: {
+          Authorization: token
+        }
+      }).then(joke => {
+        if (joke.data.status === 200) {
+          embed
+            .setTitle("•__Joke of day__•")
             .setDescription(
               joke.data.joke.question + "\n||" + joke.data.joke.answer + "||"
             )
@@ -50,32 +75,7 @@ class Joke extends Command {
           message.reply(`${this.client.config.emojis.error} | `);
         }
       });
-    } else {
-      axios({
-        method: "get",
-        url: "https://blague.xyz/api/joke/random?lang=en",
-        responseType: "application/JSON",
-        headers: {
-          Authorization: token
-        }
-      }).then(joke => {
-        if (joke.data.status === 200) {
-          embed
-            .setTitle("•__Joke__•")
-            .setDescription(
-              joke.data.joke.question + "\n||" + joke.data.joke.answer + "||"
-            )
-            .setTimestamp()
-            .setFooter(
-              this.client.user.username,
-              this.client.user.avatarURL({ format: "png" })
-            );
-          message.channel.send(embed);
-        } else {
-          message.reply("Une erreur est survenue!");
-        }
-      });
     }
   }
 }
-module.exports = Joke;
+module.exports = JokeDay;
