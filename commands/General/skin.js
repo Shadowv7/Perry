@@ -36,7 +36,7 @@ class Skin extends Command {
     .setImage(`https://minotar.net/armor/body/${text}/100.png`)
     .setTitle("•__"+text+"__•")
     message.channel.send(embed)
-     
+     .catch(err => message.reply(message.language.get("SKIN_ERROR")))
   }
 }
 module.exports = Skin;

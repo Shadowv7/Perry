@@ -134,7 +134,14 @@ module.exports = class {
       SKIN_USAGE: "skin <pseudo>",
       SKIN_EXEMPLES: "$skin Shadow",
       SKIN_NICKNAME_LENGTH: `${e.error} | Le pseudo est trop long !`,
-      SKIN_NO_NICKNAME: `${e.error} | Veuillez saisir le pseudo d'un joueur Minecraft !`
+      SKIN_NO_NICKNAME: `${e.error} | Veuillez saisir le pseudo d'un joueur Minecraft !`,
+      SKIN_ERROR: `${e.error} | Je ne trouve pas ce skin !`,
+      /* ASCII */
+      ASCII_DESCRIPTION : "Met votre message en ascii !",
+      ASCII_USAGE : "ascii <texte>",
+      ASCII_EXEMPLES: "$ascii Shadow est le best!",
+      ASCII_NO_TEXT: `${e.error} | Veuillez saisir un message !`,
+      ASCII_TEXT_LENGTH: `${e.error} | Votre message est trop long !`
     };
   }
   /**

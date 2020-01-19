@@ -25,7 +25,7 @@ class Ascii extends Command {
       .join(" ")
       .split("")
       .filter(r =>
-        "abcdefghijklmnopqrstuvwxyz1234567890-/:;()&@\".,?!'[]#%^*+=_\\<>$".includes(
+        "abcdefghijklmnopqrstuvwxyz1234567890-/:;()&@\".,?!'[]#%^*+=_\\<>$ ".includes(
           r.toLowerCase()
         )
       )
@@ -36,15 +36,14 @@ class Ascii extends Command {
     }
 
     if (text.length > 14) {
-      return message.reply("Votre texte est trop grand!");
+      return message.reply(message.language.get("ASCII_TEXT_LENGTH"));
     }
     ascii.font(text, "Doom", function(err, ascii) {
       if (err) {
-        return message.reply(
-          "Votre texte doit contenir que des caractères des l'alphabet ou/et des chiffres."
-        ); //lettres ou/et des chiffres."));
+        return message.reply(message.language.get("ASCII_ERROR")); //lettres ou/et des chiffres."));
       }
       message.channel.send("```" + ascii + "```");
     });
   }
 }
+module.exports = Ascii;

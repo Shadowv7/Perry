@@ -122,8 +122,7 @@ module.exports = class {
       FN_STATS_TITLE: user => `Statistics Fortnite of ${user}`,
       FN_STATS_HEADING: ["Win(s)", "Kill(s)", "Game(s) played", "K/D"],
       /* MINECRAFT */
-      MINECRAFT_DESCRIPTION:
-        "Displays informations for a Minecraft server !",
+      MINECRAFT_DESCRIPTION: "Displays informations for a Minecraft server !",
       MINECRAFT_USAGE: "minecraft <ip>",
       MINECRAFT_EXEMPLES: "$minecraft funcraft.fr",
       MINECRAFT_NO_IP: `${e.error} | Please enter the adress ip of a Minecraft server!`,
@@ -134,7 +133,14 @@ module.exports = class {
       SKIN_USAGE: "skin <nickname>",
       SKIN_EXEMPLES: "$skin Shadow",
       SKIN_NICKNAME_LENGTH: `${e.error} | The nickname is too long !`,
-      SKIN_NO_NICKNAME: `${e.error} | Please enter the nickname of a Minecraft player !`
+      SKIN_NO_NICKNAME: `${e.error} | Please enter the nickname of a Minecraft player !`,
+      SKIN_ERROR: `${e.error} | I can't find this skin !`,
+      /* ASCII */
+      ASCII_DESCRIPTION: "Put your message in ascii !",
+      ASCII_USAGE: "ascii <texte>",
+      ASCII_EXEMPLES: "$ascii Shadow is the best!",
+      ASCII_NO_TEXT: `${e.error} | Please enter a message !`,
+      ASCII_TEXT_LENGTH: `${e.error} | Your message is too long !`
     };
   }
 
