@@ -23,18 +23,11 @@ class Ball extends Command {
     let i = args.join(" ");
     if (!args.slice(1).join(" "))
       return message.reply(
-        "votre question doit être composée d'au moins 2 mots."
-      );
+        message.language.get("BALL_NO_TEXT") );
 
     if (!message.content.includes("?"))
-      return message.reply("Vous devez poser une **question**.");
-    const réponse = [
-      "Bien sûr.",
-      "Je ne sais pas.",
-      "Oui.",
-      "Non.",
-      "Impossible !"
-    ];
+      return message.reply(message.language.get("BALL_NO_QUESTION"));
+    const réponse =message.language.get("BALL_RESPONSE")
     const a = réponse[Math.floor(Math.random() * réponse.lenght)];
     message.reply(
       `:8ball: | ${réponse[Math.floor(Math.random() * réponse.length)]}`

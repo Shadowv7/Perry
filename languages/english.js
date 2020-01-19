@@ -152,18 +152,18 @@ module.exports = class {
       CALCUL_RESULT: "•__Result__•",
       CALCUL_CALCUL: "•__Calculation__•" 
       /* 8BALL */,
-      BALL_DESCRIPTION: "Répond aléatoirement à votre question !",
+      BALL_DESCRIPTION: "Randomly answers your question !",
       BALL_USAGE: "8ball <question>",
       BALL_EXEMPLES: "$8ball Hello , how are you ?",
       BALL_RESPONSE: [
-        "Bien sûr.",
-        "Je ne sais pas.",
-        "Oui.",
-        "Non.",
+        "Of course.",
+        "I don't know.",
+        "Yes.",
+        "No.",
         "Impossible !"
       ],
-      BALL_NO_TEXT: `${e.error} | Veuillez poser une question contenant au moins deux mots !`,
-      BALL_NO_QUESTION: `${e.error} | Veuillez poser une **question** !`
+      BALL_NO_TEXT: `${e.error} | Please ask a question containing at least two words !`,
+      BALL_NO_QUESTION: `${e.error} | Please ask a question **question** !`
     };
   }
 
