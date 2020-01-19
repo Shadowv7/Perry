@@ -91,8 +91,8 @@ class Fortnite extends Command {
           )
           .setTimestamp()
           .setFooter(
-            client.user.username,
-            client.user.avatarURL({ format: "png" })
+            this.client.user.username,
+            this.client.user.avatarURL({ format: "png" })
           );
 
         message.channel.send(embed);
