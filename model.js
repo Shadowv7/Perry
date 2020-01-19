@@ -7,7 +7,7 @@ class Bot extends Command {
       name: "botinfos",
       description: language => language.get("BOTINFOS_DESCRIPTION"),
       usage: language => language.get("BOTINFOS_USAGE"),
-      examples: language => language.get("BOTINFOS_EXAMPLES"),
+      examples: language => language.get("BOTINFOS_EXEMPLES"),
       enabled: true,
       aliases: ["bi"],
       clientPermissions: [],
