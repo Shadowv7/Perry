@@ -1,6 +1,8 @@
 module.exports = {
   /* YOUR DISCORD BOT TOKEN */
-   /* DEFAULT GUILD CONFIGURATION */
+  token: "NjYzNDYzNzUyNTE1MTkwNzk1.XiM_mg.7WGzF2JvTjc0zCEIcBhKoK2tRUo",
+
+  /* DEFAULT GUILD CONFIGURATION */
   guildConf: {
     language: "english",
     prefix: "p!"
