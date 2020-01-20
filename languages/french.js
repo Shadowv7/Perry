@@ -10,6 +10,7 @@ module.exports = class {
       PERM_LEVELS: [
         "Utilisateur",
         "Modérateur",
+        ""
         "Administrateur",
         "Fondateur",
         "Suprême"
@@ -220,7 +221,12 @@ module.exports = class {
       OPTION_ALREADY: choice => `${e.error} | Le système de niveaux est déja sur ${choice} !`,
       OPTION_SUCCESS: choice => `${e.success} | Le système de niveaux est maintenant sur ${choice} !`,
       /* LEVEL */
-      LEVELUP_MESSAGE: (user,level) => `Félicitations , <@${user}> tu es maintenant au niveau ${level} !`
+      LEVELUP_MESSAGE: (user,level) => `Félicitations , <@${user}> tu es maintenant au niveau ${level} !`,
+      /* RANK */
+      RANK_DESCRITION: "Affiche vos statistiques !",
+      RANK_USAGE: "rank [pseudo | id | mention | discriminateur]",
+      RANK_EXEMPLES: "$rank ShadowV\n$rank",
+      RANK_PROGRESSBAR: (curLevel,ProgressBar,nextLevel) => `Niveau [${curLevel}] ${ProgressBar} [${nextLevel}]`
     };
   }
   /**

@@ -10,6 +10,7 @@ module.exports = class {
       PERM_LEVELS: [
         "User",
         "Moderator",
+        "Super-Moderator",
         "Administrator",
         "Founder",
         "Ultimate"
@@ -217,7 +218,14 @@ module.exports = class {
       OPTION_SUCCESS: choice =>
         `${e.success} | The level system is ${choice} !`,
        /* LEVEL */
-      LEVELUP_MESSAGE: (user,level) => `Congratulations, <@${user}> you are now at the level ${level} !`
+      LEVELUP_MESSAGE: (user,level) => `Congratulations, <@${user}> you are now at the level ${level} !`,
+      /* RANK */
+    
+      RANK_DESCRITION: "Displays your stats !",
+      RANK_USAGE: "rank [username | id | mention | discriminator]",
+      RANK_EXEMPLES: "$rank ShadowV\n$rank",
+      RANK_PROGRESSBAR: (curLevel,ProgressBar,nextLevel) => `Level [${curLevel}] ${ProgressBar} [${nextLevel}]`
+    
     };
   }
 

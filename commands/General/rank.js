@@ -1,6 +1,6 @@
 const Command = require("../../structures/Command.js"),
   Discord = require("discord.js"),
-  { getMember } = require("common-tags");
+  { getMember } = require("../../functions.js");
 
 class Rank extends Command {
   constructor(client) {
@@ -28,17 +28,23 @@ class Rank extends Command {
       const UserXp = this.client.level.get(key, "xp");
       const UserLevel = this.client.level.get(key, "level") + 1;
       const MissingXp = UserLevel * 10 * (UserLevel * 10);
-      const embed = new Discord.MessageEmbed().setColor(data.embed.color);
+      const embed = new Discord.MessageEmbed().setColor(data.config.embed.color);
 
       function xprod(n, start1, stop1, start2, stop2) {
         return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
       }
-      const number = 50 / 5;
-      const max = 100 / 5;
-      const ProgressBar = xprod(number, 0, max, 0, max);
-      const barStr = `\`\`\`[${"■".repeat(ProgressBar)}${"-".repeat(
-        max - ProgressBar
-      )}]\`\`\``;
+
+      const xp = UserXp,
+        nextLevel = MissingXp,
+        barSize = 20;
+
+      const Bar = xprod(xp, 0, nextLevel, 0, barSize);
+      const ProgressBar = `\`\`[${"■".repeat(Bar)}${"-".repeat(
+        barSize - Bar
+      )}]\`\``;
+      embed.setTitle("•__Rank__•")
+      embed.setDescription(message.language.get("PROGRESS_BAR",UserLevel,ProgressBar,UserLevel+1))
+      message.channel.send(embed)
     }
   }
 }
