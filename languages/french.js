@@ -190,7 +190,7 @@ module.exports = class {
       INSTAGRAM_EXEMPLES: "$instagram Gotaga",
       INSTAGRAM_NO_NAME: `${e.error} | Veuillez préciser le nom du compte instagram.`,
       INSTAGRAM_NAME_NOLONG: `${e.error} | Mettez un pseudo plus grand !`,
-      INSATAGRAM_ERROR: `${e.error} | Je ne trouve pas ce compte!`,
+      INSTAGRAM_ERROR: `${e.error} | Je ne trouve pas ce compte!`,
       INSTAGRAM_HEADING: [
         "- `Pseudo` : ",
         "- `Nom` : ",
@@ -201,7 +201,17 @@ module.exports = class {
         "- `Compte privé` : ",
         "Oui :closed_lock_with_key:",
         "Non :unlock:"
-      ]
+      ],
+      INSTAGRAM_NOT_PROVIDED: "Non fournis",
+
+      /* SHORTURL COMMAND */
+
+      // Utils
+      SHORTURL_DESCRIPTION: "Raccourci votre lien !",
+      SHORTURL_USAGE: "shorturl [url]",
+      SHORTURL_EXAMPLES: "$shorturl https://google.fr",
+      // Errors
+      SHORTURL_ERR_INVALID_URL: `${e.error} | Veuillez entrer une URL valide !`
     };
   }
   /**

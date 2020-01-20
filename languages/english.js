@@ -181,13 +181,12 @@ module.exports = class {
         `${endpoint} [ username | id | mention | discriminator]`,
       IMAGE_EXEMPLES: endpoint => `$${endpoint} ShadowV`,
       /* INSTAGRAM */
-      INSTAGRAM_DESCRIPTION:
-        "Displays information on an Instagram account !",
+      INSTAGRAM_DESCRIPTION: "Displays information on an Instagram account !",
       INSTAGRAM_USAGE: "instagram <username>",
       INSTAGRAM_EXEMPLES: "$instagram Ninja",
       INSTAGRAM_NO_NAME: `${e.error} | Please specify the name of the Instagram account.`,
       INSTAGRAM_NAME_NOLONG: `${e.error} | Put a bigger nickname !`,
-      INSATAGRAM_ERROR: `${e.error} | I can't find this account!`,
+      INSTAGRAM_ERROR: `${e.error} | I can't find this account!`,
       INSTAGRAM_HEADING: [
         "- `Username` : ",
         "- `Name` : ",
@@ -198,7 +197,16 @@ module.exports = class {
         "- `Private account` : ",
         "Yes :closed_lock_with_key:",
         "No :unlock:"
-      ]
+      ],
+      INSTAGRAM_NOT_PROVIDED: "Not provided",
+      /* SHORTURL COMMAND */
+
+      // Utils
+      SHORTURL_DESCRIPTION: "Shorten your link!",
+      SHORTURL_USAGE: "shorturl [url]",
+      SHORTURL_EXAMPLES: "$shorturl https://google.fr",
+      // Errors
+      SHORTURL_ERR_INVALID_URL: `${e.error} | Please enter a valid URL!`
     };
   }
 
