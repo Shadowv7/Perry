@@ -129,15 +129,15 @@ class Help extends Command {
     let newembed = new Discord.MessageEmbed()
       .setDescription(
         message.language.get(
-          "HELP_EDESCRIPTION",
-          data.guild ? data.guild.prefix : ""
+          "HELP_SUBTITLE",
+          this.client.settings.get(message.guild.id,"prefix")
         )
       )
       .setColor(data.config.embed.color)
       .setFooter(data.config.embed.footer);
-    categories.sort().forEach(cat => {
+    categories.sort(function(a,b){return a - b}).forEach(cat => {
       let tCommands = commands.filter(cmd => cmd.help.category === cat);
-      embed.addField(
+      newembed.addField(
         emojis.categories[cat.toLowerCase()] +
           " " +
           cat +
