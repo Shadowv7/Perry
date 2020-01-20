@@ -69,8 +69,7 @@ module.exports = class {
 
     // Gets the prefix
     let prefix = this.client.settings.get(message.guild.id, "prefix");
-    
-
+    if (!message.content.startsWith(prefix)) return;
     const args = message.content
       .slice(prefix.length)
       .trim()
