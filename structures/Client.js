@@ -16,7 +16,17 @@ class Atlanta extends Client {
     this.permissions = require("../helpers/permissions"); // Permissions levels
     this.settings = new Enmap({ name: "settings" });
     this.level = new Enmap({ name: "level" });
-    
+    this.giveawaysManager = new GiveawaysManager(Atlanta, {
+      storage: "./giveaways.json",
+      updateCountdownEvery: 5000,
+      default: {
+        botsCanWin: false,
+        embedColor: "#2bfafa",
+        exemptPermissions: [],
+        reaction: "🎉",
+        embedColorEnd: "#2bfafa"
+      }
+    });
   }
 
   // This function is used to load a command and add it to the collection

@@ -24,20 +24,21 @@ class Giveaway extends Command {
     }
 
     async run (message, args, data) {
-        const giveaways = this.client.giveawaysManager
+       
+      const giveaways = this.client.giveawaysManager
         let status = args[0];
         if(!status){
             return message.channel.send(message.language.get("GIVEAWAY_ERR_STATUS"));
         }
 
         if(status === "create"){
-            let currentGiveaways = giveaways.fetch().filter((g) => g.guildID === message.guild.id && !g.ended).length;
+            let currentGiveaways = giveaways.giveaways.filter((g) => g.guildID === message.guild.id && !g.ended).length;
             if(currentGiveaways > 3){
                 return message.channel.send(message.language.get("GIVEAWAY_ERR_MAX"));
             }
             let time = args[1];
             if(!time){
-                return message.channel.send(message.language.get("GIVEAWAY_ERR_CREATE", data.guild.prefix));
+                return message.channel.send(message.language.get("GIVEAWAY_ERR_CREATE", this.client.settings.get(message.guild.id,"prefix")));
             }
             if(isNaN(ms(time))){
                 return message.channel.send(message.language.get("ERR_INVALID_TIME"));
@@ -47,19 +48,19 @@ class Giveaway extends Command {
             }
             let winnersCount = args[2];
             if(!winnersCount){
-                return message.channel.send(message.language.get("GIVEAWAY_ERR_CREATE", data.guild.prefix));
+                return message.channel.send(message.language.get("GIVEAWAY_ERR_CREATE", this.client.settings.get(message.guild.id,"prefix")));
             }
             if(isNaN(winnersCount) || winnersCount > 10 || winnersCount < 1){
                 return message.channel.send(message.language.get("ERR_INVALID_NUMBER_MM", 1, 10));
             }
             let prize = args.slice(3).join(" ");
             if(!prize){
-                return message.channel.send(message.language.get("GIVEAWAY_ERR_CREATE", data.guild.prefix)); 
+                return message.channel.send(message.language.get("GIVEAWAY_ERR_CREATE", this.client.settings.get(message.guild.id,"prefix"))); 
             }
             giveaways.start(message.channel, {
                 time: ms(time),
                 prize: prize,
-                winnersCount: parseInt(winnersCount, 10),
+                winnerCount: parseInt(winnersCount, 10),
                 messages: message.language.get("GIVEAWAY_CREATE_MESSAGES")
             }).then(() => {
                 message.channel.send(message.language.get("GIVEAWAY_CREATED", message.channel));
