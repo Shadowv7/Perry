@@ -25,7 +25,7 @@ class Insta extends Command {
     const name = args.join(" ");
 
     if (!name) {
-      return message.reply(message.language.get("INSTAGRAM_NO_"));
+      return message.reply(message.language.get("INSTAGRAM_NO_NAME"));
     }
     if (
       args
@@ -33,7 +33,7 @@ class Insta extends Command {
         .split("")
         .join(" ").length <= 2
     ) {
-      return message.reply("Mettez un nom plus grand.");
+      return message.reply(message.language.get("INSTAGRAM_NAME_NOLONG"));
     }
     const url = `https://instagram.com/${name}/?__a=1`;
 
@@ -42,7 +42,7 @@ class Insta extends Command {
     try {
       res = await fetch(url).then(url => url.json());
     } catch (e) {
-      return message.reply("je n'ai pas trouvé ce compte.");
+      return message.reply(message.language.get("INSTAGRAM_ERROR"));
     }
 
     const account = res.graphql.user;

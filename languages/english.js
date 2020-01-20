@@ -175,10 +175,30 @@ module.exports = class {
       VDM_DESCRIPTION: "Tell a shit of life!",
       VDM_USAGE: "shitoflife",
       VDM_EXEMPLES: "shitoflife",
-       /* IMAGE */
-      IMAGE_DESCRIPTION: (endpoint) => `Generate an image ${endpoint} !`,
-      IMAGE_USAGE: (endpoint) => `${endpoint} [ username | id | mention | discriminator]`,
-      IMAGE_EXEMPLES: (endpoint) => `$${endpoint} ShadowV`
+      /* IMAGE */
+      IMAGE_DESCRIPTION: endpoint => `Generate an image ${endpoint} !`,
+      IMAGE_USAGE: endpoint =>
+        `${endpoint} [ username | id | mention | discriminator]`,
+      IMAGE_EXEMPLES: endpoint => `$${endpoint} ShadowV`,
+      /* INSTAGRAM */
+      INSTAGRAM_DESCRIPTION:
+        "Displays information on an Instagram account !",
+      INSTAGRAM_USAGE: "instagram <username>",
+      INSTAGRAM_EXEMPLES: "$instagram Ninja",
+      INSTAGRAM_NO_NAME: `${e.error} | Please specify the name of the Instagram account.`,
+      INSTAGRAM_NAME_NOLONG: `${e.error} | Put a bigger nickname !`,
+      INSATAGRAM_ERROR: `${e.error} | I can't find this account!`,
+      INSTAGRAM_HEADING: [
+        "- `Username` : ",
+        "- `Name` : ",
+        "- `Biography` : ",
+        "- `Publications` : ",
+        "- `Followers` : ",
+        "- `Subscription` : ",
+        "- `Private account` : ",
+        "Yes :closed_lock_with_key:",
+        "No :unlock:"
+      ]
     };
   }
 

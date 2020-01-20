@@ -179,16 +179,29 @@ module.exports = class {
       VDM_USAGE: "vdm",
       VDM_EXEMPLES: "vdm",
       /* IMAGE */
-      IMAGE_DESCRIPTION: (endpoint) => `Génère une image ${endpoint} !`,
-      IMAGE_USAGE: (endpoint) => `${endpoint} [ pseudo | id | mention | discriminateur]`,
-      IMAGE_EXEMPLES: (endpoint) => `$${endpoint} ShadowV`,
+      IMAGE_DESCRIPTION: endpoint => `Génère une image ${endpoint} !`,
+      IMAGE_USAGE: endpoint =>
+        `${endpoint} [ pseudo | id | mention | discriminateur]`,
+      IMAGE_EXEMPLES: endpoint => `$${endpoint} ShadowV`,
       /* INSTAGRAM */
-      INSTAGRAM_DESCRIPTION: "Affiche les informations sur un compte instagram!",
+      INSTAGRAM_DESCRIPTION:
+        "Affiche les informations sur un compte instagram!",
       INSTAGRAM_USAGE: "instagram <pseudo>",
       INSTAGRAM_EXEMPLES: "$instagram Gotaga",
       INSTAGRAM_NO_NAME: `${e.error} | Veuillez préciser le nom du compte instagram.`,
-      INSTAGRAM_NAME_NOLONG : `${e.error} | Mettez un pseudo plus grand !`,
-      INSATAGRAM_ERROR: `${e.error} | Je ne trouve pas ce compte!`
+      INSTAGRAM_NAME_NOLONG: `${e.error} | Mettez un pseudo plus grand !`,
+      INSATAGRAM_ERROR: `${e.error} | Je ne trouve pas ce compte!`,
+      INSTAGRAM_HEADING: [
+        "- `Pseudo` : ",
+        "- `Nom` : ",
+        "- `Biographie` : ",
+        "- `Publications` : ",
+        "- `Abonnés` : ",
+        "- `Abonnement` : ",
+        "- `Compte privé` : ",
+        "Oui :closed_lock_with_key:",
+        "Non :unlock:"
+      ]
     };
   }
   /**
