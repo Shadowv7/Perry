@@ -219,6 +219,7 @@ module.exports = class {
         `${e.success} | The level system is ${choice} !`,
        /* LEVEL */
       LEVELUP_MESSAGE: (user,level) => `Congratulations, <@${user}> you are now at the level ${level} !`,
+      LEVEL_NOT_ON: `${e.error} | The level system is not activate in this server !`,
       /* RANK */
     
       RANK_DESCRITION: "Displays your stats !",

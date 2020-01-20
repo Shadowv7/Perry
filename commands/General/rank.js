@@ -43,9 +43,9 @@ class Rank extends Command {
         barSize - Bar
       )}]\`\``;
       embed.setTitle("•__Rank__•")
-      embed.setDescription(message.language.get("PROGRESS_BAR",UserLevel,ProgressBar,UserLevel+1))
+      embed.setDescription(message.language.get("RANK_PROGRESSBAR",UserLevel,ProgressBar,UserLevel+1))
       message.channel.send(embed)
-    }
+    } else { message.reply(message.language.get("LEVEL_NOT_ON"))}
   }
 }
 module.exports = Rank;

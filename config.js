@@ -20,7 +20,8 @@ module.exports = {
       fun: "<:fun:667627121107271681>",
       general: "<:general:667626887014514698>",
       images: "<:picture:667629000708980785>",
-      owner: "<:owner:667627445830156298>"
+      owner: "<:owner:667627445830156298>",
+      moderations: ":rotating_light:"
     }
   },
 
