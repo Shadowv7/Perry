@@ -135,7 +135,7 @@ class Help extends Command {
       )
       .setColor(data.config.embed.color)
       .setFooter(data.config.embed.footer);
-    categories.sort(function(a,b){return a - b}).forEach(cat => {
+    categories.sort().forEach(cat => {
       let tCommands = commands.filter(cmd => cmd.help.category === cat);
       newembed.addField(
         emojis.categories[cat.toLowerCase()] +
