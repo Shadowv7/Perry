@@ -16,7 +16,8 @@ class Help extends Command {
       // The other names that can trigger the command
       aliases: ["h"],
       // The permissions needed by the bot to run the command
-      clientPermissions: ["EMBED_LINKS"],
+      clientPermissions: ["EMBED_LINSK"],
+      memberPermissions: [],
       // The level of permissions required by the user to run the command.
       permLevel: 0,
       // // The time it will take a user before he can execute the command again

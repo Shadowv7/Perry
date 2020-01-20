@@ -12,6 +12,7 @@ class Ascii extends Command {
       enabled: true,
       aliases: [],
       clientPermissions: [],
+      memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,

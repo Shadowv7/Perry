@@ -42,6 +42,7 @@ module.exports = class Command {
       aliases,
       permLevel,
       clientPermissions,
+      memberPermissions,
       cooldown,
       guildOnly,
       nsfw

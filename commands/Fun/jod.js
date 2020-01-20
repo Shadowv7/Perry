@@ -11,6 +11,7 @@ class JokeDay extends Command {
       enabled: true,
       aliases: ["bdj"],
       clientPermissions: ["EMBED_LINKS"],
+      memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,

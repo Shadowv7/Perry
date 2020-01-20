@@ -13,8 +13,8 @@ class ShortURL extends Command {
       enabled: true,
       guildOnly: false,
       aliases: ["minimize"],
+      clientPermissions: ["EMBED_LINSK"],
       memberPermissions: [],
-      botPermissions: ["SEND_MESSAGES", "EMBED_LINKS"],
       nsfw: false,
       ownerOnly: false,
       cooldown: 5000

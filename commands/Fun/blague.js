@@ -11,6 +11,7 @@ class Joke extends Command {
       enabled: true,
       aliases: ["blague"],
       clientPermissions: ["EMBED_LINKS"],
+      memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,

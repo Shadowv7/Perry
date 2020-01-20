@@ -17,7 +17,8 @@ class Ping extends Command {
             aliases: [ "pong", "latency" ],
             // The permissions needed by the bot to run the command
             clientPermissions: [],
-            // The level of permissions required by the user to run the command.
+      memberPermissions: [],
+      // The level of permissions required by the user to run the command.
             permLevel: 0,
             // // The time it will take a user before he can execute the command again
             cooldown: 1000,

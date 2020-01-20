@@ -11,6 +11,7 @@ class Ball extends Command {
       enabled: true,
       aliases: ["bi"],
       clientPermissions: ["EMBED_LINKS"],
+      memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,

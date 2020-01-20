@@ -52,7 +52,7 @@ module.exports = class {
       );
       if (this.client.level.get(key, "level") < curLevel) {
         message.channel.send(
-          message.language.get("LEVELUP_MESSAGE",message.author.id,curLevel)
+          message.language.get("LEVELUP_MESSAGE", message.author.id, curLevel)
         );
         this.client.level.set(key, curLevel, "level");
       }
@@ -111,16 +111,16 @@ module.exports = class {
       }
       /* USERS PERMISSIONS*/
       const needPermissions = [];
-      cmd.conf.memberPermissions.forEach(permission => {
-        if (!message.channel.permissionsFor(message.guild.message.author).has(permission)) {
-          needPermissions.push(permission);
-        }
-      });
-      if (needPermissions.length > 0)
-        return message.channel.send(
-          message.language.get("ERR_CMD_USERS_PERMISSIONS", needPermissions)
-        );
-
+      if (cmd.conf.memberPermissions) {
+      
+          if (!message.member.permissions.has(cmd.conf.permission)) {
+            needPermissions.push(cmd.conf.permission);
+          }
+        if (needPermissions.length > 0)
+          return message.channel.send(
+            message.language.get("ERR_CMD_USERS_PERMISSIONS", needPermissions)
+          );
+      }
       /* NSFW */
       if (!message.channel.nsfw && cmd.conf.nsfw) {
         return message.channel.send(language.get("ERR_CMD_NSFW"));
