@@ -109,17 +109,46 @@ class Help extends Command {
       .setFooter(data.config.embed.footer);
 
     /* FIELDS GEN */
+
+    const commands = message.client.commands;
+
+    commands.forEach(command => {
+      if (!categories.includes(command.help.category)) {
+        if (
+          command.help.category === "Owner" &&
+          message.author.id !== message.client.config.owner.id
+        ) {
+          return;
+        }
+        categories.push(command.help.category);
+      }
+    });
+
+    let emojis = this.client.config.emojis;
+
+    let newembed = new Discord.MessageEmbed()
+      .setDescription(
+        message.language.get(
+          "HELP_EDESCRIPTION",
+          data.guild ? data.guild.prefix : ""
+        )
+      )
+      .setColor(data.config.embed.color)
+      .setFooter(data.config.embed.footer);
     categories.sort().forEach(cat => {
-      let commandsCategory = this.client.commands.filter(
-        cmd => cmd.help.category === cat
-      );
+      let tCommands = commands.filter(cmd => cmd.help.category === cat);
       embed.addField(
-        cat + " - (" + commandsCategory.size + ")",
-        commandsCategory.map(cmd => "`" + cmd.help.name + "`").join(", ")
+        emojis.categories[cat.toLowerCase()] +
+          " " +
+          cat +
+          " - (" +
+          tCommands.size +
+          ")",
+        tCommands.map(cmd => "`" + cmd.help.name + "`").join(", ")
       );
     });
 
-    message.channel.send(embed);
+    message.channel.send(newembed);
   }
 }
 

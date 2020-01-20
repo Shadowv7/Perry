@@ -15,7 +15,8 @@ module.exports = {
   emojis: {
     success: "<:success:668110577947770894>",
     error: "<:error:668110576660250636>",
-    loading: "<a:loading:668110577163304966>"
+    loading: "<a:loading:668110577163304966>",
+    categories: []
   },
 
   /* ARRAY OF BOT'S OWNERS IDs */
