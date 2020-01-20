@@ -23,7 +23,7 @@ class Option extends Command {
     if (!args[0] || !["on", "off"].includes(args[0]))
       return message.reply(message.language.get("OPTION_NO_ARGS"));
     if (this.client.level.get(message.guild.id, "option") === args[0])
-      message.reply(message.language.get("OPTION_ALREADY", args[0]));
+      return message.reply(message.language.get("OPTION_ALREADY", args[0]));
     this.client.level.set(message.guild.id, args[0], "option");
     message.reply(message.language.get("OPTION_SUCCESS", args[0]));
   }

@@ -215,7 +215,9 @@ module.exports = class {
       OPTION_ALREADY: choice =>
         `${e.error} | The level system is already on ${choice} !`,
       OPTION_SUCCESS: choice =>
-        `${e.succes} | The level system is ${choice} !`
+        `${e.success} | The level system is ${choice} !`,
+       /* LEVEL */
+      LEVELUP_MESSAGE: (user,level) => `Congratulations, <@${user}> you are now at the level ${level} !`
     };
   }
 

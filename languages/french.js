@@ -213,12 +213,12 @@ module.exports = class {
       // Errors
       SHORTURL_ERR_INVALID_URL: `${e.error} | Veuillez entrer une URL valide !`,
       /* OPTION */
-      OPTION_DESCRIPTION: "Active ou désactive le système de niveau !",
+      OPTION_DESCRIPTION: "Active ou désactive le système de niveaux !",
       OPTION_USAGE: "option <on/off>",
       OPTION_EXEMPLES: "$option on\n$option off",
       OPTION_NO_ARGS: `${e.error} | Veuillez choisir une option entre "on" et "off"!`,
-      OPTION_ALREADY: choice => `${e.error} | Le système de niveau est déja sur ${choice} !`,
-      OPTION_SUCCESS: choice => `${e.succes} | Le système de niveau est maintenant sur ${choice} !`,
+      OPTION_ALREADY: choice => `${e.error} | Le système de niveaux est déja sur ${choice} !`,
+      OPTION_SUCCESS: choice => `${e.success} | Le système de niveaux est maintenant sur ${choice} !`,
       /* LEVEL */
       LEVELUP_MESSAGE: (user,level) => `Félicitations , <@${user}> tu es maintenant au niveau ${level} !`
     };

@@ -51,8 +51,8 @@ module.exports = class {
           )
       );
       if (this.client.level.get(key, "level") < curLevel) {
-        message.reply(
-          message.language.get("LEVELUP_MESSAGE",message.author.id,this.client.level.get(key,"level"))
+        message.channel.send(
+          message.language.get("LEVELUP_MESSAGE",message.author.id,curLevel)
         );
         this.client.level.set(key, curLevel, "level");
       }
