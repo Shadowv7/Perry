@@ -28,7 +28,7 @@ module.exports = class {
         } __**Permissions manquantes**__\n\nVous avez besoin des permissions suivantes pour le bon fonctionnement de cette commande : ${perms
           .map(p => "`" + p + "`")
           .join(", ")}`,
-    
+
       ERR_CMD_USER_PERMISSIONS: (levelName, userLevel) =>
         `${e.error} | Cette commande nécessite le niveau de permissions \`${levelName}\` (vous êtes \`${userLevel}\`) !`,
       ERR_CMD_COOLDOWN: time =>
@@ -225,24 +225,77 @@ module.exports = class {
       OPTION_USAGE: "option <on/off>",
       OPTION_EXEMPLES: "$option on\n$option off",
       OPTION_NO_ARGS: `${e.error} | Veuillez choisir une option entre "on" et "off"!`,
-      OPTION_ALREADY: choice => `${e.error} | Le système de niveaux est déja sur ${choice} !`,
-      OPTION_SUCCESS: choice => `${e.success} | Le système de niveaux est maintenant sur ${choice} !`,
+      OPTION_ALREADY: choice =>
+        `${e.error} | Le système de niveaux est déja sur ${choice} !`,
+      OPTION_SUCCESS: choice =>
+        `${e.success} | Le système de niveaux est maintenant sur ${choice} !`,
       /* LEVEL */
-      LEVELUP_MESSAGE: (user,level) => `Félicitations , <@${user}> tu es maintenant au niveau ${level} !`,
+      LEVELUP_MESSAGE: (user, level) =>
+        `Félicitations , <@${user}> tu es maintenant au niveau ${level} !`,
       LEVEL_NOT_ON: `${e.error} | Le système de niveaux n'est pas activé sur ce serveur !`,
       /* RANK */
       RANK_DESCRITION: "Affiche vos statistiques !",
       RANK_USAGE: "rank [pseudo | id | mention | discriminateur]",
       RANK_EXEMPLES: "$rank ShadowV\n$rank",
-      RANK_PROGRESSBAR: (curLevel,ProgressBar,nextLevel) => `Niveau [${curLevel}] ${ProgressBar} [${nextLevel}]`,
-            /* LANG */
+      RANK_PROGRESSBAR: (curLevel, ProgressBar, nextLevel) =>
+        `Niveau [${curLevel}] ${ProgressBar} [${nextLevel}]`,
+      /* LANG */
       LANG_DESCRIPTION: "Modifie la langue de Perry !",
       LANG_USAGE: "setlang <français/anglais>",
       LANG_EXEMPLES: "$setlang français\n$setlang anglais",
       LANG_NO_ARGS: `${e.error} | Veuillez choisir une langue entre "français" et "anglais"!`,
       LANG_ALREADY: choice => `${e.error} | Je parle déjà ${choice} !`,
       LANG_SUCCESS: choice => `${e.success} | Je parle maintenant ${choice} !`,
-     
+
+      /* GIVEAWAY COMMAND */
+
+      // Utils
+      GIVEAWAY_DESCRIPTION: "Gérez vos giveaways simplement !",
+      GIVEAWAY_USAGE:
+        "giveaway [create/reroll/delete/end] (temps) (nombre de gagnants) (prix)",
+      GIVEAWAY_EXAMPLES:
+        "$giveaway create 10m 2 5€ PayPal !\n$giveaway reroll 597812898022031374",
+      // Errors
+      GIVEAWAY_ERR_STATUS: `${e.error} | Vous devez préciser \`create\`, \`reroll\` ou \`delete\` !`,
+      GIVEAWAY_ERR_CREATE: prefix =>
+        `${e.error} | Vous devez entrer les informations sous cette forme : \n\n\`${prefix}giveaway create [temps] [nombre de gagnants] [prix]\``,
+      GIVEAWAY_ERR_REROLL: `${e.error} | Vous devez entrer l'ID du message du giveaway a re-tirer !`,
+      GIVEAWAY_ERR_DELETE: `${e.error} | Vous devez entrer l'ID du message du giveaway a supprimer !`,
+      GIVEAWAY_ERR_END: `${e.error} | Vous devez entrer l'ID du message du giveaway a terminer !`,
+      GIVEAWAY_ERR_REROLL_MSG_ENDED: messageID =>
+        `${e.error} | Aucun giveaway **terminé** trouvé avec comme ID de message \`${messageID}\``,
+      GIVEAWAY_ERR_MESSAGE_NOT_FOUND: messageID =>
+        `${e.error} | Aucun giveaway trouvé avec comme ID de message \`${messageID}\``,
+      GIVEAWAY_ERR_15_DAYS: `${e.error} | La longueur maximale d'un giveaway est de 15 jours.`,
+      GIVEAWAY_ERR_MAX: `${e.error} | Un maximum de 4 Giveaways peuvent être lancé sur un même serveur.`,
+      // Content
+      GIVEAWAY_CREATED: `${e.success} | Giveaway lancé !`,
+      GIVEAWAY_REROLLED: `${e.success} | Nouveau tirage effectué !`,
+      GIVEAWAY_DELETED: `${e.success} | Giveaway supprimé !`,
+      GIVEAWAY_ENDED: `${e.success} | Giveaway en cours d'arrêt (- de 15 secondes) !`,
+      // Messages
+      GIVEAWAY_CREATE_MESSAGES: {
+        giveaway: "🎉🎉 **GIVEAWAY** 🎉🎉",
+        giveawayEnded: "🎉🎉 **GIVEAWAY TERMINÉ** 🎉🎉",
+        timeRemaining: "Temps restant: **{duration}** !",
+        inviteToParticipate: "Réagissez avec 🎉 pour participer !",
+        winMessage: "Félicitations, {winners} ! Vous avez gagné **{prize}** !",
+        embedFooter: "Giveaways",
+        noWinner: "Giveaway annulé, pas de participation valide.",
+        winners: "gagnant(s)",
+        endedAt: "Fin le",
+        units: {
+          seconds: "secondes",
+          minutes: "minutes",
+          hours: "heures",
+          days: "jours"
+        }
+      },
+      GIVEAWAY_REROLL_MESSAGES: {
+        congrat: ":tada: Nouveau gagnant(s) : {winners} ! Félicitations !",
+        error:
+          "Aucune participation valide, aucun gagnant ne peut être choisi !"
+      }
     };
   }
   /**
