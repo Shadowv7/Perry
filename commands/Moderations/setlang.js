@@ -21,13 +21,15 @@ class Lang extends Command {
   }
 
   async run(message, args, data) {
-    if (!args[0] || !["fr", "en", "français", "english"].includes(args[0]))
+    if (!args[0] || !["fr", "en", "français","anglais","french","english"].includes(args[0]))
       return message.reply(message.language.get("LANG_NO_ARGS"));
     const languages = {
       fr: "french",
       français: "french",
       en: "english",
-      english: "english"
+      english: "english",
+      anglais: "english",
+      french: "french"
     };
 
     if (this.client.settings.get(message.guild.id, "language") === languages[args[0]])

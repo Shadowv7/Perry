@@ -231,7 +231,15 @@ module.exports = class {
       RANK_DESCRITION: "Displays your stats !",
       RANK_USAGE: "rank [username | id | mention | discriminator]",
       RANK_EXEMPLES: "$rank ShadowV\n$rank",
-      RANK_PROGRESSBAR: (curLevel,ProgressBar,nextLevel) => `Level [${curLevel}] ${ProgressBar} [${nextLevel}]`
+      RANK_PROGRESSBAR: (curLevel,ProgressBar,nextLevel) => `Level [${curLevel}] ${ProgressBar} [${nextLevel}]`,
+                /* LANG */
+      LANG_DESCRIPTION: "Modifie la langue de Perry !",
+      LANG_USAGE: "setlang <français/anglais>",
+      LANG_EXEMPLES: "$setlang français\n$setlang anglais",
+      LANG_NO_ARGS: `${e.error} | Please choose a language between "french" and "english"!`,
+      LANG_ALREADY: choice => `${e.error} | I already ${choice} !`,
+      LANG_SUCCESS: choice => `${e.success} | Now I speak ${choice} !`,
+     
     
     };
   }
