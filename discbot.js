@@ -7,6 +7,7 @@ const util = require("util"),
 // Load Client class
 const Client = require("./structures/Client"),
   client = new Client();
+//const { GiveawaysManager } = require("discord-giveaways")
 
 const init = async () => {
   // Searches and loads all commands in all categories
