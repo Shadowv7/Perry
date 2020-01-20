@@ -7,15 +7,12 @@ const util = require("util"),
 // Load Client class
 const Client = require("./structures/Client"),
   client = new Client();
-//const { GiveawaysManager } = require("discord-giveaways")
+//const { GiveawaysManager } = require("discord-giveaways");
 
 const init = async () => {
   // Searches and loads all commands in all categories
   let categories = await readdir("./commands/");
-  client.logger.log(
-    `Chargement de ${categories.length} categories.`,
-    "log"
-  );
+  client.logger.log(`Chargement de ${categories.length} categories.`, "log");
   categories.forEach(async cat => {
     let commands = await readdir(`./commands/${cat}/`);
     commands
@@ -37,20 +34,16 @@ const init = async () => {
     delete require.cache[require.resolve(`./events/${file}`)];
   });
 
-  
-
-  client.login(client.config.token); 
+  client.login(client.config.token);
 };
 
 init();
-
 
 client
   .on("disconnect", () => client.logger.log("Bot is disconnecting...", "warn"))
   .on("reconnecting", () => client.logger.log("Bot reconnecting...", "log"))
   .on("error", e => client.logger.log(e, "error"))
   .on("warn", info => client.logger.log(info, "warn"));
-
 
 process.on("unhandledRejection", err => {
   client.logger.log("Uncaught Promise Error: " + err, "error");

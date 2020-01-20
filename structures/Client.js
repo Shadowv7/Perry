@@ -16,7 +16,7 @@ class Atlanta extends Client {
     this.permissions = require("../helpers/permissions"); // Permissions levels
     this.settings = new Enmap({ name: "settings" });
     this.level = new Enmap({ name: "level" });
-    this.giveawaysManager = new GiveawaysManager(Atlanta, {
+    this.giveawaysManager = new GiveawaysManager(this, {
       storage: "./giveaways.json",
       updateCountdownEvery: 5000,
       default: {
