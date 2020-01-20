@@ -131,12 +131,15 @@ class Help extends Command {
       .setDescription(
         message.language.get(
           "HELP_SUBTITLE",
-          this.client.settings.get(message.guild.id,"prefix")
+          this.client.settings.get(message.guild.id, "prefix")
         )
       )
       .setColor(data.config.embed.color)
       .setFooter(data.config.embed.footer)
-      .setAuthor(this.client.user.username,this.client.user.displayAvatarURL({format: "png"}))
+      .setAuthor(
+        this.client.user.username,
+        this.client.user.displayAvatarURL({ format: "png" })
+      );
     categories.sort().forEach(cat => {
       let tCommands = commands.filter(cmd => cmd.help.category === cat);
       newembed.addField(

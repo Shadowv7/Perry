@@ -69,13 +69,13 @@ module.exports = class {
 
     // Gets the prefix
     let prefix = this.client.settings.get(message.guild.id, "prefix");
-    if (!prefix) return;
+    
 
-    let args = message.content
+    const args = message.content
       .slice(prefix.length)
       .trim()
       .split(/ +/g);
-    let command = args.shift().toLowerCase();
+    const command = args.shift().toLowerCase();
     let cmd =
       this.client.commands.get(command) ||
       this.client.commands.get(this.client.aliases.get(command));
@@ -99,7 +99,7 @@ module.exports = class {
         return message.channel.send(
           message.language.get("ERR_CMD_CLIENT_PERMISSIONS", neededPermissions)
         );
-     /* Member permissions */
+      /* Member permissions */
       const needPermissions = [];
       cmd.conf.memberPermissions.forEach(permission => {
         if (!message.channel.permissionsFor(message.member).has(permission)) {
