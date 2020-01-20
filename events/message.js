@@ -109,6 +109,17 @@ module.exports = class {
           message.language.get("ERR_CMD_USER_PERMISSIONS", levelName, userLevel)
         );
       }
+      /* USERS PERMISSIONS*/
+      const needPermissions = [];
+      cmd.conf.memberPermissions.forEach(permission => {
+        if (!message.channel.permissionsFor(message.guild.message.author).has(permission)) {
+          needPermissions.push(permission);
+        }
+      });
+      if (needPermissions.length > 0)
+        return message.channel.send(
+          message.language.get("ERR_CMD_USERS_PERMISSIONS", needPermissions)
+        );
 
       /* NSFW */
       if (!message.channel.nsfw && cmd.conf.nsfw) {

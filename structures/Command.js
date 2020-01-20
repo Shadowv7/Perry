@@ -17,6 +17,7 @@ module.exports = class Command {
       aliases = new Array(),
       // The permissions needed by the bot to run the command
       clientPermissions = new Array(),
+      memberPermissions = new Array(),
       // The level of permissions required by the user to run the command. Permissions list can be found in the README
       permLevel = 0,
       // The time it will take a user before he can execute the command again

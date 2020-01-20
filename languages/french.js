@@ -22,6 +22,13 @@ module.exports = class {
         } __**Permissions manquantes**__\n\nJ'ai besoin des permissions suivantes pour le bon fonctionnement de cette commande : ${perms
           .map(p => "`" + p + "`")
           .join(", ")}`,
+      ERR_CMD_USERS_PERMISSIONS: perms =>
+        `${
+          e.error
+        } __**Permissions manquantes**__\n\nVous avez besoin des permissions suivantes pour le bon fonctionnement de cette commande : ${perms
+          .map(p => "`" + p + "`")
+          .join(", ")}`,
+    
       ERR_CMD_USER_PERMISSIONS: (levelName, userLevel) =>
         `${e.error} | Cette commande nécessite le niveau de permissions \`${levelName}\` (vous êtes \`${userLevel}\`) !`,
       ERR_CMD_COOLDOWN: time =>

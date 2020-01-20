@@ -11,6 +11,7 @@ class Option extends Command {
       enabled: true,
       aliases: [],
       clientPermissions: [],
+      memberPermissions: ["MANAGE_GUILD"],
       permLevel: 3,
       cooldown: 5000,
       commandPath: __dirname,

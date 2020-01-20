@@ -22,6 +22,12 @@ module.exports = class {
         } __**Missing permissions**__\n\nI need the following permissions for this command to work properly: ${perms
           .map(p => "`" + p + "`")
           .join(", ")}`,
+      ERR_CMD_USERS_PERMISSIONS: perms =>
+        `${
+          e.error
+        } __**Missing permissions**__\n\nYou need the following permissions for this command to work properly: ${perms
+          .map(p => "`" + p + "`")
+          .join(", ")}`,
       ERR_CMD_USER_PERMISSIONS: (levelName, userLevel) =>
         `${e.error} | This command requires the level of permissions \`${levelName}\` (you are \`${userLevel}\`) !`,
       ERR_CMD_COOLDOWN: time =>
