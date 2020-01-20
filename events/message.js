@@ -99,7 +99,17 @@ module.exports = class {
         return message.channel.send(
           message.language.get("ERR_CMD_CLIENT_PERMISSIONS", neededPermissions)
         );
-
+     /* Member permissions */
+      const needPermissions = [];
+      cmd.conf.memberPermissions.forEach(permission => {
+        if (!message.channel.permissionsFor(message.membet).has(permission)) {
+          needPermissions.push(permission);
+        }
+      });
+      if (needPermissions.length > 0)
+        return message.channel.send(
+          message.language.get("ERR_CMD_CLIENT_PERMISSIONS", neededPermissions)
+        );
       /* User permissions */
       const permLevel = await this.client.getLevel(message);
       if (permLevel < cmd.conf.permLevel) {
@@ -109,18 +119,7 @@ module.exports = class {
           message.language.get("ERR_CMD_USER_PERMISSIONS", levelName, userLevel)
         );
       }
-      /* USERS PERMISSIONS*/
-      const needPermissions = [];
-      if (cmd.conf.memberPermissions) {
-      
-          if (!message.member.permissions.has(cmd.conf.permission)) {
-            needPermissions.push(cmd.conf.permission);
-          }
-        if (needPermissions.length > 0)
-          return message.channel.send(
-            message.language.get("ERR_CMD_USERS_PERMISSIONS", needPermissions)
-          );
-      }
+
       /* NSFW */
       if (!message.channel.nsfw && cmd.conf.nsfw) {
         return message.channel.send(language.get("ERR_CMD_NSFW"));
