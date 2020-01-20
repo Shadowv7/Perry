@@ -36,6 +36,27 @@ module.exports = class {
     )}.js`);
     message.language = new Language();
 
+    if (this.client.level.get(message.guild.id, "option") !== "off") {
+      const key = `${message.guild.id}-${message.author.id}`;
+      const xp = Math.floor(Math.random() * 10 + 1);
+      this.client.level.math(key, "+", xp, "xp");
+
+      const curLevel = Math.floor(
+        0.1 *
+          Math.sqrt(
+            this.client.level.get(
+              `${message.guild.id}-${message.author.id}`,
+              "xp"
+            )
+          )
+      );
+      if (this.client.level.get(key, "level") < curLevel) {
+        message.reply(
+          message.language.get("LEVELUP_MESSAGE",message.author.id,this.client.level.get(key,"level"))
+        );
+        this.client.level.set(key, curLevel, "level");
+      }
+    }
     // Check if the bot was mentionned
     const prefixMention = new RegExp(`^<@!?${this.client.user.id}>( |)$`);
     if (message.content.match(prefixMention))

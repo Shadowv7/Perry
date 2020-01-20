@@ -218,8 +218,9 @@ module.exports = class {
       OPTION_EXEMPLES: "$option on\n$option off",
       OPTION_NO_ARGS: `${e.error} | Veuillez choisir une option entre "on" et "off"!`,
       OPTION_ALREADY: choice => `${e.error} | Le système de niveau est déja sur ${choice} !`,
-      OPTION_SUCCESS: choice => `${e.succes} | Le système de niveau est maintenant sur ${choice} !`
-      
+      OPTION_SUCCESS: choice => `${e.succes} | Le système de niveau est maintenant sur ${choice} !`,
+      /* LEVEL */
+      LEVELUP_MESSAGE: (user,level) => `Félicitations , <@${user}> tu es maintenant au niveau ${level} !`
     };
   }
   /**
