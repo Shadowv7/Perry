@@ -135,7 +135,8 @@ class Help extends Command {
         )
       )
       .setColor(data.config.embed.color)
-      .setFooter(data.config.embed.footer);
+      .setFooter(data.config.embed.footer)
+      .setAuthor(this.client.user.username,this.client.user.displayAvatarURL({format: "png"}))
     categories.sort().forEach(cat => {
       let tCommands = commands.filter(cmd => cmd.help.category === cat);
       newembed.addField(
