@@ -14,7 +14,8 @@ class Atlanta extends Client {
         this.logger = require("../helpers/logger"); // Load the logger file
         this.wait = util.promisify(setTimeout); // client.wait(1000) - Wait 1 second   
         this.permissions = require("../helpers/permissions"); // Permissions levels
-        this.settings = new Enmap({name: "settings"})
+        this.settings = new Enmap({name: "settings"});
+        this.level = new Enmap({name: "level"})
     }
 
     // This function is used to load a command and add it to the collection

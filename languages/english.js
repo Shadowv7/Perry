@@ -206,7 +206,16 @@ module.exports = class {
       SHORTURL_USAGE: "shorturl [url]",
       SHORTURL_EXAMPLES: "$shorturl https://google.fr",
       // Errors
-      SHORTURL_ERR_INVALID_URL: `${e.error} | Please enter a valid URL!`
+      SHORTURL_ERR_INVALID_URL: `${e.error} | Please enter a valid URL!`,
+      /* OPTION */
+      OPTION_DESCRIPTION: "Activate or deactivate the level system !",
+      OPTION_USAGE: "option <on/off>",
+      OPTION_EXEMPLES: "$option on\n$option off",
+      OPTION_NO_ARGS: `${e.error} | Please choose an option between "on" and "off" !`,
+      OPTION_ALREADY: choice =>
+        `${e.error} | The level system is already on ${choice} !`,
+      OPTION_SUCCESS: choice =>
+        `${e.succes} | The level system is ${choice} !`
     };
   }
 

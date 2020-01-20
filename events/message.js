@@ -5,7 +5,7 @@ module.exports = class {
   constructor(client) {
     this.client = client;
   }
-//settingd
+  //settingd
   async run(message) {
     const data = {};
 
@@ -18,20 +18,36 @@ module.exports = class {
 
     data.config = this.client.config;
     //database
-    this.client.settings.ensure(`${message.guild.id}`,{prefix: "p!",language: "english"})
+    this.client.settings.ensure(`${message.guild.id}`, {
+      prefix: "p!",
+      language: "english"
+    });
+    this.client.level.ensure(message.guild.id, { option: "off" });
+    this.client.level.ensure(`${message.guild.id}-${message.author.id}`, {
+      user: message.author.id,
+      guild: message.guild.id,
+      xp: 0,
+      level: 0
+    });
     // Gets language
-    let Language = require(`../languages/${this.client.settings.get(message.guild.id,"language")}.js`);
+    let Language = require(`../languages/${this.client.settings.get(
+      message.guild.id,
+      "language"
+    )}.js`);
     message.language = new Language();
 
     // Check if the bot was mentionned
     const prefixMention = new RegExp(`^<@!?${this.client.user.id}>( |)$`);
     if (message.content.match(prefixMention))
       return message.reply(
-        message.language.get("PREFIX_INFO", this.client.settings.get(message.guild.id,"prefix"))
+        message.language.get(
+          "PREFIX_INFO",
+          this.client.settings.get(message.guild.id, "prefix")
+        )
       );
 
     // Gets the prefix
-    let prefix = this.client.settings.get(message.guild.id,"prefix")
+    let prefix = this.client.settings.get(message.guild.id, "prefix");
     if (!prefix) return;
 
     let args = message.content

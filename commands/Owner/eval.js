@@ -12,7 +12,7 @@ class Eval extends Command {
       enabled: true,
       aliases: ["e"],
       clientPermissions: [],
-      permLevel: 4,
+      permLevel: 5,
       cooldown: 5000,
       commandPath: __dirname,
       guildOnly: true,
