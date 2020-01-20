@@ -102,13 +102,13 @@ module.exports = class {
      /* Member permissions */
       const needPermissions = [];
       cmd.conf.memberPermissions.forEach(permission => {
-        if (!message.channel.permissionsFor(message.membet).has(permission)) {
+        if (!message.channel.permissionsFor(message.member).has(permission)) {
           needPermissions.push(permission);
         }
       });
       if (needPermissions.length > 0)
         return message.channel.send(
-          message.language.get("ERR_CMD_CLIENT_PERMISSIONS", neededPermissions)
+          message.language.get("ERR_CMD_CLIENT_PERMISSIONS", needPermissions)
         );
       /* User permissions */
       const permLevel = await this.client.getLevel(message);
