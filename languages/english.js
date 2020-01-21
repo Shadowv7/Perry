@@ -288,7 +288,21 @@ module.exports = class {
       GIVEAWAY_REROLL_MESSAGES: {
         congrat: ":tada: New winner(s) : {winners}! Congratulations!",
         error: "No valid entries, no winners can be chosen!"
-      }
+      },
+        /* WORK */
+      WORK_DESCRIPTION: "You work!",
+      WORK_USAGE: "work",
+      WORK_EXEMPLES: "$work\n$w",
+      WORK_TIME: time =>
+        `You're too tired to work, come back to ${time} !`,
+      WORK_MESSAGES: random => [
+        `You arrested 2 dealers, you got ${random} Perryen!`,
+        `The gangsters gave you $ {random} Perryen!`,
+        `You sold 3 sachets of drugs for ${random} Perryen!`,
+        `You just won ${random} Perryen in poker!`,
+        `A lawyer gave you ${random} Perryen so you wouldn't charge his client!`,
+        `You are helping the police arrest a corrupt lawyer. By doing so you got ${random} Perryen! `,
+        `You are faking evidence for a mafia leader accused of gangsterism.They gave you ${random} Perryen!`]
     };
   }
 

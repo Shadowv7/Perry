@@ -35,7 +35,13 @@ module.exports = class {
       "language"
     )}.js`);
     message.language = new Language();
-
+    this.client.economy.ensure(`${message.guild.id}-${message.author.id}`, {
+      guild: message.guild.id,
+      user: message.author.id,
+      money: 0,
+      cooldown: 0,
+      crimecooldown: 0
+    });
     if (this.client.level.get(message.guild.id, "option") !== "off") {
       const key = `${message.guild.id}-${message.author.id}`;
       const xp = Math.floor(Math.random() * 10 + 1);

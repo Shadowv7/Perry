@@ -237,8 +237,7 @@ module.exports = class {
       RANK_DESCRITION: "Affiche vos statistiques !",
       RANK_USAGE: "rank [pseudo | id | mention | discriminateur]",
       RANK_EXEMPLES: "$rank ShadowV\n$rank",
-      RANK_PROGRESSBAR: (curLevel, ProgressBar, nextLevel) =>
-        `${ProgressBar}`,
+      RANK_PROGRESSBAR: (curLevel, ProgressBar, nextLevel) => `${ProgressBar}`,
       /* LANG */
       LANG_DESCRIPTION: "Modifie la langue de Perry !",
       LANG_USAGE: "setlang <français/anglais>",
@@ -297,6 +296,20 @@ module.exports = class {
           "Aucune participation valide, aucun gagnant ne peut être choisi !"
       },
       /* WORK */
+      WORK_DESCRIPTION: "Vous travaillez !",
+      WORK_USAGE: "work",
+      WORK_EXEMPLES: "$work\n$w",
+      WORK_TIME: time =>
+        `Vous être trop fatigué pour travailler , revenez dans ${time} !`,
+      WORK_MESSAGES: random => [
+        `Vous avez arrêté 2 dealers, vous avez obtenu ${random} Perryen!`,
+        `Les gangster vous ont donné ${random} Perryen!`,
+        `Vous avez vendu 3 sachets de drogues pour une somme de ${random} Perryen !`,
+        `Vous venez de gagner ${random} Perryen au poker !`,
+        `Un avocat vous a donné ${random} Perryen pour que vous n'inculpiez pas son client !`,
+        `Vous aidez la police à arrêter un avocat corrompu.En faisant cela vous avez obtenu ${random} Perryen !`,
+        `Vous traffiquez une preuve pour un chef de la mafia accusé de gangstérisme.Ils vous ont donné ${random} Perryen!`
+      ]
     };
   }
   /**

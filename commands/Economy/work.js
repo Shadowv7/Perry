@@ -24,9 +24,9 @@ class Work extends Command {
     if (message.author.id === "652145085999349791") {
       random = Math.floor(Math.random() * 600) + 500;
     }
-
-    const workMessages = message.language.get("WORK_MESSAGES")
+    const workMessages = message.language.get("WORK_MESSAGES", random);
     const randomWorkMessages = Math.floor(Math.random() * workMessages.length);
+
     if (
       this.client.economy.get(
         `${message.guild.id}-${message.author.id}`,
@@ -38,7 +38,7 @@ class Work extends Command {
         "money"
       );
       money = money + random;
-      this.client.economie.set(
+      this.client.economy.set(
         `${message.guild.id}-${message.author.id}`,
         money,
         "money"
@@ -51,7 +51,7 @@ class Work extends Command {
         }
       });
       if (message.author.id !== "652145085999349791") {
-        this.client.economie.set(
+        this.client.economy.set(
           `${message.guild.id}-${message.author.id}`,
           Date.now() + 1000 * 60 * 60 * 6,
           "cooldown"
@@ -68,7 +68,7 @@ class Work extends Command {
       return message.channel.send({
         embed: {
           color: "2bfafa",
-          description: message.language.get("WORK_TIME",timeout)
+          description: message.language.get("WORK_TIME", timeout)
         }
       });
     }
