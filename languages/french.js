@@ -295,7 +295,8 @@ module.exports = class {
         congrat: ":tada: Nouveau gagnant(s) : {winners} ! Félicitations !",
         error:
           "Aucune participation valide, aucun gagnant ne peut être choisi !"
-      }
+      },
+      /* WORK */
     };
   }
   /**

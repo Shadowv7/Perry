@@ -26,7 +26,8 @@ class Atlanta extends Client {
         reaction: "🎉",
         embedColorEnd: "#2bfafa"
       }
-    });
+    })
+    this.economy = new Enmap({name:"economy"})
   }
 
   // This function is used to load a command and add it to the collection

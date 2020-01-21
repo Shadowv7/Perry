@@ -7,7 +7,17 @@ const util = require("util"),
 // Load Client class
 const Client = require("./structures/Client"),
   client = new Client();
-//const { GiveawaysManager } = require("discord-giveaways");
+const http = require("http");
+const express = require("express");
+const app = express();
+
+app.get("/", (request, response) => {
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://superficial-monday-fujrnj7456.glitch.me/`);
+}, 280000);
 
 const init = async () => {
   // Searches and loads all commands in all categories
