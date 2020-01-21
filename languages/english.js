@@ -96,7 +96,7 @@ module.exports = class {
       USERINFOS_DESCRIPTION: "Show member information!",
       USERINFOS_USAGE: "userinfos [id | mention | pseudo | discriminateur]",
       USERINFOS_EXEMPLES:
-        "$userinfos ShadowV\n$userinfos @ShadowV#9338\n$userinfos 9338",
+        "$userinfos ShadowV",//$userinfos @ShadowV#9338 $userinfos 9338",
       USERINFOS_HEADING: [
         ":bust_in_silhouette: Username",
         ":id: ID",
@@ -292,7 +292,7 @@ module.exports = class {
         /* WORK */
       WORK_DESCRIPTION: "You work!",
       WORK_USAGE: "work",
-      WORK_EXEMPLES: "$work\n$w",
+      WORK_EXEMPLES: "$work\n $w",
       WORK_TIME: time =>
         `You're too tired to work, come back to ${time} !`,
       WORK_MESSAGES: random => [
@@ -302,7 +302,11 @@ module.exports = class {
         `You just won ${random} Perryen in poker!`,
         `A lawyer gave you ${random} Perryen so you wouldn't charge his client!`,
         `You are helping the police arrest a corrupt lawyer. By doing so you got ${random} Perryen! `,
-        `You are faking evidence for a mafia leader accused of gangsterism.They gave you ${random} Perryen!`]
+        `You are faking evidence for a mafia leader accused of gangsterism.They gave you ${random} Perryen!`],
+           /* TOP */
+      TOP_DESCRIPTION: "Displays members classement !",
+      TOP_USAGE: "top",
+      TOP_EXEMPLES: "$top"
     };
   }
 
