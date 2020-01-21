@@ -10,7 +10,7 @@ class Play extends Command {
       examples: language => language.get("PLAY_EXEMPLES"),
       enabled: true,
       aliases: ["p"],
-      clientPermissions: ["CONNECT","SPEAK","EMBED_LINKS"],
+      clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,
@@ -21,6 +21,11 @@ class Play extends Command {
 
   async run(message, args, data) {
     if(!args.join(" ")) return message.reply(message.language.get("PLAY_NO_MUSIQUE"))
+    let voice = message.member.voice.channel;
+          let perms = voice.permissionsFor(message.client.user);
+        if(!perms.has("CONNECT") || !perms.has("SPEAK")){
+            return message.channel.send(message.language.get("ERR_CMD_USERS_PERMISSIONS",["SPEAK","CONNECT"]));
+        }
     if (!this.client.player.isPlaying(message.guild.id)) {
       this.client.player
         .play(message.member.voice.channel, args.join(" "))
