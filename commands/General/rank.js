@@ -43,14 +43,12 @@ class Rank extends Command {
 
       const Bar = xprod(xp, 0, nextLevel, 0, barSize);
       const Pourcentage = xprod(xp, 0, nextLevel, 0, 100);
-    
-      const ProgressBar = `${"<:dblCertified:392249976639455232>".repeat(
-        Bar
-      )}${"<:dblAdmin:483994951961673738>".repeat(barSize - Bar)}`;
+
+      const ProgressBar = `[${"".repeat(Bar)}${"◾".repeat(barSize - Bar)}]`;
       embed.setTitle("•__Rank__•");
-      //embed.addField("Level",UserLevel)
       embed.addField(
-        `Progression`,message.language.get(
+        `Progression`,
+        message.language.get(
           "RANK_PROGRESSBAR",
           UserLevel,
           ProgressBar,
