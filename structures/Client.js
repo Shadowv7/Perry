@@ -2,7 +2,8 @@ const { Client, Collection } = require("discord.js"),
   util = require("util"),
   path = require("path"),
   Enmap = require("enmap"),
-  { GiveawaysManager } = require("discord-giveaways");
+  { GiveawaysManager } = require("discord-giveaways"),
+  { Player } = require("discord-player");
 
 // Creates Atlanta class
 class Atlanta extends Client {
@@ -26,8 +27,13 @@ class Atlanta extends Client {
         reaction: "🎉",
         embedColorEnd: "#2bfafa"
       }
-    })
-    this.economy = new Enmap({name:"economy"})
+    });
+    this.economy = new Enmap({ name: "economy" });
+    this.player = new Player(this, "AIzaSyCSeZlhNMUi7X1EqAM6dTHHG6Rh-daWaL8", {
+      leaveOnStop: true,
+      leaveOnEnd: true,
+      leaveOnEmpty: true
+    });
   }
 
   // This function is used to load a command and add it to the collection
