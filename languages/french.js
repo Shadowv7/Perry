@@ -238,7 +238,7 @@ module.exports = class {
       RANK_USAGE: "rank [pseudo | id | mention | discriminateur]",
       RANK_EXEMPLES: "$rank ShadowV\n$rank",
       RANK_PROGRESSBAR: (curLevel, ProgressBar, nextLevel) =>
-        `•__Progression__•\n${ProgressBar}`,
+        `<:booster:660789028861509633> Niveau ${curLevel}\n${ProgressBar}`,
       /* LANG */
       LANG_DESCRIPTION: "Modifie la langue de Perry !",
       LANG_USAGE: "setlang <français/anglais>",
