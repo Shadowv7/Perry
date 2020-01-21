@@ -233,7 +233,7 @@ module.exports = class {
       RANK_USAGE: "rank [username | id | mention | discriminator]",
       RANK_EXEMPLES: "$rank ShadowV\n$rank",
       RANK_PROGRESSBAR: (curLevel, ProgressBar, nextLevel) =>
-        `Level [${curLevel}] ${ProgressBar} [${nextLevel}]`,
+        `•__Progression__•\n${ProgressBar}`,
       /* LANG */
       LANG_DESCRIPTION: "Change Perry's language !",
       LANG_USAGE: "setlang <french/english>",
@@ -245,7 +245,7 @@ module.exports = class {
 
       // Utils
       GIVEAWAY_DESCRIPTION: "Manage your giveaways simply!",
-      GIVEAWAY_USAGE:
+      GIVEAWAY_USAGE: v
         "giveaway [create/reroll/delete/end] (time) (winners count) (prize)",
       GIVEAWAY_EXAMPLES:
         "$giveaway create 10m 2 5$ PayPal !\n$giveaway reroll 597812898022031374",

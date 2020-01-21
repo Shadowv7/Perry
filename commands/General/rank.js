@@ -29,7 +29,9 @@ class Rank extends Command {
       const UserXp = this.client.level.get(key, "xp");
       const UserLevel = this.client.level.get(key, "level") + 1;
       const MissingXp = UserLevel * 10 * (UserLevel * 10);
-      const embed = new Discord.MessageEmbed().setColor(data.config.embed.color);
+      const embed = new Discord.MessageEmbed().setColor(
+        data.config.embed.color
+      );
 
       function xprod(n, start1, stop1, start2, stop2) {
         return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
@@ -37,16 +39,25 @@ class Rank extends Command {
 
       const xp = UserXp,
         nextLevel = MissingXp,
-        barSize = 20;
+        barSize = 10;
 
       const Bar = xprod(xp, 0, nextLevel, 0, barSize);
-      const ProgressBar = `\`\`[${"■".repeat(Bar)}${"-".repeat(
-        barSize - Bar
-      )}]\`\``;
-      embed.setTitle("•__Rank__•")
-      embed.setDescription(message.language.get("RANK_PROGRESSBAR",UserLevel,ProgressBar,UserLevel+1))
-      message.channel.send(embed)
-    } else { message.reply(message.language.get("LEVEL_NOT_ON"))}
+      const ProgressBar = `${"<:dblCertified:392249976639455232>".repeat(
+        Bar
+      )}${"<:dblAdmin:483994951961673738>".repeat(barSize - Bar)}`;
+      embed.setTitle("•__Rank__•");
+      embed.setDescription(
+        message.language.get(
+          "RANK_PROGRESSBAR",
+          UserLevel,
+          ProgressBar,
+          UserLevel + 1
+        )
+      );
+      message.channel.send(embed);
+    } else {
+      message.reply(message.language.get("LEVEL_NOT_ON"));
+    }
   }
 }
 module.exports = Rank;
