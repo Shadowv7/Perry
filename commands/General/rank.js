@@ -39,15 +39,15 @@ class Rank extends Command {
 
       const xp = UserXp,
         nextLevel = MissingXp,
-        barSize = 10;
+        barSize = 11;
 
       const Bar = xprod(xp, 0, nextLevel, 0, barSize);
-      const Pourcentage = xprod(xp, 0, nextLevel, 0, 100);
-
-      const ProgressBar = `[${"".repeat(Bar)}${"◾".repeat(barSize - Bar)}]`;
+      const ExactPourcent= xprod(xp, 0, nextLevel, 0, 100);
+      const { roundDecimal } = require("../../functions.js")
+      const ProgressBar = `[${"◻️".repeat(Bar)}${"◾".repeat(barSize - Bar)}]`;
       embed.setTitle("•__Rank__•");
       embed.addField(
-        `Progression`,
+        `Progression - (${roundDecimal(ExactPourcent)}%)`,
         message.language.get(
           "RANK_PROGRESSBAR",
           UserLevel,
