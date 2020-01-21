@@ -10,7 +10,7 @@ class Minecraft extends Command {
       examples: language => language.get("MINECRAFT_EXEMPLES"),
       enabled: true,
       aliases: ["mc"],
-      clientPermissions: ["EMBED_LINSK"],
+      clientPermissions: ["EMBED_LINKS"],
       memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,

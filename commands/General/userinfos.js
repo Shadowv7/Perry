@@ -11,7 +11,7 @@ class Userinfos extends Command {
       examples: language => language.get("USERINFOS_EXEMPLES"),
       enabled: true,
       aliases: ["ui"],
-      clientPermissions: ["EMBED_LINSK"],
+      clientPermissions: ["EMBED_LINKS"],
       memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,

@@ -11,7 +11,7 @@ class Perm extends Command {
       examples: language => language.get("PERMS_EXEMPLES"),
       enabled: true,
       aliases: ["perms"],
-      clientPermissions: ["EMBED_LINSK"],
+      clientPermissions: ["EMBED_LINKS"],
       memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,

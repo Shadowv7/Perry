@@ -13,7 +13,7 @@ class Challenge extends Command {
       examples: language => language.get("FN_CHALLENGE_EXEMPLES"),
       enabled: true,
       aliases: [],
-      clientPermissions: ["EMBED_LINSK"],
+      clientPermissions: ["EMBED_LINKS"],
       memberPermissions: [],
      permLevel: 0,
       cooldown: 5000,

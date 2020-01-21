@@ -10,7 +10,7 @@ class Calcul extends Command {
       examples: language => language.get("CALCUL_EXEMPLES"),
       enabled: true,
       aliases: ["calc"],
-      clientPermissions: ["EMBED_LINSK"],
+      clientPermissions: ["EMBED_LINKS"],
       memberPermissions: [],
       permLevel: 0,
       cooldown: 5000,
