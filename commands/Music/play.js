@@ -29,27 +29,27 @@ class Play extends Command {
           song.queue
 
             .on("end", () => {
-              message.channel.send("Il n'y a plus de musique dans la queue!");
+              message.channel.send(message.language.get("QUEUE_END"));
             })
             .on("songChanged", (oldSong, newSong) => {
             
-              message.channel.send({embed: {color: "2bfafa",thumbnail:{url: newSong.thumbnail},description:`Je joue actuelement [\`${newSong.name}\`](${newSong.url}).`}});
+              message.channel.send({embed: {color: "2bfafa",thumbnail:{url: newSong.thumbnail},description:message.language.get("NOW_PLAYING",`[${newSong.name}](${newSong.url})`)}});
          
             });
         })
         .catch(e => {
           console.log(e);
-          message.reply("Je ne trouve pas la musique " + args.join(" ") + ".");
+          message.reply(message.language.get("CANT_FIND_MUSIC"));
         });
     } else {
       this.client.player
         .addToQueue(message.guild.id, args.join(" "))
         .then(song => {
-          message.channel.send({embed: {color: "2bfafa",thumbnail:{url: song.thumbnail},description:`[\`${song.name}\`](${song.url}) a été ajouté à la queue!`}});
+          message.channel.send({embed: {color: "2bfafa",thumbnail:{url: song.thumbnail},description: message.language.get("ADD_TO_QUEUE",`[${song.name}](${song.url})`)}});
          
         })
         .catch(err =>
-          message.reply("Je ne trouve pas la musique `" + args.join(" ") + "`.")
+          message.reply(message.language.get("CANT_FIND_MUSIC"))
         );
     }
   }
