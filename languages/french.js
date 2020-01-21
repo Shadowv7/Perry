@@ -312,7 +312,15 @@ module.exports = class {
       /* TOP */
       TOP_DESCRIPTION: "Affiche le classement des membres",
       TOP_USAGE: "top",
-      TOP_EXEMPLES: "$top"
+      TOP_EXEMPLES: "$top",
+      /* PLAY */
+      PLAY_DESCRIPTION: "Joue de la musique!",
+      PLAY_USAGE: "play <musique>",
+      PLAY_EXEMPLES: "play falling",
+      NOW_PLAYING: (song) => `${e.success} | Je joue ${song} !`,
+      ADD_TO_QUEUE: (song) => `${e.success} | ${song} a été ajouté à la queue !`,
+      QUEUE_END: `${e.error} | La queue est vide !`,
+      CANT_FIND_MUSIC: `${e.error} | Je ne trouve pas cette musique !`
     };
   }
   /**

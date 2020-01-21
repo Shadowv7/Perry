@@ -25,7 +25,7 @@ class Play extends Command {
       this.client.player
         .play(message.member.voice.channel, args.join(" "))
         .then(song => {
-          message.channel.send({embed: {color: "2bfafa",thumbnail:{url: song.thumbnail},description:`Je joue actuelement [\`${song.name}\`](${song.url}).`}});
+          message.channel.send({embed: {color: "2bfafa",thumbnail:{url: song.thumbnail},description:message.language.get("NOW_PLAYING",`[${song.name}](${song.url})`)}});
           song.queue
 
             .on("end", () => {
