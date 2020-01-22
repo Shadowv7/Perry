@@ -318,7 +318,25 @@ module.exports = class {
       CANT_FIND_MUSIC: `${e.error} | I can't find this music !` ,
       JOIN_CHANNEL: `${e.error} | Please join a voice channel !`,
       SAME_CHANNEL: `${e.error} | You must me in the same voice channel as mine !`,
-      NOT_PLAYING: `${e.error} | I'm not playing muisc !`
+      NOT_PLAYING: `${e.error} | I'm not playing muisc !`,
+      PAUSE_DESCRIPTION: `Pause the music!`,
+      RESUME_DESCRIPTION: `Resume the music!`,
+      SKIP_DESCRIPTION: `Skip the music !`,
+      STOP_DESCRIPTION: `Stop the music !`,
+      QUEUE_DESCRIPTION: `Displays the server queue !`,
+      VOLUME_DESCRIPTION: `Change the volume of music !`,
+      PAUSE_USAGE: "pause",
+      RESUME_USAGE: "resume",
+      SKIP_USAGE: "skip",
+      STOP_USAGE: "stop",
+      QUEUE_USAGE: "queue",
+      VOLUME_USAGE: "volume <1 à 100>",
+      RESUME_EXEMPLES: "$resume",
+      PAUSE_EXEMPLES: "$pause",
+      SKIP_EXEMPLES: "$skip",
+      STOP_EXEMPLES: "$stop",
+      QUEUE_EXEMPLES: "$queue",
+      VOLUME_EXEMPLES: "$volume 80"
     };
   }
 

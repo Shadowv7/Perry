@@ -27,7 +27,7 @@ class Pause extends Command {
       return message.reply(message.language.get("SAME_CHANNEL"));
     }
     let song = await this.client.player.pause(message.guild.id);
-    message.reply(`La musique \`${song.name}\` a été mis sur pause!`);
+    message.reply(message.language.get("SKIP_SUCCESS"));
   }
 }
 module.exports = Pause;

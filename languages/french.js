@@ -326,7 +326,26 @@ module.exports = class {
       SAME_CHANNEL: `${e.error} | Vous devez être dans le même salon vocal que moi !`,
       NOT_PLAYING: `${e.error} | Je ne suis pas en train de jouer de la muisque !`,
       PAUSE_DESCRIPTION: `Met en pause la musique !`,
-      PAUSE_USAGE: ``
+      RESUME_DESCRIPTION: `Reprend la musique !`,
+      SKIP_DESCRIPTION: `Skip la musique !`,
+      STOP_DESCRIPTION: `Arrête la musique !`,
+      QUEUE_DESCRIPTION: `Affiche la queue du serveur !`,
+      VOLUME_DESCRIPTION: `Modifie le volume de la musique !`,
+      PAUSE_USAGE: "pause",
+      RESUME_USAGE: "resume",
+      SKIP_USAGE: "skip",
+      STOP_USAGE: "stop",
+      QUEUE_USAGE: "queue",
+      VOLUME_USAGE: "volume <1 à 100>",
+      RESUME_EXEMPLES: "$resume",
+      PAUSE_EXEMPLES: "$pause",
+      SKIP_EXEMPLES: "$skip",
+      STOP_EXEMPLES: "$stop",
+      QUEUE_EXEMPLES: "$queue",
+      VOLUME_EXEMPLES: "$volume 80",
+      SKIP_SUCCESS: `${e.succes} | La musique à été skip !`,
+      PAUSE_SUCCESS: `${e.success} | La musique à été mis en pause !`,
+      RESUME_SUCCES: ``
     };
   }
   /**
