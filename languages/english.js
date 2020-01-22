@@ -339,7 +339,7 @@ module.exports = class {
       VOLUME_EXEMPLES: "$volume 80",
       SKIP_SUCCESS: `${e.success} | The music as been skiped !`,
       PAUSE_SUCCESS: `${e.success} | The music as been paused !`,
-      RESUME_SUCCES: `${e.success} | The music as been resumed !`,
+      RESUME_SUCCESS: `${e.success} | The music as been resumed !`,
       STOP_SUCCESS: `${e.success} | The music as been stoped !`,
       VOLUME_SUCCESS: volume =>
         `${e.success} | The volume is now on \`${volume}\` !`
