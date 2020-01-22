@@ -83,7 +83,7 @@ class Play extends Command {
               thumbnail: { url: song.thumbnail },
               description: message.language.get(
                 "ADD_TO_QUEUE",
-                `[\`${song.name}\`](${song.url})\``
+                `[\`${song.name}\`](${song.url})`
               )
             }
           });

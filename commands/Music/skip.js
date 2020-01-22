@@ -26,7 +26,8 @@ class Skip extends Command {
     if (message.member.voice.channel.id !== queue.connection.channel.id) {
       return message.reply(message.language.get("SAME_CHANNEL"));
     }
-    if(queue.length )
+    if(queue.songs.length < 2)
+      return message.reply(message.language.get("QUEUE_END"))
     let song = await this.client.player.pause(message.guild.id);
     message.reply(message.language.get("SKIP_SUCCESS"))
     .catch(err => message.reply(message.language.get("QUEUE_END")))
