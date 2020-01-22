@@ -50,14 +50,13 @@ class Work extends Command {
           description: workMessages[randomWorkMessages]
         }
       });
-     
+
       //if (message.author.id !== "652145085999349791") {
-        this.client.economy.set(
-          `${message.guild.id}-${message.author.id}`,
-          Date.now() + 1000 * 60 * 60 * 6,
-          "cooldown"
-        );
-      
+      this.client.economy.set(
+        `${message.guild.id}-${message.author.id}`,
+        Date.now() + 1000 * 60 * 60 * 6,
+        "cooldown"
+      );
     } else {
       const time =
         this.client.economy.get(
@@ -68,23 +67,21 @@ class Work extends Command {
       if (this.client.settings.get(message.guild.id, "language") === "french") {
         const timeout = tims.text(time, { lang: "fr" });
         return message.channel.send({
-        embed: {
-          color: "2bfafa",
-          description: message.language.get("WORK_TIME", timeout)
-        }
-      });
-    }
+          embed: {
+            color: "2bfafa",
+            description: message.language.get("WORK_TIME", timeout)
+          }
+        });
       } else {
-       const timeout = tims.text(time, { lang: "en" });
+        const timeout = tims.text(time, { lang: "en" });
         return message.channel.send({
-        embed: {
-          color: "2bfafa",
-          description: message.language.get("WORK_TIME", timeout)
-        }
-      });
-    }
+          embed: {
+            color: "2bfafa",
+            description: message.language.get("WORK_TIME", timeout)
+          }
+        });
       }
-      
+    }
   }
 }
 module.exports = Work;
