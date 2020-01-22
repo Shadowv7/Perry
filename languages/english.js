@@ -316,8 +316,8 @@ module.exports = class {
       ADD_TO_QUEUE: (song) => `${e.success} | ${song} as been add to the queue !`,
       QUEUE_END: `${e.error} | There is any song in the queue !`,
       CANT_FIND_MUSIC: `${e.error} | I can't find this music !` ,
-      JOIN_CHANNEL: `${e.error} | Please join a voice channel !`
-    
+      JOIN_CHANNEL: `${e.error} | Please join a voice channel !`,
+      SAME_CHANNEL: `${e.error} | You must me in the same voice channel as mine !`
     };
   }
 

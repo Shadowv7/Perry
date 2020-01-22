@@ -322,7 +322,8 @@ module.exports = class {
       ADD_TO_QUEUE: (song) => `${e.success} | ${song} a été ajouté à la queue !`,
       QUEUE_END: `${e.error} | La queue est vide !`,
       CANT_FIND_MUSIC: `${e.error} | Je ne trouve pas cette musique !` ,
-      JOIN_CHANNEL: `${e.error} | Veuillez rejoindre un salon vocal !`
+      JOIN_CHANNEL: `${e.error} | Veuillez rejoindre un salon vocal !`,
+      SAME_CHANNEL: `${e.error} | Vous devez être dans le même salon vocal que moi !`
     };
   }
   /**
