@@ -22,7 +22,8 @@ module.exports = {
       images: "<:picture:667629000708980785>",
       owner: "<:owner:667627445830156298>",
       moderations: ":rotating_light:",
-      economy: "<:coins:667642903254007828>"
+      economy: "<:coins:667642903254007828>",
+      music:"<:musique:667627814027264000>"
     }
   },
 

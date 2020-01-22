@@ -43,7 +43,7 @@ class Play extends Command {
               thumbnail: { url: song.thumbnail },
               description: message.language.get(
                 "NOW_PLAYING",
-                `\`[${song.name}](${song.url})\``
+                `[\`${song.name}\`](${song.url})`
               )
             }
           });
@@ -59,7 +59,7 @@ class Play extends Command {
                   thumbnail: { url: newSong.thumbnail },
                   description: message.language.get(
                     "NOW_PLAYING",
-                    `\`[${newSong.name}](song.url)\``
+                    `[\`${song.name}\`](${song.url})`
                   )
                 }
               });
@@ -83,7 +83,7 @@ class Play extends Command {
               thumbnail: { url: song.thumbnail },
               description: message.language.get(
                 "ADD_TO_QUEUE",
-                `\`[${song.name}](${song.url})\``
+                `[\`${song.name}\`](${song.url})\``
               )
             }
           });
