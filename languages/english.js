@@ -317,7 +317,8 @@ module.exports = class {
       QUEUE_END: `${e.error} | There is any song in the queue !`,
       CANT_FIND_MUSIC: `${e.error} | I can't find this music !` ,
       JOIN_CHANNEL: `${e.error} | Please join a voice channel !`,
-      SAME_CHANNEL: `${e.error} | You must me in the same voice channel as mine !`
+      SAME_CHANNEL: `${e.error} | You must me in the same voice channel as mine !`,
+      NOT_PLAYING: `${e.error} | I'm not playing muisc !`
     };
   }
 

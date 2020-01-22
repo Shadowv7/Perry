@@ -313,7 +313,7 @@ module.exports = class {
       TOP_DESCRIPTION: "Affiche le classement des membres",
       TOP_USAGE: "top",
       TOP_EXEMPLES: "$top",
-      /* PLAY */
+      /* MUSIC */
       PLAY_DESCRIPTION: "Joue de la musique!",
       PLAY_USAGE: "play <musique>",
       PLAY_EXEMPLES: "play falling",
@@ -323,7 +323,10 @@ module.exports = class {
       QUEUE_END: `${e.error} | La queue est vide !`,
       CANT_FIND_MUSIC: `${e.error} | Je ne trouve pas cette musique !` ,
       JOIN_CHANNEL: `${e.error} | Veuillez rejoindre un salon vocal !`,
-      SAME_CHANNEL: `${e.error} | Vous devez être dans le même salon vocal que moi !`
+      SAME_CHANNEL: `${e.error} | Vous devez être dans le même salon vocal que moi !`,
+      NOT_PLAYING: `${e.error} | Je ne suis pas en train de jouer de la muisque !`,
+      PAUSE_DESCRIPTION: `Met en pause la musique !`,
+      PAUSE_USAGE: ``
     };
   }
   /**
