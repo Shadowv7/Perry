@@ -1,13 +1,13 @@
 const Command = require("../../structures/Command.js"),
   Discord = require("discord.js");
 
-class Pause extends Command {
+class Skip extends Command {
   constructor(client) {
     super(client, {
-      name: "pause",
-      description: language => language.get("PAUSE_DESCRIPTION"),
-      usage: language => language.get("PAUSE_USAGE"),
-      examples: language => language.get("PAUSE_EXEMPLES"),
+      name: "skip",
+      description: language => language.get("SKIP_DESCRIPTION"),
+      usage: language => language.get("SKIP_USAGE"),
+      examples: language => language.get("SKIP_EXEMPLES"),
       enabled: true,
       aliases: [],
       clientPermissions: [],
@@ -26,8 +26,10 @@ class Pause extends Command {
     if (message.member.voice.channel.id !== queue.connection.channel.id) {
       return message.reply(message.language.get("SAME_CHANNEL"));
     }
+    if(queue.length )
     let song = await this.client.player.pause(message.guild.id);
-    message.reply(message.language.get("PAUSE_SUCCESS"));
+    message.reply(message.language.get("SKIP_SUCCESS"))
+    .catch(err => message.reply(message.language.get("QUEUE_END")))
   }
 }
-module.exports = Pause;
+module.exports = Skip;
