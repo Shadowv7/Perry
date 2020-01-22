@@ -20,9 +20,13 @@ class Play extends Command {
   }
 
   async run(message, args, data) {
+    process.on("unhandledRejection", e => {
+      console.error(e);
+    });
     if (!args.join(" "))
       return message.reply(message.language.get("PLAY_NO_MUSIC"));
     let voice = message.member.voice.channel;
+    if(!voice) return message.reply(message.language.get("JOIN_CHANNEL"))
     let perms = voice.permissionsFor(message.client.user);
     if (!perms.has("CONNECT") || !perms.has("SPEAK")) {
       return message.channel.send(
@@ -55,7 +59,7 @@ class Play extends Command {
                   thumbnail: { url: newSong.thumbnail },
                   description: message.language.get(
                     "NOW_PLAYING",
-                    `${newSong.name}`
+                    `\`[${newSong.name}](song.url)\``
                   )
                 }
               });
@@ -75,7 +79,7 @@ class Play extends Command {
               thumbnail: { url: song.thumbnail },
               description: message.language.get(
                 "ADD_TO_QUEUE",
-                `[${song.name}](${song.url})`
+                `\`[${song.name}](${song.url})\``
               )
             }
           });

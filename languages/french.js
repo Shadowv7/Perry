@@ -321,7 +321,8 @@ module.exports = class {
       PLAY_NO_MUSIC: `${e.error} | Veuillez saisir le nom de la musique !`,
       ADD_TO_QUEUE: (song) => `${e.success} | ${song} a été ajouté à la queue !`,
       QUEUE_END: `${e.error} | La queue est vide !`,
-      CANT_FIND_MUSIC: `${e.error} | Je ne trouve pas cette musique !`
+      CANT_FIND_MUSIC: `${e.error} | Je ne trouve pas cette musique !` ,
+      JOIN_CHANNEL: `${e.error} | Veuillez rejoindre un salon vocal !`
     };
   }
   /**

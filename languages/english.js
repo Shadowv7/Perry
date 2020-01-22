@@ -306,7 +306,18 @@ module.exports = class {
            /* TOP */
       TOP_DESCRIPTION: "Displays members classement !",
       TOP_USAGE: "top",
-      TOP_EXEMPLES: "$top"
+      TOP_EXEMPLES: "$top",
+           /* PLAY */
+      PLAY_DESCRIPTION: "Play muisic !",
+      PLAY_USAGE: "play <music>",
+      PLAY_EXEMPLES: "play falling",
+      NOW_PLAYING: (song) => `${e.success} | I'm playing ${song} !`,
+      PLAY_NO_MUSIC: `${e.error} | Please enter the song name !`,
+      ADD_TO_QUEUE: (song) => `${e.success} | ${song} as been add to the queue !`,
+      QUEUE_END: `${e.error} | There is any song in the queue !`,
+      CANT_FIND_MUSIC: `${e.error} | I can't find this music !` ,
+      JOIN_CHANNEL: `${e.error} | Please join a voice channel !`
+    
     };
   }
 
