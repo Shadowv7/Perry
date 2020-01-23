@@ -349,7 +349,12 @@ module.exports = class {
       STOP_SUCCESS: `${e.success} | La musique à été arrêté !`,
       VOLUME_SUCCESS: volume =>
         `${e.success} | Le volume est maintenant sur \`${volume}\` !`,
-      QUEUE_MAX: `${e.error} | La queue est remplie !`
+      QUEUE_MAX: `${e.error} | La queue est remplie !`,
+      /* WELCOME */
+      WELCOME_DESCRIPTION: "Set le welcome image !",
+      WELCOME_USAGE: "setwelcome <#salon> <url de l'image>",
+      WELCOME_EXEMPLES: "$setwelcome #arrivants https://image.url/",
+      NO_CHANNEL:`${e.error} | Veuillez mentioner un salon !`
     };
   }
   /**
