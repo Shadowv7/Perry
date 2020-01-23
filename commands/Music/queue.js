@@ -1,6 +1,6 @@
 const Command = require("../../structures/Command.js"),
   Discord = require("discord.js"),
-  Pagination = require("discord.js-pagination")
+  Pagination = require("discord.js-pagination");
 
 class Queue extends Command {
   constructor(client) {
@@ -27,17 +27,17 @@ class Queue extends Command {
     if (message.member.voice.channel.id !== queue.connection.channel.id) {
       return message.reply(message.language.get("SAME_CHANNEL"));
     }
-    if (queue.songs.length > 1) {
+    if (queue.songs.length < 1) {
       message.reply(message.language.get("QUEUE_END"));
     }
     const GuildQueue = queue.songs
+      .splice()
       .map((song, i) => {
         return `${`#${i + 1}`} - ${song.name} | ${song.author}`;
       })
       .join("\n");
-    if (queue.songs.length > 10) {
-      
-    }
+    
+    console.log(GuildQueue)
   }
 }
 module.exports = Queue;

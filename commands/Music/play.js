@@ -12,7 +12,7 @@ class Play extends Command {
       aliases: ["p"],
       clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
-      cooldown: 5000,
+      cooldown: 0,
       commandPath: __dirname,
       guildOnly: true,
       nsfw: false
