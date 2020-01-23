@@ -1,21 +1,13 @@
 const applyText = (canvas, text) => {
   const ctx = canvas.getContext("2d");
-
-  // Declare a base size of the font
   let fontSize = 70;
-
   do {
-    // Assign the font to the context and decrement it so it can be measured again
-    ctx.font = `${(fontSize -= 10)}px sans-serif`;
-    // Compare pixel width of the text to the canvas minus the approximate avatar size
+    ctx.font = `${(fontSize -= 10)}px sans-serif}`;
   } while (ctx.measureText(text).width > canvas.width - 300);
-
-  // Return the result to use in the actual canvas
   return ctx.font;
-  //const snekfetch = require("snekfetch");
 };
 const snekfetch = require("snekfetch"),
-      Discord = require("discord.js")
+  Discord = require("discord.js");
 module.exports = class {
   constructor(client) {
     this.client = client;
@@ -40,7 +32,6 @@ module.exports = class {
     ctx.strokeStyle = "#74037b";
     ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-    // Slightly smaller text placed above the member's display name
     ctx.font = "28px sans-serif";
     ctx.fillStyle = "#ffffff";
     ctx.fillText(
@@ -49,7 +40,6 @@ module.exports = class {
       canvas.height / 3.5
     );
 
-    // Add an exclamation point here and below
     ctx.font = applyText(canvas, `${member.displayName}!`);
     ctx.fillStyle = "#ffffff";
     ctx.fillText(
