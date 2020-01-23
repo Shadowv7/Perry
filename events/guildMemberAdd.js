@@ -1,8 +1,24 @@
+const http = require("http");
+const url = require("url");
+const fs = require("fs");
+const Canvas = require("canvas");
+
+const font = url.parse(
+  "https://cdn.glitch.com/238640a7-e93a-4255-8d02-78dcd8c463a8%2Fubuntu.bold.ttf?v=1578079024436"
+);
+var filename = "." + font.pathname;
+fs.readFile(filename, function(err, data) {
+  if (err) {
+    return;
+  }
+
+  Canvas.registerFont(data, { family: "Ubuntu Bold" });
+});
 const applyText = (canvas, text) => {
   const ctx = canvas.getContext("2d");
   let fontSize = 70;
   do {
-    ctx.font = `${(fontSize -= 10)}px sans-serif}`;
+    ctx.font = `${(fontSize -= 10)}px Ubuntu Bold}`;
   } while (ctx.measureText(text).width > canvas.width - 300);
   return ctx.font;
 };
@@ -14,7 +30,7 @@ module.exports = class {
   }
 
   async run(member) {
-    const Canvas = require("canvas");
+    // const Canvas = require("canvas");
     const channel = member.guild.channels.find(
       ch =>
         ch.id === this.client.settings.get(member.guild.id, "welcome_channel")
@@ -32,7 +48,7 @@ module.exports = class {
     ctx.strokeStyle = "#74037b";
     ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-    ctx.font = "28px sans-serif";
+    ctx.font = "28px Ubuntu Bold";
     ctx.fillStyle = "#ffffff";
     ctx.fillText(
       "Welcome to the server,",
@@ -53,7 +69,9 @@ module.exports = class {
     ctx.closePath();
     ctx.clip();
 
-    const { body: buffer } = await snekfetch.get(member.user.displayAvatarURL({format: "png"}));
+    const { body: buffer } = await snekfetch.get(
+      member.user.displayAvatarURL({ format: "png" })
+    );
     const avatar = await Canvas.loadImage(buffer);
     ctx.drawImage(avatar, 25, 25, 200, 200);
 
