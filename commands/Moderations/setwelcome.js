@@ -20,7 +20,7 @@ class Welcome extends Command {
   }
 
   async run(message, args, data) {
-    const channel = message.mentions.channel.first()
+    const channel = message.mentions.channels.first()
     const url = args.slice(1).join(" ")
     if(!channel) return message.reply(message.language.get("NO_CHANNEL"));
     if(!url) return message.reply(message.language.get("NO_URL"))
