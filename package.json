@@ -43,7 +43,7 @@
     "discord-player": "^1.3.1",
     "ffmpeg": "^0.0.4",
     "node-opus": "^0.3.2",
-    "discord-paginationembed": "^1.0.3"
-    
+    "discord-paginationembed": "^1.0.3",
+    "discord.js-pagination": "^1.0.1"
   }
 }
