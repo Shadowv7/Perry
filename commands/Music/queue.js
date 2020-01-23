@@ -31,13 +31,16 @@ class Queue extends Command {
       message.reply(message.language.get("QUEUE_END"));
     }
     const GuildQueue = queue.songs
-      .splice()
+      .splice(0, 20)
       .map((song, i) => {
         return `${`#${i + 1}`} - ${song.name} | ${song.author}`;
       })
       .join("\n");
-    
-    console.log(GuildQueue)
+    const embed = new Discord.MessageEmbed()
+      .setColor(data.config.embed.color)
+      .setTitle("•__Queue__•")
+      .setDescription(GuildQueue);
+    message.channel.send(embed);
   }
 }
 module.exports = Queue;

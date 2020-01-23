@@ -348,7 +348,8 @@ module.exports = class {
       RESUME_SUCCES: `${e.success} | La musique à été repris !`,
       STOP_SUCCESS: `${e.success} | La musique à été arrêté !`,
       VOLUME_SUCCESS: volume =>
-        `${e.success} | Le volume est maintenant sur \`${volume}\` !`
+        `${e.success} | Le volume est maintenant sur \`${volume}\` !`,
+      QUEUE_MAX: `${e.error} | La queue est remplie !`
     };
   }
   /**

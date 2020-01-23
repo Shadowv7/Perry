@@ -342,7 +342,8 @@ module.exports = class {
       RESUME_SUCCESS: `${e.success} | The music as been resumed !`,
       STOP_SUCCESS: `${e.success} | The music as been stoped !`,
       VOLUME_SUCCESS: volume =>
-        `${e.success} | The volume is now on \`${volume}\` !`
+        `${e.success} | The volume is now on \`${volume}\` !`,
+      QUEUE_MAX: `${e.error} | The queue is full !`
     };
   }
 

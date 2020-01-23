@@ -12,7 +12,7 @@ class Play extends Command {
       aliases: ["p"],
       clientPermissions: ["EMBED_LINKS"],
       permLevel: 0,
-      cooldown: 0,
+      cooldown: 5000,
       commandPath: __dirname,
       guildOnly: true,
       nsfw: false
@@ -33,6 +33,7 @@ class Play extends Command {
         message.language.get("ERR_CMD_USERS_PERMISSIONS", ["SPEAK", "CONNECT"])
       );
     }
+  
     if (!this.client.player.isPlaying(message.guild.id)) {
       this.client.player
         .play(message.member.voice.channel, args.join(" "))
@@ -74,6 +75,7 @@ class Play extends Command {
       if (message.member.voice.channel.id !== queue.connection.channel.id) {
         return message.channel.send(message.language.get("SAME_CHANNEL"));
       }
+      if(queue.songs.length > 20) return message.reply(message.language.get("QUEUE_MAX"))
       this.client.player
         .addToQueue(message.guild.id, args.join(" "))
         .then(song => {
