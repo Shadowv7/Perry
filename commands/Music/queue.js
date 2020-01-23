@@ -12,7 +12,7 @@ class Queue extends Command {
       enabled: true,
       aliases: [],
       clientPermissions: [],
-      permLevel: 0,
+      permLevel: 5,
       cooldown: 5000,
       commandPath: __dirname,
       guildOnly: true,
