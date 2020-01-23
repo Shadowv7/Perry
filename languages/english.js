@@ -95,8 +95,7 @@ module.exports = class {
       /* USERINFOS */
       USERINFOS_DESCRIPTION: "Show member information!",
       USERINFOS_USAGE: "userinfos [id | mention | pseudo | discriminateur]",
-      USERINFOS_EXEMPLES:
-        "$userinfos ShadowV",//$userinfos @ShadowV#9338 $userinfos 9338",
+      USERINFOS_EXEMPLES: "$userinfos ShadowV", //$userinfos @ShadowV#9338 $userinfos 9338",
       USERINFOS_HEADING: [
         ":bust_in_silhouette: Username",
         ":id: ID",
@@ -232,8 +231,7 @@ module.exports = class {
       RANK_DESCRITION: "Displays your stats !",
       RANK_USAGE: "rank [username | id | mention | discriminator]",
       RANK_EXEMPLES: "$rank ShadowV\n$rank",
-      RANK_PROGRESSBAR: (curLevel, ProgressBar, nextLevel) =>
-        `${ProgressBar}`,
+      RANK_PROGRESSBAR: (curLevel, ProgressBar, nextLevel) => `${ProgressBar}`,
       /* LANG */
       LANG_DESCRIPTION: "Change Perry's language !",
       LANG_USAGE: "setlang <french/english>",
@@ -245,7 +243,7 @@ module.exports = class {
 
       // Utils
       GIVEAWAY_DESCRIPTION: "Manage your giveaways simply!",
-      GIVEAWAY_USAGE: 
+      GIVEAWAY_USAGE:
         "giveaway [create/reroll/delete/end] (time) (winners count) (prize)",
       GIVEAWAY_EXAMPLES:
         "$giveaway create 10m 2 5$ PayPal !\n$giveaway reroll 597812898022031374",
@@ -289,33 +287,33 @@ module.exports = class {
         congrat: ":tada: New winner(s) : {winners}! Congratulations!",
         error: "No valid entries, no winners can be chosen!"
       },
-        /* WORK */
+      /* WORK */
       WORK_DESCRIPTION: "You work!",
       WORK_USAGE: "work",
       WORK_EXEMPLES: "$work\n $w",
-      WORK_TIME: time =>
-        `You're too tired to work, come back to ${time} !`,
+      WORK_TIME: time => `You're too tired to work, come back to ${time} !`,
       WORK_MESSAGES: random => [
         `You arrested 2 dealers, you got ${random} Perryen!`,
-        `The gangsters gave you $ {random} Perryen!`,
-        `You sold 3 sachets of drugs for ${random} Perryen!`,
-        `You just won ${random} Perryen in poker!`,
-        `A lawyer gave you ${random} Perryen so you wouldn't charge his client!`,
-        `You are helping the police arrest a corrupt lawyer. By doing so you got ${random} Perryen! `,
-        `You are faking evidence for a mafia leader accused of gangsterism.They gave you ${random} Perryen!`],
-           /* TOP */
+        `The gangsters gave you $ {random} Perryen!`,
+        `You sold 3 sachets of drugs for ${random} Perryen!`,
+        `You just won ${random} Perryen in poker!`,
+        `A lawyer gave you ${random} Perryen so you wouldn't charge his client!`,
+        `You are helping the police arrest a corrupt lawyer. By doing so you got ${random} Perryen! `,
+        `You are faking evidence for a mafia leader accused of gangsterism.They gave you ${random} Perryen!`
+      ],
+      /* TOP */
       TOP_DESCRIPTION: "Displays members classement !",
       TOP_USAGE: "top",
       TOP_EXEMPLES: "$top",
-           /* PLAY */
+      /* PLAY */
       PLAY_DESCRIPTION: "Play muisic !",
       PLAY_USAGE: "play <music>",
       PLAY_EXEMPLES: "play falling",
-      NOW_PLAYING: (song) => `${e.success} | I'm playing ${song} !`,
+      NOW_PLAYING: song => `${e.success} | I'm playing ${song} !`,
       PLAY_NO_MUSIC: `${e.error} | Please enter the song name !`,
-      ADD_TO_QUEUE: (song) => `${e.success} | ${song} as been add to the queue !`,
+      ADD_TO_QUEUE: song => `${e.success} | ${song} as been add to the queue !`,
       QUEUE_END: `${e.error} | There is any song in the queue !`,
-      CANT_FIND_MUSIC: `${e.error} | I can't find this music !` ,
+      CANT_FIND_MUSIC: `${e.error} | I can't find this music !`,
       JOIN_CHANNEL: `${e.error} | Please join a voice channel !`,
       SAME_CHANNEL: `${e.error} | You must me in the same voice channel as mine !`,
       NOT_PLAYING: `${e.error} | I'm not playing muisc !`,
@@ -343,7 +341,14 @@ module.exports = class {
       STOP_SUCCESS: `${e.success} | The music as been stoped !`,
       VOLUME_SUCCESS: volume =>
         `${e.success} | The volume is now on \`${volume}\` !`,
-      QUEUE_MAX: `${e.error} | The queue is full !`
+      QUEUE_MAX: `${e.error} | The queue is full !`,
+      /* WELCOME */
+      WELCOME_DESCRIPTION: "Set the welcome image !",
+      WELCOME_USAGE: "setwelcome <#channel> <image-url>",
+      WELCOME_EXEMPLES: "$setwelcome #join https://image.url/",
+      NO_CHANNEL: `${e.error} | Please ping a channel !`,
+      NO_URL: `${e.error} | Please include the url image !`,
+      WELCOME_SUCCESS: `${e.success} | The welcome image as been set !`
     };
   }
 

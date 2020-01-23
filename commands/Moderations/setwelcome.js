@@ -9,7 +9,7 @@ class Welcome extends Command {
       usage: language => language.get("WELCOME_USAGE"),
       examples: language => language.get("WELCOME_EXEMPLES"),
       enabled: true,
-      aliases: ["setwelcome"],
+      aliases: ["sw"],
       clientPermissions: [],
       permLevel: 0,
       cooldown: 5000,
@@ -24,7 +24,7 @@ class Welcome extends Command {
     const url = args.slice(1).join(" ")
     if(!channel) return message.reply(message.language.get("NO_CHANNEL"));
     if(!url) return message.reply(message.language.get("NO_URL"))
-    this.client.settings.set(message.guild.id,channel,"welcome_channel")
+    this.client.settings.set(message.guild.id,channel.id,"welcome_channel")
     this.client.settings.set(message.guild.id,url,"welcome_image")
     message.reply(message.language.get("WELCOME_SUCCESS"))
   }

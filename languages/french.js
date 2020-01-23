@@ -354,7 +354,9 @@ module.exports = class {
       WELCOME_DESCRIPTION: "Set le welcome image !",
       WELCOME_USAGE: "setwelcome <#salon> <url de l'image>",
       WELCOME_EXEMPLES: "$setwelcome #arrivants https://image.url/",
-      NO_CHANNEL:`${e.error} | Veuillez mentioner un salon !`
+      NO_CHANNEL:`${e.error} | Veuillez mentioner un salon !`,
+      NO_URL: `${e.error} | Veuillez inclure l'url de l'image !`,
+      WELCOME_SUCCESS: `${e.success} | Le welcome image à été mis avec succès !`
     };
   }
   /**

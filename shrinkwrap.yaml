@@ -2,6 +2,7 @@ dependencies:
   ascii-art: 2.5.0
   axios: 0.19.2
   better-sqlite-pool: 0.2.3
+  canvas: 2.6.1
   chalk: 3.0.0
   common-tags: 1.8.0
   discord-giveaways: 3.0.10
@@ -20,6 +21,7 @@ dependencies:
   mongoose: 5.8.9
   ms: 2.1.2
   node-opus: 0.3.3
+  snekfetch: 4.0.4
   tims: 1.0.4
 packages:
   /@discordjs/collection/0.1.3:
@@ -1484,7 +1486,7 @@ packages:
       mkdirp: 0.5.1
       needle: 2.4.0
       nopt: 4.0.1
-      npm-packlist: 1.4.7
+      npm-packlist: 1.4.8
       npmlog: 4.1.2
       rc: 1.2.8
       rimraf: 2.7.1
@@ -1512,13 +1514,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-EPfafl6JL5/rU+ot6P3gRSCpPDW5VmIzX959Ob1+ySFUuuYHWHekXpwdUZcKP5C+DS4GEtdJluwBjnsNDl+fSA==
-  /npm-packlist/1.4.7:
+  /npm-packlist/1.4.8:
     dependencies:
       ignore-walk: 3.0.3
       npm-bundled: 1.1.1
+      npm-normalize-package-bin: 1.0.1
     dev: false
     resolution:
-      integrity: sha512-vAj7dIkp5NhieaGZxBJB8fF4R0078rqsmhJcAfXZ6O7JJhjhPK96n5Ry1oZcfLXgfun0GWTZPOxaEyqv8GBykQ==
+      integrity: sha512-5+AZgwru5IevF5ZdnFglB5wNlHG1AOOuw28WhUq8/8emhBmLv6jX5by4WJCh7lW0uSYZYS6DXqIsyZVIXRZU9A==
   /npmlog/4.1.2:
     dependencies:
       are-we-there-yet: 1.1.5
@@ -1927,6 +1930,11 @@ packages:
     dev: false
     resolution:
       integrity: sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
+  /snekfetch/4.0.4:
+    deprecated: use node-fetch instead
+    dev: false
+    resolution:
+      integrity: sha512-dyycG9fvwtSJqKPfMVOpXt+60qvMGe7vWLwOJDiSJaiAx+hs2EnFChG2bXCWn7ulz+zGzrHdN9/yeEb0YqEPww==
   /sparse-bitfield/3.0.3:
     dependencies:
       memory-pager: 1.5.0
@@ -2282,6 +2290,7 @@ specifiers:
   ascii-art: ^2.5.0
   axios: ^0.19.2
   better-sqlite-pool: ^0.2.3
+  canvas: ^2.6.1
   chalk: ^3.0.0
   common-tags: ^1.8.0
   discord-giveaways: ^3.0.9
@@ -2300,4 +2309,5 @@ specifiers:
   mongoose: ^5.7.1
   ms: ^2.1.2
   node-opus: ^0.3.2
+  snekfetch: ^4.0.4
   tims: ^1.0.4
