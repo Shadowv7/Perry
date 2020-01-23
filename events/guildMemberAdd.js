@@ -53,7 +53,7 @@ module.exports = class {
     ctx.closePath();
     ctx.clip();
 
-    const { body: buffer } = await snekfetch.get(member.user.displayAvatarURL);
+    const { body: buffer } = await snekfetch.get(member.user.displayAvatarURL({format: "png"}));
     const avatar = await Canvas.loadImage(buffer);
     ctx.drawImage(avatar, 25, 25, 200, 200);
 
