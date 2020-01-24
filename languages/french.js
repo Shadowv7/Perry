@@ -358,7 +358,10 @@ module.exports = class {
       NO_URL: `${e.error} | Veuillez inclure l'url de l'image !`,
       WELCOME_SUCCESS: `${e.success} | Le welcome image à été mis avec succès !`,
       WELCOME_MESSAGE: "Bienvenue sur le serveur ,",
-      WELCOM_IMAGE: (member) => `Bienvenue sur le serveur ,${member}`
+      WELCOME_IMAGE: (member) => `Bienvenue sur le serveur ,${member}`,
+      /* GUILDMEMBERBOOST */
+      BOOSTER_TITLE: "•__Nouveau Booster__•",
+      BOOSTER_MESSAGE: (member,guild) => `<a:boost:670174468320002049> ${member} vient de booster le serveur ! Merci à toi ! <a:boost:670174468320002049>`
     };
   }
   /**

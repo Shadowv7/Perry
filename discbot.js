@@ -56,9 +56,6 @@ client
   .on("reconnecting", () => client.logger.log("Bot reconnecting...", "log"))
   .on("error", e => client.logger.log(e, "error"))
   .on("warn", info => client.logger.log(info, "warn"));
-client.on('guildMemberBoost', (member) => {
-    console.log(`${member.user.tag} just boosted ${member.guild.name}!`);
-});
 process.on("unhandledRejection", err => {
   client.logger.log("Uncaught Promise Error: " + err, "error");
 });

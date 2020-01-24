@@ -350,7 +350,11 @@ module.exports = class {
       NO_URL: `${e.error} | Please include the url image !`,
       WELCOME_SUCCESS: `${e.success} | The welcome image as been set !`,
       WELCOME_IMAGE: member => `Welcome to the server , ${member}`,
-      WELCOME_MESSAGE: "Bienvenue sur le serveur ,"
+      WELCOME_MESSAGE: "Bienvenue sur le serveur ,",
+      /* GUILDMEMBERBOOST */
+      BOOSTER_TITLE: "•__New Booster__•",
+      BOOSTER_MESSAGE: (member, guild) =>
+        `<a:boost:670174468320002049> ${member} just boosted the  server ! Thank you ! <a:boost:670174468320002049>`
     };
   }
 
