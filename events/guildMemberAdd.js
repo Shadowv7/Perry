@@ -51,7 +51,7 @@ module.exports = class {
     ctx.font = "28px Ubuntu Bold";
     ctx.fillStyle = "#ffffff";
     ctx.fillText(
-      "Welcome to the server,",
+     member.language.get("WELCOME_MESSAGE"),
       canvas.width / 2.5,
       canvas.height / 3.5
     );
@@ -80,6 +80,6 @@ module.exports = class {
       "welcome-image.png"
     );
 
-    channel.send(`Welcome to the server, ${member}!`, attachment);
+    channel.send(member.language.get("WELCOME_IMAGE",member), attachment);
   }
 };

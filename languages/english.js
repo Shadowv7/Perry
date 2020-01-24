@@ -348,7 +348,9 @@ module.exports = class {
       WELCOME_EXEMPLES: "$setwelcome #join https://image.url/",
       NO_CHANNEL: `${e.error} | Please ping a channel !`,
       NO_URL: `${e.error} | Please include the url image !`,
-      WELCOME_SUCCESS: `${e.success} | The welcome image as been set !`
+      WELCOME_SUCCESS: `${e.success} | The welcome image as been set !`,
+      WELCOME_IMAGE: member => `Welcome to the server , ${member}`,
+      WELCOME_MESSAGE: "Bienvenue sur le serveur ,"
     };
   }
 

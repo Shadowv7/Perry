@@ -356,7 +356,9 @@ module.exports = class {
       WELCOME_EXEMPLES: "$setwelcome #arrivants https://image.url/",
       NO_CHANNEL:`${e.error} | Veuillez mentioner un salon !`,
       NO_URL: `${e.error} | Veuillez inclure l'url de l'image !`,
-      WELCOME_SUCCESS: `${e.success} | Le welcome image à été mis avec succès !`
+      WELCOME_SUCCESS: `${e.success} | Le welcome image à été mis avec succès !`,
+      WELCOME_MESSAGE: "Bienvenue sur le serveur ,",
+      WELCOM_IMAGE: (member) => `Bienvenue sur le serveur ,${member}`
     };
   }
   /**
