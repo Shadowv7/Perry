@@ -13,24 +13,24 @@ module.exports = class {
         "Gran-Moderador",
         "Administrador",
         "Fundador",
-        "Suprême"
+        "Supremo"
       ],
 
       ERR_CMD_CLIENT_PERMISSIONS: perms =>
         `${
           e.error
-        } __**Permissions manquantes**__\n\nJ'ai besoin des permissions suivantes pour le bon fonctionnement de cette commande : ${perms
+        } __**Falta de permisos**__ \n\nNecesito los siguientes permisos para que este comando funcione: ${perms
           .map(p => "`" + p + "`")
           .join(", ")}`,
       ERR_CMD_USERS_PERMISSIONS: perms =>
         `${
           e.error
-        } __**Permissions manquantes**__\n\nVous avez besoin des permissions suivantes pour le bon fonctionnement de cette commande : ${perms
+        } __**Falta de permisos**__ \n\nUsted necesita los siguientes permisos para que este comando funcione: ${perms
           .map(p => "`" + p + "`")
           .join(", ")}`,
 
       ERR_CMD_USER_PERMISSIONS: (levelName, userLevel) =>
-        `${e.error} | Cette commande nécessite le niveau de permissions \`${levelName}\` (vous êtes \`${userLevel}\`) !`,
+        `${e.error} | Este comando requiere el nivel de permisos \`${levelName}\` (usted es \`${userLevel}\`) !`,
       ERR_CMD_COOLDOWN: time =>
         `${e.error} | Hey, restez calme ! Attendez **${time}** seconde(s) avant d'effectuer de nouveau cette commande !`,
       ERR_CMD_NSFW: `${e.error} | Cette commande doit être exécutée dans un salon NSFW !`,
