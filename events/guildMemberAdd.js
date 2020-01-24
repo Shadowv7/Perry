@@ -35,7 +35,7 @@ module.exports = class {
       ch =>
         ch.id === this.client.settings.get(member.guild.id, "welcome_channel")
     );
-    const language = require(`../languages/${this.client.settings.get(member.guild.id,"language")}.js`)
+    const language = new(require(`../languages/${this.client.settings.get(member.guild.id,"language")}.js`))
     if (!channel) return;
 
     const canvas = Canvas.createCanvas(700, 250);
