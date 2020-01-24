@@ -32,25 +32,25 @@ module.exports = class {
       ERR_CMD_USER_PERMISSIONS: (levelName, userLevel) =>
         `${e.error} | Este comando requiere el nivel de permisos \`${levelName}\` (usted es \`${userLevel}\`) !`,
       ERR_CMD_COOLDOWN: time =>
-        `${e.error} | Hey, restez calme ! Attendez **${time}** seconde(s) avant d'effectuer de nouveau cette commande !`,
-      ERR_CMD_NSFW: `${e.error} | Cette commande doit être exécutée dans un salon NSFW !`,
-      ERR_CMD_DISABLED: `${e.error} | Cette commande est actuellement désactivée !`,
-      ERR_OCCURRED: `${e.error} | Une erreur est survenue. Veuillez réessayez dans quelques minutes !`,
-      ERR_CMD_GUILDONLY: `${e.error} | Cette commande n'est pas disponible en messages privés !`,
+        `${e.error} | ¡Oye, mantén la calma! ¡Espere ** ${time} ** segundos) antes de realizar este pedido nuevamente!`,
+      ERR_CMD_NSFW: `${e.error} | ¡Este comando debe ejecutarse en un salón NSFW!`,
+      ERR_CMD_DISABLED: `${e.error} | ¡Este comando está actualmente desactivado!`,
+      ERR_OCCURRED: `${e.error} | Ha ocurrido un error ¡Inténtalo nuevamente en unos minutos!`,
+      ERR_CMD_GUILDONLY: `${e.error} | ¡Este comando no está disponible en mensajes privados!`,
 
       PREFIX_INFO: prefix =>
-        `${e.success} | Le préfixe de ce serveur est \`${prefix}\` !`,
+        `${e.success} | El prefijo para este servidor es \`${prefix}\` !`,
 
       /* PING COMMAND */
-      PING_DESCRIPTION: "Affiche la latence du bot !",
+      PING_DESCRIPTION: "Mostrar la latencia del bot!",
       PING_USAGE: "ping",
       PING_EXEMPLES: "$ping",
-      PING_WAIT: `${e.loading} | Ping en cours...`,
-      PING_RESULT: ms => `${e.success} | Pong ! Latence: \`${ms}\` ms !`,
+      PING_WAIT: `${e.loading} | Ping en progreso...`,
+      PING_RESULT: ms => `${e.success} | Pong ! Latencia: \`${ms}\` ms !`,
 
       /* EVAL COMMAND */
-      EVAL_DESCRIPTION: "Evalue un code !",
-      EVAL_USAGE: "eval <code>",
+      EVAL_DESCRIPTION: "Evaluar un código !",
+      EVAL_USAGE: "eval <código>",
       EVAL_EXEMPLES: "$eval message.reply('eval')",
 
       /* BUILD EMOJIS COMMAND */
@@ -62,21 +62,21 @@ module.exports = class {
       BUILD_EMOJIS_INFOS: `${e.success} | Copiez-collez ceci dans votre configuration !`,
 
       /* HELP COMMAND */
-      HELP_TITLE: "Liste des commandes",
+      HELP_TITLE: "Lista de comandos",
       HELP_SUBTITLE: prefix =>
-        `● Pour avoir de l'aide sur une commande tapez \`${prefix}help <commande>\` !`,
+        `● Para obtener ayuda sobre un comando, escriba \`${prefix}help <comando>\` !`,
       HELP_HEADINGS: [
-        "Aide :",
-        "Utilisation :",
-        "Exemples :",
-        "Groupe :",
-        "Description :",
+        "Ayua :",
+        "Uso :",
+        "Ejemplos :",
+        "Grupo :",
+        "Descripción :",
         "Alias :",
-        "Permissions :"
+        "Permiso :"
       ],
-      HELP_NO_ALIASES: "Aucun alias.",
+      HELP_NO_ALIASES: "No alias.",
       HELP_ERR_NOT_FOUND: cmd =>
-        `${e.error} | Commande \`${cmd}\` introuvable !`,
+        `${e.error} | Comandos \`${cmd}\` no encontrada!`,
 
       /* BOTINFOS */
       BOTINFOS_DESCRIPTION: "Affiche des informations sur Perry",
