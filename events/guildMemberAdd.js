@@ -35,6 +35,7 @@ module.exports = class {
       ch =>
         ch.id === this.client.settings.get(member.guild.id, "welcome_channel")
     );
+    const language = require(`../languages/${this.client.settings.get(member.guild.id,"language")}.js`)
     if (!channel) return;
 
     const canvas = Canvas.createCanvas(700, 250);
@@ -51,7 +52,7 @@ module.exports = class {
     ctx.font = "28px Ubuntu Bold";
     ctx.fillStyle = "#ffffff";
     ctx.fillText(
-     member.language.get("WELCOME_MESSAGE"),
+     language.get("WELCOME_MESSAGE"),
       canvas.width / 2.5,
       canvas.height / 3.5
     );
@@ -80,6 +81,6 @@ module.exports = class {
       "welcome-image.png"
     );
 
-    channel.send(member.language.get("WELCOME_IMAGE",member), attachment);
+    channel.send(language.get("WELCOME_IMAGE",member), attachment);
   }
 };

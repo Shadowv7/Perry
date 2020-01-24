@@ -8,11 +8,14 @@ module.exports = class {
       this.client.settings.get(member.guild.id, "logs-channel")
     );
     if (!channel) return;
+    const language = new(require(`../languages/${this.client.settings.get(member.guild.id,"language")}.js`)),
+          title = language.get("BOOSTER_TITLE"),
+          message = language.get("BOOSTER_MESSAGE");
     channel.send({
       embed: {
         color: 0x2bfafa,
-        title: member.language.get("BOOSTER_TITLE"),
-        description: member.language.get(
+        title: title,
+        description: language.get(
           "BOOSTER_MESSAGE",
           member
         )
