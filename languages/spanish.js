@@ -79,21 +79,21 @@ module.exports = class {
         `${e.error} | Comandos \`${cmd}\` no encontrada!`,
 
       /* BOTINFOS */
-      BOTINFOS_DESCRIPTION: "Affiche des informations sur Perry",
+      BOTINFOS_DESCRIPTION: "Muestra información sobre Perry.",
       BOTINFOS_USAGE: "botinfos",
       BOTINFOS_EXEMPLES: "$botinfos",
       BOTINFOS_HEADING: [
-        "•__Voici des informations sur Perry__•",
-        ":computer: Développeur :",
-        "📊 Statistiques : ",
-        "Seveurs",
-        "Utilisateurs"
+        "•__Aquí hay alguna información sobre Perry__•",
+        ":computer: Revelador :",
+        "📊 : ",
+        "Servidores",
+        "Usuarios"
       ],
       /* PERMS */
-      PERMS_DESCRIPTION: "Affiche les permissions que vous possédez!",
+      PERMS_DESCRIPTION: "¡Muestra los permisos que tienes!",
       PERMS_USAGE: "permissions",
       PERMS_EXEMPLES: "$permissions",
-      PERMS_TITLE: user => `•__Voici les permissions de ${user}__•`,
+      PERMS_TITLE: user => `•__Aquí están los permisos de ${user}__•`,
       /* USERINFOS */
       USERINFOS_DESCRIPTION: "Affiche les informations d'un membre!",
       USERINFOS_USAGE: "userinfos [id | mention | pseudo | discriminateur]",
