@@ -14,12 +14,6 @@ module.exports = class {
       )}.js`))(),
       title = language.get("BOOSTER_TITLE"),
       message = language.get("BOOSTER_MESSAGE", member);
-    channel.send({
-      embed: {
-        color: 0x2bfafa,
-        title: title,
-        description: message
-      }
-    });
+    channel.send(message);
   }
 };
