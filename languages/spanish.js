@@ -95,32 +95,32 @@ module.exports = class {
       PERMS_EXEMPLES: "$permissions",
       PERMS_TITLE: user => `•__Aquí están los permisos de ${user}__•`,
       /* USERINFOS */
-      USERINFOS_DESCRIPTION: "Affiche les informations d'un membre!",
-      USERINFOS_USAGE: "userinfos [id | mention | pseudo | discriminateur]",
+      USERINFOS_DESCRIPTION: "Mostrar información del miembro!",
+      USERINFOS_USAGE: "userinfos [id | mencionar | apodo | discriminador]",
       USERINFOS_EXEMPLES: "$userinfos ShadowV", // $userinfos @ShadowV#9338 $userinfos 9338",
       USERINFOS_HEADING: [
-        ":bust_in_silhouette: Pseudo",
+        ":bust_in_silhouette: Nombre de usuario",
         ":id: ID",
-        ":hash: Discriminateur",
+        ":hash: Discriminasor",
         ":robot: Robot",
-        ":busts_in_silhouette: Surnom",
-        ":calendar: A rejoint Discord le",
-        "🔐 Rôles"
+        ":busts_in_silhouette: Apodo",
+        ":calendar: Se unió a Discord en",
+        "🔐 Papeles"
       ],
-      USERINFOS_ERROR: `${e.error} | Ce membre possède trop de rôles!`,
+      USERINFOS_ERROR: `${e.error} | ¡Este miembro tiene demasiados roles!`,
       /* FN_CHALLENGE */
-      FN_CHALLENGE_DESCRIPTION: "Affiche les défis de fortnite!",
+      FN_CHALLENGE_DESCRIPTION: "¡Muestra desafíos fortnite!",
       FN_CHALLENGE_USAGE: "fnchallenge",
       FN_CHALLENGE_EXEMPLES: "$fnchallenge",
       /* FN_STORE*/
-      FN_STORE_DESCRIPTION: "Affiche la boutique de Fortnite!",
+      FN_STORE_DESCRIPTION: "¡Muestra la tienda Fortnite!",
       FN_STORE_USAGE: "fnshop",
       FN_STORE_EXEMPLES: "$fnshop",
-      FN_STORE_HEADING: ["Rareté", "Prix", "Image", "Cliquez ici"],
+      FN_STORE_HEADING: ["Rareza", "Primio", "Imagen", "Haga clic aquí"],
       /* FN_STATS*/
 
-      FN_STATS_DESCRIPTION: "Affiche les statistiques d'un joueur Fortnite !",
-      FN_STATS_USAGE: "fnstats <platform> <pseudo>",
+      FN_STATS_DESCRIPTION: "Muestra estadísticas para un jugador de Fortnite!",
+      FN_STATS_USAGE: "fnstats <plataforma> <apodo>",
       FN_STATS_EXEMPLES: "$fnstats psn Shadow",
       FN_STATS_NO_USER: `${e.error} | Veuillez saisir le pseudo d'un joueur Fortnite !`,
       FN_STATS_NO_PLATFORM: `${e.error} | Veuillez saisir la platform !`,
@@ -354,11 +354,15 @@ module.exports = class {
       WELCOME_DESCRIPTION: "Set le welcome image !",
       WELCOME_USAGE: "setwelcome <#salon> <url de l'image>",
       WELCOME_EXEMPLES: "$setwelcome #arrivants https://image.url/",
-      NO_CHANNEL:`${e.error} | Veuillez mentioner un salon !`,
+      NO_CHANNEL: `${e.error} | Veuillez mentioner un salon !`,
       NO_URL: `${e.error} | Veuillez inclure l'url de l'image !`,
       WELCOME_SUCCESS: `${e.success} | Le welcome image à été mis avec succès !`,
       WELCOME_MESSAGE: "Bienvenue sur le serveur ,",
-      WELCOM_IMAGE: (member) => `Bienvenue sur le serveur ,${member}`
+      WELCOME_IMAGE: member => `Bienvenue sur le serveur ,${member}`,
+      /* GUILDMEMBERBOOST */
+      BOOSTER_TITLE: "•__Nouveau Booster__•",
+      BOOSTER_MESSAGE: (member, guild) =>
+        `<a:boost:670174468320002049> ${member} vient de booster le serveur ! Merci à toi ! <a:boost:670174468320002049>`
     };
   }
   /**
