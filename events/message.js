@@ -20,7 +20,12 @@ module.exports = class {
     //database
     this.client.settings.ensure(`${message.guild.id}`, {
       prefix: "p!",
-      language: "english"
+      language: "english",
+      logs: false,
+      logs_channel: null,
+      welcome : false,
+      welcome_image : null,
+      welcome_channel: null
     });
     this.client.level.ensure(message.guild.id, { option: "off" });
     this.client.level.ensure(`${message.guild.id}-${message.author.id}`, {
