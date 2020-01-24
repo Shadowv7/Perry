@@ -6,6 +6,7 @@ dependencies:
   chalk: 3.0.0
   common-tags: 1.8.0
   discord-giveaways: 3.0.10
+  discord-logs: 1.0.3
   discord-paginationembed: 1.0.3
   discord-player: 1.3.2
   discord.js: github.com/discordjs/discord.js/69c79a4136619e4dcacfffb935aa9bd60aa2081c
@@ -729,6 +730,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-vqLoH4RWcCgJGwzFPwgqxHbU8Auy+puCbmFM6hSNZZ+GnUdHydQmE8sLmvh0CsY7Ap6s3xKqUwNI5CEJzK7fug==
+  /discord-logs/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-r3ij6tzw9D3HHVNkfmPv0BXaMskr2pfroeNZYX++efdY5Wu11pT/zZav1Mi5DbnkdZXWZhq9C/dyrFshQ32+tg==
   /discord-paginationembed/1.0.3:
     dev: false
     engines:
@@ -2294,6 +2299,7 @@ specifiers:
   chalk: ^3.0.0
   common-tags: ^1.8.0
   discord-giveaways: ^3.0.9
+  discord-logs: ^1.0.3
   discord-paginationembed: ^1.0.3
   discord-player: ^1.3.1
   discord.js: 'github:discordjs/discord.js'

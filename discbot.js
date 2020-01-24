@@ -2,12 +2,14 @@ const util = require("util"),
   fs = require("fs"),
   mongoose = require("mongoose"),
   readdir = util.promisify(fs.readdir),
-  permissions = require("./helpers/permissions");
+  permissions = require("./helpers/permissions")
 
 // Load Client class
 const Client = require("./structures/Client"),
-  client = new Client();
-const http = require("http");
+  client = new Client(),
+  logs = require("discord-logs")
+logs(client)
+const http = require("http")
 const express = require("express");
 const app = express();
 
@@ -54,7 +56,9 @@ client
   .on("reconnecting", () => client.logger.log("Bot reconnecting...", "log"))
   .on("error", e => client.logger.log(e, "error"))
   .on("warn", info => client.logger.log(info, "warn"));
-
+client.on('guildMemberBoost', (member) => {
+    console.log(`${member.user.tag} just boosted ${member.guild.name}!`);
+});
 process.on("unhandledRejection", err => {
   client.logger.log("Uncaught Promise Error: " + err, "error");
 });

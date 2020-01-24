@@ -46,6 +46,7 @@
     "discord-paginationembed": "^1.0.3",
     "discord.js-pagination": "^1.0.1",
     "canvas": "^2.6.1",
-    "snekfetch": "^4.0.4"
+    "snekfetch": "^4.0.4",
+    "discord-logs": "^1.0.3"
   }
 }
