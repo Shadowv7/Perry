@@ -5,26 +5,24 @@ module.exports = class {
   constructor(client) {
     this.client = client;
   }
-  //settingd
+
   async run(message) {
     const data = {};
 
-    // If the message author is a bot
     if (message.author.bot) return;
 
-    // If the member on a guild is invisible or not cached, fetch him
     if (message.guild && !message.member)
       await message.guild.members.fetch(message.author.id);
 
     data.config = this.client.config;
-    //database
+
     this.client.settings.ensure(`${message.guild.id}`, {
       prefix: "p!",
       language: "english",
       logs: false,
       logs_channel: null,
-      welcome : false,
-      welcome_image : null,
+      welcome: false,
+      welcome_image: null,
       welcome_channel: null
     });
     this.client.level.ensure(message.guild.id, { option: "off" });
@@ -34,7 +32,7 @@ module.exports = class {
       xp: 0,
       level: 0
     });
-    // Gets language
+
     let Language = require(`../languages/${this.client.settings.get(
       message.guild.id,
       "language"
@@ -68,7 +66,7 @@ module.exports = class {
         this.client.level.set(key, curLevel, "level");
       }
     }
-    // Check if the bot was mentionned
+
     const prefixMention = new RegExp(`^<@!?${this.client.user.id}>( |)$`);
     if (message.content.match(prefixMention))
       return message.reply(
@@ -78,7 +76,6 @@ module.exports = class {
         )
       );
 
-    // Gets the prefix
     let prefix = this.client.settings.get(message.guild.id, "prefix");
     if (!message.content.startsWith(prefix)) return;
     const args = message.content
