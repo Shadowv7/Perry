@@ -214,13 +214,13 @@ module.exports = class {
       // Errors
       SHORTURL_ERR_INVALID_URL: `${e.error} | Please enter a valid URL!`,
       /* OPTION */
-      OPTION_DESCRIPTION: "Activate or deactivate the level system !",
-      OPTION_USAGE: "option <on/off>",
-      OPTION_EXEMPLES: "$option on\n$option off",
+      OPTION_DESCRIPTION: "Configurate Perry !",
+      OPTION_USAGE: "option <logs/level/welcome> <on/off>",
+      OPTION_EXEMPLES: "$option on",
       OPTION_NO_ARGS: `${e.error} | Please choose an option between "on" and "off" !`,
-      OPTION_ALREADY: choice =>
+      OPTION_ALREADY: (choice, config) =>
         `${e.error} | The level system is already on ${choice} !`,
-      OPTION_SUCCESS: choice =>
+      OPTION_SUCCESS: (choice, config) =>
         `${e.success} | The level system is ${choice} !`,
       /* LEVEL */
       LEVELUP_MESSAGE: (user, level) =>
