@@ -12,7 +12,7 @@ class Option extends Command {
       aliases: [],
       clientPermissions: [],
       memberPermissions: ["MANAGE_GUILD"],
-      permLevel: 5,
+      permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,
       guildOnly: true,
@@ -37,10 +37,11 @@ class Option extends Command {
       message.reply(message.language.get("OPTION_LEVEL_SUCCESS", args[1]));
     } else if (args[0] === "welcome") {
       this.client.settings.set(message.guild.id, option, "welcome");
-      message.reply(message.language.get("OPTION_WELCOME_SUCCESS"));
+      
+      message.reply(message.language.get("OPTION_WELCOME_SUCCESS",args[1]));
     } else if (args[0] === "logs") {
       this.client.settings.set(message.guild.id,option,"logs")
-      message.reply(message.language.get("OPTION_LOGS_SUCCESS"))
+      message.reply(message.language.get("OPTION_LOGS_SUCCESS",args[1]))
     }
   }
 }

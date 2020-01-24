@@ -4,7 +4,7 @@ module.exports = class {
   }
 
   async run(member) {
-    if (this.client.settings.get(member.guild.id, "logs") !== true) {
+    if (this.client.settings.get(member.guild.id,"logs") === true) {
       const channel = member.guild.channels.get(
         this.client.settings.get(member.guild.id, "logs-channel")
       );

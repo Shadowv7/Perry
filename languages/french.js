@@ -224,10 +224,18 @@ module.exports = class {
       OPTION_USAGE: "option <on/off>",
       OPTION_EXEMPLES: "$option on\n$option off",
       OPTION_NO_ARGS: `${e.error} | Veuillez choisir une option entre "on" et "off"!`,
-      OPTION_ALREADY: choice =>
+      OPTION_NO_NAME: `${e.error} | Veuillez choisir entre "level" , "welcome" et "logs" !`,
+      OPTION_LEVEL_ALREADY: choice =>
         `${e.error} | Le système de niveaux est déja sur ${choice} !`,
-      OPTION_SUCCESS: choice =>
+      OPTION_LEVEL_SUCCESS: choice =>
         `${e.success} | Le système de niveaux est maintenant sur ${choice} !`,
+      OPTION_WELCOME_SUCCESS: choice =>
+        `${e.success} | Le welcome-image est maintenant sur ${choice} !`,
+      OPTION_WELCOME_ALREADY: choice =>
+        `${e.error} | Le welcome-image est déjà sur ${choice} !`,
+      OPTION_LOGS_SUCCESS: choice => `${e.success} | Les logs sont maintenant sur ${choice} !`,
+      OPTION_LOGS_ALREADY: choice =>
+        `${e.error} | Les logs sont déjà sur ${choice} !`,
       /* LEVEL */
       LEVELUP_MESSAGE: (user, level) =>
         `Félicitations , <@${user}> tu es maintenant au niveau ${level} !`,
@@ -354,14 +362,15 @@ module.exports = class {
       WELCOME_DESCRIPTION: "Set le welcome image !",
       WELCOME_USAGE: "setwelcome <#salon> <url de l'image>",
       WELCOME_EXEMPLES: "$setwelcome #arrivants https://image.url/",
-      NO_CHANNEL:`${e.error} | Veuillez mentioner un salon !`,
+      NO_CHANNEL: `${e.error} | Veuillez mentioner un salon !`,
       NO_URL: `${e.error} | Veuillez inclure l'url de l'image !`,
       WELCOME_SUCCESS: `${e.success} | Le welcome image à été mis avec succès !`,
       WELCOME_MESSAGE: "Bienvenue sur le serveur ,",
-      WELCOME_IMAGE: (member) => `Bienvenue sur le serveur ,${member}`,
+      WELCOME_IMAGE: member => `Bienvenue sur le serveur ,${member}`,
       /* GUILDMEMBERBOOST */
       BOOSTER_TITLE: "•__Nouveau Booster__•",
-      BOOSTER_MESSAGE: (member,guild) => `<a:boost:670174468320002049> ${member} vient de booster le serveur ! Merci à toi ! <a:boost:670174468320002049>`
+      BOOSTER_MESSAGE: (member, guild) =>
+        `<a:boost:670174468320002049> ${member} vient de booster le serveur ! Merci à toi ! <a:boost:670174468320002049>`
     };
   }
   /**

@@ -217,11 +217,16 @@ module.exports = class {
       OPTION_DESCRIPTION: "Configurate Perry !",
       OPTION_USAGE: "option <logs/level/welcome> <on/off>",
       OPTION_EXEMPLES: "$option on",
+      OPTION_NO_NAME: `${e.error} | Please choose between "welcome","level" and "logs"`,
       OPTION_NO_ARGS: `${e.error} | Please choose an option between "on" and "off" !`,
-      OPTION_ALREADY: (choice, config) =>
-        `${e.error} | The level system is already on ${choice} !`,
-      OPTION_SUCCESS: (choice, config) =>
+      OPTION_LEVEL_ALREADY: (choice, config) =>
+        `${e.error} | The level system is already ${choice} !`,
+      OPTION_LEVEL_SUCCESS: (choice, config) =>
         `${e.success} | The level system is ${choice} !`,
+      OPTION_WELCOME_SUCCESS: (choice) => `${e.success} | The welcome-image is ${choice} !`,
+      OPTION_WELCOME_ALREADY: (choice) => `${e.error} | The welcome-image is already ${choice} !`,
+      OPTION_LOGS_SUCCESS: (choice) => `${e.success} | The logs are ${choice} !`,
+      OPTION_LOGS_ALREADY: (choice) => `${e.error} | The logs are already ${choice} !`,
       /* LEVEL */
       LEVELUP_MESSAGE: (user, level) =>
         `Congratulations, <@${user}> you are now at the level ${level} !`,
