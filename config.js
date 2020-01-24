@@ -1,6 +1,6 @@
 module.exports = {
   /* YOUR DISCORD BOT TOKEN */
-  token: "NjU4NTc5NTAzMTM1NTg4Mzky.XiVkBw.JPhUJGZMbn6Dmk-dJmxx9RGPRVA",
+  token: "NjU4NTc5NTAzMTM1NTg4Mzky.XiqGDQ.0OYE2qBpoaqyO4dNYnwRjpa8gYU",
 
   /* DEFAULT GUILD CONFIGURATION */
   guildConf: {

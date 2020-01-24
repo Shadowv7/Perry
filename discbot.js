@@ -14,7 +14,7 @@ const app = express();
 app.get("/", (request, response) => {
   response.sendStatus(200);
 });
-app.listen(process.env.PORT);
+app.listen(3000);
 setInterval(() => {
   http.get(`http://superficial-monday-fujrnj7456.glitch.me/`);
 }, 280000);
