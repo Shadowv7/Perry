@@ -12,7 +12,7 @@ class Option extends Command {
       aliases: [],
       clientPermissions: [],
       memberPermissions: ["MANAGE_GUILD"],
-      permLevel: 3,
+      permLevel: 5,
       cooldown: 5000,
       commandPath: __dirname,
       guildOnly: true,
@@ -21,12 +21,27 @@ class Option extends Command {
   }
 
   async run(message, args, data) {
-    if (!args[0] || !["on", "off"].includes(args[0]))
+    const options = { on: true, off: false };
+    const option = options[args[1]];
+    if (!args[1] || !["on", "off"].includes(args[1]))
       return message.reply(message.language.get("OPTION_NO_ARGS"));
-    if (this.client.level.get(message.guild.id, "option") === args[0])
-      return message.reply(message.language.get("OPTION_ALREADY", args[0]));
-    this.client.level.set(message.guild.id, args[0], "option");
-    message.reply(message.language.get("OPTION_SUCCESS", args[0]));
+    if (!args[0] || !["level", "welcome", "logs"])
+      return message.reply(message.language.get("OPTION_NO_NAME"));
+    if (args[0] === "level") {
+      if (this.client.level.get(message.guild.id, "option") === args[1])
+        return message.reply(
+          message.language.get("OPTION_LEVEL_ALREADY", args[1])
+        );
+
+      this.client.level.set(message.guild.id, option, "option");
+      message.reply(message.language.get("OPTION_LEVEL_SUCCESS", args[1]));
+    } else if (args[0] === "welcome") {
+      this.client.settings.set(message.guild.id, option, "welcome");
+      message.reply(message.language.get("OPTION_WELCOME_SUCCESS"));
+    } else if (args[0] === "logs") {
+      this.client.settings.set(message.guild.id,option,"logs")
+      message.reply(message.language.get("OPTION_LOGS_SUCCESS"))
+    }
   }
 }
 module.exports = Option;
