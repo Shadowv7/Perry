@@ -2,14 +2,14 @@ const util = require("util"),
   fs = require("fs"),
   mongoose = require("mongoose"),
   readdir = util.promisify(fs.readdir),
-  permissions = require("./helpers/permissions")
+  permissions = require("./helpers/permissions");
 
 // Load Client class
 const Client = require("./structures/Client"),
   client = new Client(),
-  logs = require("discord-logs")
-logs(client)
-const http = require("http")
+  logs = require("discord-logs");
+logs(client);
+const http = require("http");
 const express = require("express");
 const app = express();
 
@@ -18,7 +18,7 @@ app.get("/", (request, response) => {
 });
 app.listen(3000);
 setInterval(() => {
-  http.get(`http://superficial-monday-fujrnj7456.glitch.me/`);
+  http.get(`https://superficial-monday-fujrnj7456.glitch.me`);
 }, 280000);
 
 const init = async () => {

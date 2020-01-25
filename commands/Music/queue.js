@@ -11,8 +11,8 @@ class Queue extends Command {
       examples: language => language.get("QUEUE_EXEMPLES"),
       enabled: true,
       aliases: [],
-      clientPermissions: [],
-      permLevel: 5,
+      clientPermissions: ["EMBED_LINKS"],
+      permLevel: 0,
       cooldown: 5000,
       commandPath: __dirname,
       guildOnly: true,
@@ -28,7 +28,7 @@ class Queue extends Command {
       return message.reply(message.language.get("SAME_CHANNEL"));
     }
     if (queue.songs.length < 1) {
-      message.reply(message.language.get("QUEUE_END"));
+      return message.reply(message.language.get("QUEUE_END"));
     }
     const GuildQueue = queue.songs
       .splice(0, 20)
