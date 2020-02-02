@@ -122,8 +122,8 @@ module.exports = class {
       FN_STATS_DESCRIPTION: "Muestra estadísticas para un jugador de Fortnite!",
       FN_STATS_USAGE: "fnstats <plataforma> <apodo>",
       FN_STATS_EXEMPLES: "$fnstats psn Shadow",
-      FN_STATS_NO_USER: `${e.error} | Veuillez saisir le pseudo d'un joueur Fortnite !`,
-      FN_STATS_NO_PLATFORM: `${e.error} | Veuillez saisir la platform !`,
+      FN_STATS_NO_USER: `${e.error} | ¡Ingresa el apodo de un jugador de Fortnite!`,
+      FN_STATS_NO_PLATFORM: `${e.error} | ¡Por favor ingrese a la plataforma!`,
       FN_STATS_USER_NOT_FOUND: `${e.error} | Je ne trouve pas ce joueur !`,
       FN_STATS_PLATFORM_NOT_FOUND: platform =>
         `${e.error} | La platforme \`${platform}\` n'est pas correcte !`,
