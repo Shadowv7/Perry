@@ -6,23 +6,7 @@
   "scripts": {
     "start": "node discbot.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Androz2091/Discbot.js.git"
-  },
-  "keywords": [
-    "template",
-    "discord.js",
-    "bot",
-    "structure"
-  ],
-  "author": "Androz2091",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/Androz2091/Discbot.js/issues"
-  },
-  "homepage": "https://github.com/Androz2091/Discbot.js#readme",
-  "dependencies": {
+"dependencies": {
     "chalk": "^3.0.0",
     "discord.js": "github:discordjs/discord.js",
     "json-beautify": "^1.1.1",
@@ -34,9 +18,9 @@
     "common-tags": "^1.8.0",
     "axios": "^0.19.2",
     "ascii-art": "^2.5.0",
-    "math-expression-evaluator": "^1.2.17",
+    "math-expression-evaluator": "^1.2.22",
     "ms": "^2.1.2",
-    "discord-giveaways": "^3.0.9",
+    "discord-giveaways": "^3.0.11",
     "express": "^4.17.1",
     "http": "^0.0.0",
     "tims": "^1.0.4",

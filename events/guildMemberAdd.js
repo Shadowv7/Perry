@@ -1,19 +1,6 @@
-const http = require("http");
-const url = require("url");
-const fs = require("fs");
+
 const Canvas = require("canvas");
 
-const font = url.parse(
-  "https://cdn.glitch.com/238640a7-e93a-4255-8d02-78dcd8c463a8%2Fubuntu.bold.ttf?v=1578079024436"
-);
-var filename = "." + font.pathname;
-fs.readFile(filename, function(err, data) {
-  if (err) {
-    return;
-  }
-
-  Canvas.registerFont(data, { family: "Ubuntu Bold" });
-});
 const applyText = (canvas, text) => {
   const ctx = canvas.getContext("2d");
   let fontSize = 70;

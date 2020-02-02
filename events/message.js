@@ -16,22 +16,8 @@ module.exports = class {
 
     data.config = this.client.config;
 
-    this.client.settings.ensure(`${message.guild.id}`, {
-      prefix: "p!",
-      language: "english",
-      logs: false,
-      logs_channel: null,
-      welcome: false,
-      welcome_image: null,
-      welcome_channel: null
-    });
-    this.client.level.ensure(message.guild.id, { option: "off" });
-    this.client.level.ensure(`${message.guild.id}-${message.author.id}`, {
-      user: message.author.id,
-      guild: message.guild.id,
-      xp: 0,
-      level: 0
-    });
+    
+    
 
     let Language = require(`../languages/${this.client.settings.get(
       message.guild.id,
@@ -46,6 +32,12 @@ module.exports = class {
       crimecooldown: 0
     });
     if (this.client.level.get(message.guild.id, "option") !== "off") {
+      this.client.level.ensure(`${message.guild.id}-${message.author.id}`, {
+      user: message.author.id,
+      guild: message.guild.id,
+      xp: 0,
+      level: 0
+    });
       const key = `${message.guild.id}-${message.author.id}`;
       const xp = Math.floor(Math.random() * 10 + 1);
       this.client.level.math(key, "+", xp, "xp");
