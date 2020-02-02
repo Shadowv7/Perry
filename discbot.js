@@ -22,7 +22,6 @@ setInterval(() => {
 }, 280000);
 
 const init = async () => {
-  // Searches and loads all commands in all categories
   let categories = await readdir("./commands/");
   client.logger.log(`Chargement de ${categories.length} categories.`, "log");
   categories.forEach(async cat => {
@@ -35,7 +34,6 @@ const init = async () => {
       });
   });
 
-  // Searches and loads all events, like the ready event
   const evtFiles = await readdir("./events/");
   client.logger.log(`Chargement de : ${evtFiles.length} events.`, "log");
   evtFiles.forEach(file => {
