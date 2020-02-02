@@ -5,8 +5,8 @@ const { Client, Collection } = require("discord.js"),
   { GiveawaysManager } = require("discord-giveaways"),
   { Player } = require("discord-player");
 
-// Creates Atlanta class
-class Atlanta extends Client {
+// Creates Perry class
+class Perry extends Client {
   constructor(options) {
     super(options);
     this.config = require("../config"); // Load the config file
@@ -105,4 +105,4 @@ class Atlanta extends Client {
   }
 }
 
-module.exports = Atlanta;
+module.exports = Perry;
