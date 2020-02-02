@@ -119,19 +119,19 @@ module.exports = class {
       FN_STORE_HEADING: ["Rareza", "Primio", "Imagen", "Haga clic aquí"],
       /* FN_STATS*/
 
-      FN_STATS_DESCRIPTION: "Muestra estadísticas para un jugador de Fortnite!",
+      FN_STATS_DESCRIPTION: "¡Muestra estadísticas para un jugador de Fortnite!",
       FN_STATS_USAGE: "fnstats <plataforma> <apodo>",
       FN_STATS_EXEMPLES: "$fnstats psn Shadow",
       FN_STATS_NO_USER: `${e.error} | ¡Ingresa el apodo de un jugador de Fortnite!`,
       FN_STATS_NO_PLATFORM: `${e.error} | ¡Por favor ingrese a la plataforma!`,
-      FN_STATS_USER_NOT_FOUND: `${e.error} | Je ne trouve pas ce joueur !`,
+      FN_STATS_USER_NOT_FOUND: `${e.error} | ¡No puedo encontrar este jugador!`,
       FN_STATS_PLATFORM_NOT_FOUND: platform =>
         `${e.error} | La platforme \`${platform}\` n'est pas correcte !`,
-      FN_STATS_TITLE: user => `Statistiques Fortnite de ${user}`,
-      FN_STATS_HEADING: ["Victoire(s)", "Tué(s)", "Partie(s)", "T/M"],
+      FN_STATS_TITLE: user => `Estadísticas de ${user} Fortnite`,
+      FN_STATS_HEADING: ["Victora(s)", "Muerto(s)", "Parte(s)", "M/M"],
       /* MINECRAFT */
       MINECRAFT_DESCRIPTION:
-        "Affiche les informations d'un serveur Minecraft !",
+        "¡ Muestra información de un servidor de Minecraft!",
       MINECRAFT_USAGE: "minecraft <ip>",
       MINECRAFT_EXEMPLES: "$minecraft funcraft.fr",
       MINECRAFT_NO_IP: `${e.error} | Veuillez saisir l'ip d'un serveur Minecraft !`,

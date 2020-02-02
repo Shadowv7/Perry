@@ -13,8 +13,8 @@ module.exports = {
 
   /* EMOJIS STRINGS LIKE <:emojiName:emojiID> */
   emojis: {
-    success: "<:success:668110577947770894>",
-    error: "<:error:668110576660250636>",
+    success: "<:success:668013533266575364>",
+    error: "<:error:668013531483996161>",
     loading: "<a:loading:668110577163304966>",
     categories: {
       fun: "<:fun:667627121107271681>",
